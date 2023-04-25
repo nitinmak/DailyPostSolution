@@ -16,7 +16,7 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
     }
 }
-rootProject.name = "DailyPostSolution"
+rootProject.name = "SEND POST"
 include ':app'
 include ':PhotoPicker'
 include ':photoeditor'

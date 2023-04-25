@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.NavFragment.DailyFragment;
+import com.sendpost.dreamsoft.NavFragment.DailyNewFragment;
 import com.sendpost.dreamsoft.NavFragment.ImageFragment;
 import com.sendpost.dreamsoft.NavFragment.CreateFragment;
 import com.sendpost.dreamsoft.NavFragment.HomeFragment;
@@ -45,6 +46,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     Fragment homeFragment = new HomeFragment();
     Fragment dailyFragment = new DailyFragment();
     Fragment imageFragment = new ImageFragment();
+    Fragment dailynewfragment = new DailyNewFragment();
     Fragment createFragment = new CreateFragment();
     Fragment searchFragment = new VideoFragment();
 //  Fragment premiumFragment = new PremiumFragment();
