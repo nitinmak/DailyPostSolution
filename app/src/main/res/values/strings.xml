@@ -312,4 +312,50 @@
     <string name="faild">Warning</string>
     <string name="business_support">Business Support</string>
 
+
+
+
+
+
+    <string name="dailynewrouting1">Agriculture</string>
+    <string name="dailynewrouting2"><![CDATA[Animal Food & Store]]></string>
+    <string name="dailynewrouting3">Automotive</string>
+    <string name="dailynewrouting4"><![CDATA[Beauty & Saloon]]></string>
+    <string name="dailynewrouting5">Building Material</string>
+    <string name="dailynewrouting6"><![CDATA[Clothes & Textile]]></string>
+    <string name="dailynewrouting7"><![CDATA[Construction & Contractors]]></string>
+    <string name="dailynewrouting8">Customer Service Center</string>
+    <string name="dailynewrouting9">Education</string>
+    <string name="dailynewrouting10">Electrical</string>
+    <string name="dailynewrouting11">Entertainment</string>
+    <string name="dailynewrouting12"><![CDATA[Fashion & Lifestyle]]></string>
+    <string name="dailynewrouting13"><![CDATA[Foods (Cooking & Making)]]></string>
+    <string name="dailynewrouting14"><![CDATA[Foods (Pre-Cooked & Services)]]></string>
+    <string name="dailynewrouting15">Furniture</string>
+    <string name="dailynewrouting16">Handloom</string>
+    <string name="dailynewrouting17">Hardware</string>
+    <string name="dailynewrouting18"><![CDATA[Home & Garden]]></string>
+    <string name="dailynewrouting19"><![CDATA[Hospital & Clinic]]></string>
+    <string name="dailynewrouting20">Industrial Equipment</string>
+    <string name="dailynewrouting21">Insurance</string>
+    <string name="dailynewrouting22">Interior</string>
+    <string name="dailynewrouting23">Investment</string>
+    <string name="dailynewrouting24"><![CDATA[IT (Software & Hardware)]]></string>
+    <string name="dailynewrouting25">Jewellery</string>
+    <string name="dailynewrouting26">Laboratory</string>
+    <string name="dailynewrouting27">Loan</string>
+    <string name="dailynewrouting28">Mobile Store</string>
+    <string name="dailynewrouting29">Professional</string>
+    <string name="dailynewrouting30">Real Estate</string>
+    <string name="dailynewrouting31">Security Surveillance</string>
+    <string name="dailynewrouting32">Spiritual</string>
+    <string name="dailynewrouting33"><![CDATA[Tours & Travels (Domestic)]]></string>
+    <string name="dailynewrouting34"><![CDATA[Tours & Travels (International)]]></string>
+    <string name="dailynewrouting35">Transportation</string>
+    <string name="dailynewrouting36"><![CDATA[Visa & Immigration]]></string>
+    <string name="dailynewrouting37"><![CDATA[Wellness, GYM & Yoga]]></string>
+
+
+
+
 </resources>

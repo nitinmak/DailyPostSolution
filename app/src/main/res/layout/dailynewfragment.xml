@@ -33,16 +33,16 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Daily_Routine1"
+                        android:text="@string/dailynewrouting1"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/daily1"
+                        android:id="@+id/daynew1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(1)"
+                        android:text="(0)"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
@@ -54,7 +54,7 @@
                 android:clipToPadding="true"
                 android:layoutAnimation="@anim/rc_animation"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:id="@+id/rvdailyCategory"
+                android:id="@+id/agriculturenew"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -62,7 +62,7 @@
                 tools:listitem="@layout/item_upcoming_images_home" />
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:id="@+id/daily_shimmer_lay"
+                android:id="@+id/agri_shimmer_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -115,15 +115,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Daily_Routine2"
+                        android:text="@string/dailynewrouting2"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/daily2"
+                        android:id="@+id/daynew2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(1)"
+                        android:text="(0)"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
@@ -133,7 +133,7 @@
                 android:clipToPadding="true"
                 android:layoutAnimation="@anim/rc_animation"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:id="@+id/rvledmotivationalCategory"
+                android:id="@+id/rvanimalfoodCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -141,7 +141,7 @@
                 tools:listitem="@layout/item_upcoming_images_home" />
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:id="@+id/moti_shimmer_lay"
+                android:id="@+id/animal_shimmer_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -194,15 +194,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/Daily_Routine3"
+                        android:text="@string/dailynewrouting3"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/daily3"
+                        android:id="@+id/dailynew3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(1)"
+                        android:text="(0)"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
@@ -212,7 +212,7 @@
                 android:clipToPadding="true"
                 android:layoutAnimation="@anim/rc_animation"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:id="@+id/rvdaylyr3Category"
+                android:id="@+id/automativeCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -220,7 +220,7 @@
                 tools:listitem="@layout/item_upcoming_images_home" />
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:id="@+id/daily3_shimmer_lay"
+                android:id="@+id/automative_shimmer_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -275,15 +275,15 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/goddeva"
+                        android:text="@string/dailynewrouting4"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/dailycgoddeva"
+                        android:id="@+id/dailynew4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(1)"
+                        android:text="(0)"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
@@ -293,7 +293,7 @@
                 android:clipToPadding="true"
                 android:layoutAnimation="@anim/rc_animation"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:id="@+id/rvgoddevaCategory"
+                android:id="@+id/rvbeautysalonCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -301,7 +301,7 @@
                 tools:listitem="@layout/item_upcoming_images_home" />
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:id="@+id/goddeva_shimmer_lay"
+                android:id="@+id/beautysalon_shimmer_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <LinearLayout
@@ -352,35 +352,2606 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/business_support"
+                        android:text="@string/dailynewrouting5"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
                     <TextView
-                        android:id="@+id/dailycmsgsoc"
+                        android:id="@+id/dailynew5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="(1)"
+                        android:text="(0)"
                         android:textColor="@color/textColor"
                         android:textSize="16dp"
                         android:textStyle="bold" />
                 </LinearLayout>
             </RelativeLayout>
+
             <androidx.recyclerview.widget.RecyclerView
                 android:clipToPadding="true"
                 android:layoutAnimation="@anim/rc_animation"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:id="@+id/rvmsgtosocCategory"
+                android:id="@+id/rvbuildingCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:orientation="horizontal"
                 tools:listitem="@layout/item_upcoming_images_home" />
+
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:id="@+id/msgtosoc_shimmer_lay"
+                android:id="@+id/building_shimmer_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting6"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvclothingtextCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/clothingtext_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting7"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvcunstructioncontracCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/cunstructioncontrac_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting8"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvcustomerservicecenCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/customerservicecen_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting9"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rveducationCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/education_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting10"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvelectricalCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/electrical_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting11"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rventertainmentCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/entertainment_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting12"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvfashionlifeCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/fashionlife_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting13"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvcookingmakingCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/cookingmaking_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting14"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvpreecoockedCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/preecoocked_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting15"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvfurnitureCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/furniture_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting16"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvhandloomCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/handloom_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting18"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvhomegardenCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/homegarden_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting19"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvhospitalclicnickCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/hospitalclicnick_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting20"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvindustrialequipmentCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/industrialequipment_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting21"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvinsuranceCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/insurance_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting22"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvinteriorCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/interior_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting23"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvinvestmentCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/investment_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting24"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew24"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvithardwareCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/ithardware_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting25"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew25"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvjewllaryCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/jewllary_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting26"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew26"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvlaboretroyCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/laboretroy_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting27"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew27"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvloanCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/loan_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting28"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvmobilestoreCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/mobilestore_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting29"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew29"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvprofassionalCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/profassional_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting30"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvrealestateCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/realestate_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting31"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvsecuritysurvilanceCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/securitysurvilance_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting32"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvspiritualCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/spiritual_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting33"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvttdomesticCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/ttdomestic_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting34"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvttinternationalCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/ttinternational_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting35"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvtransportationCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/transportation_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting36"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvvisaimigrationCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/visaimigration_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting37"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/dailynew37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvhealthgymwellCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/healthgymwell_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
                 <LinearLayout
                     android:gravity="center_vertical"
                     android:layout_marginTop="@dimen/_10sdp"

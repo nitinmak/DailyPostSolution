@@ -47,37 +47,145 @@ public class DailyNewFragment extends Fragment {
 
             if (homeResponse != null){
 
-                if (homeResponse.dailyroutin1.size() > 0){
-                    setamazingadapter(homeResponse.dailyroutin1,homeResponse.getDailyc1());
+                if (homeResponse.dailnewyroutin1.size() > 0){
+                    setamazingadapter(homeResponse.dailnewyroutin1,homeResponse.getDailynew1());
                 }
 
-                if (homeResponse.dailyroutin2.size() > 0){
-                    setledthotsadapter(homeResponse.dailyroutin2,homeResponse.getDailyc2());
+                if (homeResponse.dailnewyroutin2.size() > 0){
+                    setledthotsadapter(homeResponse.dailnewyroutin2,homeResponse.getDailynew2());
                 }
 
-                if (homeResponse.dailyroutin3.size() > 0){
-                    setdaily3sadapter(homeResponse.dailyroutin3,homeResponse.dailyc3);
+                if (homeResponse.dailnewyroutin3.size() > 0){
+                    setdaily3sadapter(homeResponse.dailnewyroutin3,homeResponse.dailynew3);
                 }
 
-                if (homeResponse.msgtosoc.size() > 0){
-                    setmsgtsocadapter(homeResponse.msgtosoc,homeResponse.dailycmsgsoc);
+                if (homeResponse.dailnewyroutin4.size() > 0){
+                    setmsgtsocadapter(homeResponse.dailnewyroutin4,homeResponse.dailynew4);
                 }
 
-                if (homeResponse.goddeva.size() > 0){
-                    setgoddevaadapter(homeResponse.goddeva,homeResponse.dailycgoddeva);
+                if (homeResponse.dailnewyroutin5.size() > 0){
+                    setgoddevaadapter(homeResponse.dailnewyroutin5,homeResponse.dailynew5);
                 }
 
-//                    if (homeResponse.goddevi.size() > 0) {
-//                        setgoddeviadapter(homeResponse.goddevi,homeResponse.dailycgoddevi);
-//                    }
-//
-//                    if (homeResponse.numerology.size() > 0){
-//                        setnumrologyadapter(homeResponse.numerology,homeResponse.dailycnumro);
-//                    }
-//                    if (homeResponse.rashi.size() > 0){
-//                        setrashiadapter(homeResponse.rashi,homeResponse.dailycrashi);
-//                    }
+                if (homeResponse.dailnewyroutin6.size() > 0) {
+                    setgoddeviadapter(homeResponse.dailnewyroutin6,homeResponse.dailynew6);
+                }
 
+                if (homeResponse.dailnewyroutin7.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin7,homeResponse.dailynew7);
+                }
+                if (homeResponse.dailnewyroutin8.size() > 0){
+                    setrashiadapter(homeResponse.dailnewyroutin8,homeResponse.dailynew8);
+                }
+                if (homeResponse.dailnewyroutin9.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin9,homeResponse.dailynew9);
+                }
+                if (homeResponse.dailnewyroutin10.size() > 0){
+                    setrashiadapter(homeResponse.dailnewyroutin10,homeResponse.dailynew10);
+                }
+                if (homeResponse.dailnewyroutin11.size() > 0){
+                    setamazingadapter(homeResponse.dailnewyroutin11,homeResponse.dailynew11);
+                }
+
+                if (homeResponse.dailnewyroutin12.size() > 0){
+                    setledthotsadapter(homeResponse.dailnewyroutin12,homeResponse.dailynew12);
+                }
+
+                if (homeResponse.dailnewyroutin13.size() > 0){
+                    setdaily3sadapter(homeResponse.dailnewyroutin13,homeResponse.dailynew13);
+                }
+
+                if (homeResponse.dailnewyroutin14.size() > 0){
+                    setmsgtsocadapter(homeResponse.dailnewyroutin14,homeResponse.dailynew14);
+                }
+
+                if (homeResponse.dailnewyroutin15.size() > 0){
+                    setgoddevaadapter(homeResponse.dailnewyroutin15,homeResponse.dailynew15);
+                }
+
+                if (homeResponse.dailnewyroutin16.size() > 0) {
+                    setgoddeviadapter(homeResponse.dailnewyroutin16,homeResponse.dailynew16);
+                }
+
+                if (homeResponse.dailnewyroutin17.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin17,homeResponse.dailynew17);
+                }
+                if (homeResponse.dailnewyroutin18.size() > 0){
+                    setrashiadapter(homeResponse.dailnewyroutin18,homeResponse.dailynew18);
+                }
+                if (homeResponse.dailnewyroutin19.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin19,homeResponse.dailynew19);
+                }
+                if (homeResponse.dailnewyroutin20.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin20,homeResponse.dailynew20);
+                }
+                if (homeResponse.dailnewyroutin21.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin21,homeResponse.dailynew21);
+                }
+
+                if (homeResponse.dailnewyroutin22.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin22,homeResponse.dailynew22);
+                }
+
+                if (homeResponse.dailnewyroutin23.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin23,homeResponse.dailynew23);
+                }
+
+                if (homeResponse.dailnewyroutin24.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin24,homeResponse.dailynew24);
+                }
+
+                if (homeResponse.dailnewyroutin25.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin25,homeResponse.dailynew25);
+                }
+
+                if (homeResponse.dailnewyroutin26.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin26,homeResponse.dailynew26);
+                }
+
+                if (homeResponse.dailnewyroutin27.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin27,homeResponse.dailynew27);
+                }
+
+                if (homeResponse.dailnewyroutin28.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin28,homeResponse.dailynew28);
+                }
+
+                if (homeResponse.dailnewyroutin29.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin29,homeResponse.dailynew29);
+                }
+
+                if (homeResponse.dailnewyroutin30.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin30,homeResponse.dailynew30);
+                }
+
+                if (homeResponse.dailnewyroutin31.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin31,homeResponse.dailynew31);
+                }
+
+                if (homeResponse.dailnewyroutin32.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin32,homeResponse.dailynew32);
+                }
+
+                if (homeResponse.dailnewyroutin33.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin33,homeResponse.dailynew33);
+                }
+
+                if (homeResponse.dailnewyroutin34.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin34,homeResponse.dailynew34);
+                }
+
+                if (homeResponse.dailnewyroutin35.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin35,homeResponse.dailynew35);
+                }
+
+                if (homeResponse.dailnewyroutin36.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin36,homeResponse.dailynew36);
+                }
+
+                if (homeResponse.dailnewyroutin37.size() > 0){
+                    setnumrologyadapter(homeResponse.dailnewyroutin37,homeResponse.dailynew37);
+                }
             }
         });
     }

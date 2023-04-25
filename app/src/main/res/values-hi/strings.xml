@@ -306,6 +306,41 @@
     <string name="download_complete">डाउनलोड पूर्ण</string>
     <string name="business_digtal_card">डिजिटल कार्ड</string>
     <string name="business_support">व्यापार का समर्थन</string>
+    <string name="dailynewrouting1">कृषि</string>
+    <string name="dailynewrouting2">एनिमल फ़ूड एंड स्टोर</string>
+    <string name="dailynewrouting3">ऑटोमोटिव</string>
+    <string name="dailynewrouting4">સૌંદર્ય અને સલૂન</string>
+    <string name="dailynewrouting5">निर्माण सामग्री</string>
+    <string name="dailynewrouting6">कपड़े और कपड़ा</string>
+    <string name="dailynewrouting7">निर्माण और ठेकेदार</string>
+    <string name="dailynewrouting8">ग्राहक सेवा केन्द्र</string>
+    <string name="dailynewrouting9">शिक्षा</string>
+    <string name="dailynewrouting10">विद्युतीय</string>
+    <string name="dailynewrouting11">मनोरंजन</string>
+    <string name="dailynewrouting12">फैशन और जीवन शैली</string>
+    <string name="dailynewrouting13">खाद्य पदार्थ (खाना बनाना और बनाना)</string>
+    <string name="dailynewrouting14">खाद्य पदार्थ (पहले से पका हुआ और सेवाएं)</string>
+    <string name="dailynewrouting15">फर्नीचर</string>
+    <string name="dailynewrouting16">हथकरघा</string>
+    <string name="dailynewrouting17">हार्डवेयर</string>
+    <string name="dailynewrouting18">घर और बगिया</string>
+    <string name="dailynewrouting19">अस्पताल और क्लिनिक</string>
+    <string name="dailynewrouting20">औद्योगिक उपकरण</string>
+    <string name="dailynewrouting21">बीमा</string>
+    <string name="dailynewrouting22">आंतरिक भाग</string>
+    <string name="dailynewrouting23">निवेश</string>
+    <string name="dailynewrouting24">आईटी (सॉफ्टवेयर और हार्डवेयर)</string>
+    <string name="dailynewrouting25">जेवर</string>
+    <string name="dailynewrouting26">प्रयोगशाला</string>
+    <string name="dailynewrouting28">मोबाइल स्टोर</string>
+    <string name="dailynewrouting29">पेशेवर</string>
+    <string name="dailynewrouting30">रियल एस्टेट</string>
+    <string name="dailynewrouting31">सुरक्षा निगरानी</string>
+    <string name="dailynewrouting32">आध्यात्मिक</string>
+    <string name="dailynewrouting33">पर्यटन और यात्रा (घरेलू)</string>
+    <string name="dailynewrouting34">पर्यटन और यात्रा (अंतर्राष्ट्रीय)</string>
+    <string name="dailynewrouting35">यातायात</string>
+    <string name="dailynewrouting36">वीजा और आप्रवासन</string>
 
 
 </resources>
