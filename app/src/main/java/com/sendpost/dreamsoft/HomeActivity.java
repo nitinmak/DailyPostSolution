@@ -19,12 +19,12 @@ import com.sendpost.dreamsoft.NavFragment.VideoFragment;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Context context;
-    ImageView home_btn,image_btns,images_daily_routing,search_btn,create_btn,profile_btn;
+    ImageView home_btn,image_btns,images_daily_routing,search_btn,dialybusinessnew,create_btn,profile_btn;
     //  premium_btn,
 
     public static Fragment active;
     public static FragmentManager fragmentManager;
-    boolean homeClicked = true, imageClicked = false,dailyClicked = false,videoClicked = false,createClicked = false,premiumClicked = false,profileClicked = false;
+    boolean homeClicked = true, imageClicked = false,dailyClicked = false,dailynew = false,videoClicked = false,createClicked = false,premiumClicked = false,profileClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         image_btns = findViewById(R.id.images_btn);
         images_daily_routing = findViewById(R.id.images_daily_routing);
         search_btn = findViewById(R.id.search_btn);
+        dialybusinessnew = findViewById(R.id.dialybusinessnew);
         create_btn = findViewById(R.id.create_btn);
 //      premium_btn = findViewById(R.id.premium_btn);
 //      profile_btn = findViewById(R.id.profile_btn);
@@ -64,6 +65,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         home_btn.setOnClickListener(this);
         image_btns.setOnClickListener(this);
         images_daily_routing.setOnClickListener(this);
+        dialybusinessnew.setOnClickListener(this);
         search_btn.setOnClickListener(this);
         create_btn.setOnClickListener(this);
 //      premium_btn.setOnClickListener(this);
@@ -100,7 +102,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
-            
+
                 home_btn.getBackground().setTintList(null);
                 home_btn.getDrawable().setTint(getColor(R.color.white));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
@@ -198,6 +200,47 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 showFragmentOnFrame(dailyFragment);
                 break;
+
+             case R.id.dialybusinessnew:
+                isHome = false;
+                home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
+                images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
+                image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
+                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+//              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
+//              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
+
+                home_btn.getDrawable().setTint(getColor(R.color.black));
+                image_btns.getDrawable().setTint(getColor(R.color.black));
+                images_daily_routing.getDrawable().setTint(getColor(R.color.black));
+                 dialybusinessnew.getDrawable().setTint(getColor(R.color.white));
+                create_btn.getDrawable().setTint(getColor(R.color.black));
+                search_btn.getDrawable().setTint(getColor(R.color.black));
+
+
+                home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
+                images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
+                dialybusinessnew.getBackground().setTintList(null);
+
+                search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+
+                if (active != dailynewfragment) {
+                    if (!dailynew) {
+                        fragmentManager.beginTransaction().add(R.id.main_framelayout, dailynewfragment).show(dailynewfragment).hide(active).commit();
+                        dailynew = true;
+                    } else {
+                        fragmentManager.beginTransaction().show(dailynewfragment).hide(active).commit();
+                    }
+                }
+                showFragmentOnFrame(dailynewfragment);
+
+                break;
             case R.id.search_btn:
                 isHome = false;
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
@@ -223,8 +266,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 search_btn.getBackground().setTintList(null);
 
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
-//                premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
-//                profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 
                 if (active != searchFragment) {
                     if (!videoClicked) {
@@ -235,6 +278,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 }
                 showFragmentOnFrame(searchFragment);
+
                 break;
             case R.id.create_btn:
                 isHome = false;
@@ -258,8 +302,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTintList(null);
                 create_btn.getDrawable().setTint(getColor(R.color.white));
-//                premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
-//                profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 
                 if (active != createFragment) {
                     if (!createClicked) {

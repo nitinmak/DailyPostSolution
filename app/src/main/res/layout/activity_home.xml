@@ -64,6 +64,16 @@
                     android:src="@drawable/_business_page_icon" />
 
                 <ImageButton
+                    android:id="@+id/dialybusinessnew"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instagram_btn"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/_business_page_icon" />
+
+                <ImageButton
                     android:id="@+id/create_btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
