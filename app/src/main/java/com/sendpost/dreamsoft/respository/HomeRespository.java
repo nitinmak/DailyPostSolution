@@ -72,6 +72,24 @@ public class HomeRespository {
         });
         return data;
     }
+    public LiveData<HomeResponse> getDailynew(){
+        MutableLiveData<HomeResponse> data = new MutableLiveData<>();
+
+        Log.d("sdsfs",Constants.API_KEY);
+        Log.d("sdsfs",apiService.getdailynewData(Constants.API_KEY).toString());
+        apiService.getdailyData(Constants.API_KEY).enqueue(new Callback<HomeResponse>() {
+            @Override
+            public void onResponse(Call<HomeResponse> call, Response<HomeResponse> response) {
+                data.setValue(response.body());
+            }
+
+            @Override
+            public void onFailure(Call<HomeResponse> call, Throwable t) {
+                data.setValue(null);
+            }
+        });
+        return data;
+    }
 
     public LiveData<HomeResponse> getVideoCategory(){
         MutableLiveData<HomeResponse> data = new MutableLiveData<>();

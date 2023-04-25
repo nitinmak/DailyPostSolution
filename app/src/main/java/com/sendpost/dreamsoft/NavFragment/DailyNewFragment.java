@@ -43,7 +43,7 @@ public class DailyNewFragment extends Fragment {
 
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
-        homeViewModel.getDailyData().observe(getViewLifecycleOwner(), homeResponse -> {
+        homeViewModel.getDailynewData().observe(getViewLifecycleOwner(), homeResponse -> {
 
             if (homeResponse != null){
 

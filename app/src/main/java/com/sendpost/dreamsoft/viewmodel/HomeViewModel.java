@@ -26,6 +26,10 @@ public class HomeViewModel extends ViewModel {
         return respository.getDaily();
     }
 
+    public LiveData<HomeResponse> getDailynewData() {
+        return respository.getDailynew();
+    }
+
     public LiveData<HomeResponse> cheakPromo(String promo) {
         return respository.cheakPromo(promo);
     }

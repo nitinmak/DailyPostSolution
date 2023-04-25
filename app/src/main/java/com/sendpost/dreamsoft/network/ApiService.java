@@ -154,6 +154,9 @@ public interface ApiService {
     @GET("{API_KEY}/dailydata")
     Call<HomeResponse> getdailyData(@Path("API_KEY") String apikey);
 
+    @GET("{API_KEY}/dailynewdata")
+    Call<HomeResponse> getdailynewData(@Path("API_KEY") String apikey);
+
     @GET("{API_KEY}/videocategory")
     Call<HomeResponse> getVideoCategories(@Path("API_KEY") String apikey);
 
