@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="com.sendpost.dreamsoft.Account.EditProfileFragment">
+
+    <RelativeLayout
+        android:background="@color/cardBackgroundColor"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp">
+
+        <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="15dp"
+            android:rotation="180"
+            android:src="@drawable/ic_right_arrow"
+            app:tint="@color/textColor" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/add_bussiness"
+            android:textColor="@color/textColor"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submit_btn"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/bussiness_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/company"
+                    app:civ_border_color="@color/purple_500"
+                    app:civ_border_width="2dp" />
+
+                <ImageButton
+                    android:id="@+id/upload_pic_btn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@color/transparent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_camera"
+                    app:tint="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:gravity="center_horizontal"
+                android:text="@string/bussiness_logo"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/bussiness_details"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivUserCompany"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_company"
+                    app:tint="@color/textColor" />
+
+                <EditText
+                    android:id="@+id/company_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivUserCompany"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/bussiness_name"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivUserfNumber"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:padding="2dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_call"
+                    app:tint="@color/textColor" />
+
+                <EditText
+                    android:id="@+id/number_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/ivUserfNumber"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/bussiness_number"
+                    android:inputType="number"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivUseremail"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_email"
+                    app:tint="@color/textColor" />
+
+                <EditText
+                    android:id="@+id/email_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_toEndOf="@+id/ivUseremail"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/bussiness_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivwebsiteName"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_web"
+                    app:tint="@color/texteditColor" />
+
+                <EditText
+                    android:id="@+id/website_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivwebsiteName"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="Business Website"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivUserAddress"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_company"
+                    app:tint="@color/texteditColor" />
+
+                <EditText
+                    android:id="@+id/address_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivUserAddress"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/address"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:orientation="vertical"
+                android:paddingHorizontal="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_toEndOf="@+id/ivUserAddress"
+                    android:backgroundTint="@color/transparent"
+                    android:paddingHorizontal="8dp"
+                    android:text="@string/about_business"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+                <EditText
+                    android:id="@+id/about_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivUserAddress"
+                    android:backgroundTint="@color/transparent"
+                    android:gravity="top"
+                    android:hint="@string/About"
+                    android:minHeight="@dimen/_100sdp"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/social_details"
+                android:textColor="@color/texteditColor"
+                android:textSize="@dimen/_18sdp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivWhatsapp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_whatsapp_bussiness"
+                    app:tint="@color/texteditColor" />
+
+                <EditText
+                    android:id="@+id/whatsapp_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivWhatsapp"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/whatsapp"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivFacebookInsta"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_facebook"
+                    app:tint="@color/texteditColor" />
+
+                <EditText
+                    android:id="@+id/facebook_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivFacebookInsta"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/facebook"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivYoutubeInsta"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_youtube"
+                    app:tint="@color/texteditColor" />
+
+                <EditText
+                    android:id="@+id/youtube_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivYoutubeInsta"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/Youtube_channel_name"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/ivUserInsta"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_instagram"
+                    app:tint="@color/texteditColor" />
+
+                <EditText
+                    android:id="@+id/insta_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/ivUserInsta"
+                    android:backgroundTint="@color/transparent"
+                    android:hint="@string/instagrame_username"
+                    android:inputType="text"
+                    android:paddingHorizontal="8dp"
+                    android:textColor="@color/texteditColor"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/submit_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:background="@drawable/rounded_bg"
+        android:gravity="center"
+        android:text="@string/save"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

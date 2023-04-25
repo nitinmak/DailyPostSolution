@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/main_lay"
+    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardElevation="0dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_290sdp"
+    android:layout_height="@dimen/_500sdp">
+
+
+    <RelativeLayout
+        android:background="@drawable/bussinescard4_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/top_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:background="@drawable/ic_frame_shape_square"
+                android:backgroundTint="@color/ic_launcher_background">
+
+                <com.sendpost.dreamsoft.View.ShapesImage
+                    android:id="@+id/bussiness_pic"
+                    android:layout_width="@dimen/_100sdp"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:src="@drawable/ic_user_icon"
+                    app:shapeDrawable="@drawable/ic_frame_shape_square" />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/bussiness_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/app_name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_22sdp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/about_bussiness"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_pic"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:gravity="center|top"
+                android:hint="@string/lorem_ipsum"
+                android:maxLines="4"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/bottom_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:padding="@dimen/_15sdp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/person_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/white"
+                    android:gravity="center"
+                    android:hint="@string/demo_number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_call"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/black"
+                    android:textColorHint="@color/black"
+                    android:gravity="center"
+                    android:hint="@string/demo_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/email_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_email"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/black"
+                    android:textColorHint="@color/black"
+                    android:gravity="center"
+                    android:hint="@string/demo_email"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/website_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_web"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/black"
+                    android:gravity="left"
+                    android:textColorHint="@color/black"
+                    android:hint="@string/demo_website"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/whatsapp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:drawableLeft="@drawable/ic_whatsapp_bussiness"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:drawableTint="@color/black"
+                    android:gravity="center"
+                    android:textColorHint="@color/black"
+                    android:hint="@string/demo_number"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_3sdp"
+                android:background="@drawable/full_rounded_bg"/>
+            <TextView
+                android:id="@+id/address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_pic"
+                android:layout_centerHorizontal="true"
+                android:textColorHint="@color/black"
+                android:hint="@string/demo_address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

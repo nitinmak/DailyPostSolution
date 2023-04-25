@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/home_activity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sendpost.dreamsoft.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/main_framelayout"
+            android:layout_above="@+id/topBlurView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
+
+        </FrameLayout>
+
+        <RelativeLayout
+            android:background="@color/cardBackgroundColor"
+            android:id="@+id/topBlurView"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:id="@+id/bottom_nav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/home_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instagram_btn"
+                    android:src="@drawable/nav_home_active" />
+
+                <ImageButton
+                    android:id="@+id/images_daily_routing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instagram_btn"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/daily_page_icon"
+                     />
+
+                <ImageButton
+                    android:id="@+id/images_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instagram_btn"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/_business_page_icon" />
+
+                <ImageButton
+                    android:id="@+id/create_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instagram_btn"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/frame_page_icon" />
+
+                <ImageButton
+                    android:id="@+id/search_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/instagram_btn"
+                    android:backgroundTint="@color/transparent"
+                    android:src="@drawable/video_page_icon" />
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/premium_btn"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/nav_full_rounded_btn"-->
+<!--                    android:backgroundTint="@color/transparent"-->
+<!--                    android:src="@drawable/nav_premium" />-->
+
+<!--                <ImageButton-->
+<!--                    android:id="@+id/profile_btn"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:layout_margin="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/nav_full_rounded_btn"-->
+<!--                    android:backgroundTint="@color/transparent"-->
+<!--                    android:src="@drawable/nav_profile" />-->
+
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
+

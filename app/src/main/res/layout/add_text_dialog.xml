@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main_lay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <TextView
+        android:layout_margin="@dimen/_8sdp"
+        android:id="@+id/add_text_done_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="@dimen/_25sdp"
+        android:paddingVertical="@dimen/_12sdp"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/rounded_bg"
+        android:text="Done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/add_text_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_200sdp"
+        android:background="@null"
+        android:gravity="center"
+        android:hint="Tap here..."
+        android:inputType="textMultiLine"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+
+        android:textColorHint="#838383"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/add_text_color_picker_recycler_view"
+        tools:visibility="visible" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_text_font_picker_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/add_text_done_tv"
+        tools:layout_height="wrap_content"
+        tools:listitem="@layout/font_picker_item_list" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_text_color_picker_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@+id/add_text_font_picker_recycler_view"
+        tools:layout_height="wrap_content"
+        tools:listitem="@layout/color_picker_item_list" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

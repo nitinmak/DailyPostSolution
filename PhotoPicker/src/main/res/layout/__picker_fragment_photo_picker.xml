@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rv_photos"
+      android:layout_width="match_parent"
+      android:gravity="center"
+      android:layout_weight="1"
+      android:layout_height="0dip"
+      />
+
+
+  <LinearLayout
+      android:background="@drawable/rounded_bg"
+      android:gravity="center"
+      android:layout_width="match_parent"
+      android:layout_height="55dp">
+
+      <ImageView
+          android:id="@+id/poster_iv"
+          android:layout_width="25dp"
+          android:layout_height="25dp"
+          android:adjustViewBounds="true"
+          android:src="@drawable/folder"
+          app:tint="#fff" />
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/button"
+            android:text="@string/__picker_all_image"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:background="@null"/>
+
+  </LinearLayout>
+
+</LinearLayout>

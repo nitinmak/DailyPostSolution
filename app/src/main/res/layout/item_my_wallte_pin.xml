@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="posts"
+            type="com.sendpost.dreamsoft.model.PostsModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="4dp"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/cardpins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:orientation="horizontal">
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:adjustViewBounds="true"-->
+<!--                android:minHeight="100dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:imageURL="@{posts.item_url}"/>-->
+            <TextView
+                android:id="@+id/nob"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1."
+                android:layout_weight="1.2"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"/>
+            <TextView
+                android:id="@+id/mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+917990876436"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"/>
+
+            <TextView
+                android:id="@+id/createddate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="11-03-23 20:46:02"
+                android:layout_weight="0.9"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"/>
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/_13sdp"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

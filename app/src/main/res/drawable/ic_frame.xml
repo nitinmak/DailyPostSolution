@@ -1,0 +1,12 @@
+<vector android:height="25dp" android:viewportHeight="500"
+    android:viewportWidth="500" android:width="25dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M0,0h500v500h-500z"/>
+        <path android:fillColor="#00000000"
+            android:pathData="M69,40L432,40A29,29 0,0 1,461 69L461,432A29,29 0,0 1,432 461L69,461A29,29 0,0 1,40 432L40,69A29,29 0,0 1,69 40z"
+            android:strokeColor="@color/texteditColor" android:strokeWidth="42"/>
+        <path android:fillColor="@color/texteditColor" android:pathData="M125.5,337L268.5,337A14.5,14.5 0,0 1,283 351.5L283,351.5A14.5,14.5 0,0 1,268.5 366L125.5,366A14.5,14.5 0,0 1,111 351.5L111,351.5A14.5,14.5 0,0 1,125.5 337z"/>
+        <path android:fillColor="@color/texteditColor" android:pathData="M125.5,386L325.5,386A14.5,14.5 0,0 1,340 400.5L340,400.5A14.5,14.5 0,0 1,325.5 415L125.5,415A14.5,14.5 0,0 1,111 400.5L111,400.5A14.5,14.5 0,0 1,125.5 386z"/>
+        <path android:fillColor="@color/texteditColor" android:pathData="M165,263m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0"/>
+    </group>
+</vector>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="slider"
+            type="com.sendpost.dreamsoft.model.SliderModel" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/slider_rlt"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:imageURL="@{slider.image}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"/>
+
+        </RelativeLayout>
+    </FrameLayout>
+</layout>

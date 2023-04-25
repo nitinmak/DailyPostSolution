@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="posts"
+            type="com.sendpost.dreamsoft.model.UserPostModel" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_margin="4dp"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:maxHeight="@dimen/_200sdp">
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:imageURL="@{posts.post_url}"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/video_type"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/exo_controls_play"
+            android:background="@drawable/rounded_bg"
+            android:layout_gravity="bottom"
+            android:isVideo="@{posts.post_url}"
+            />
+        <ImageView
+            android:id="@+id/delete_btn"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_delete_white_24dp"
+            android:background="@drawable/ic_delete_bg"
+            android:layout_gravity="right"
+            />
+    </androidx.cardview.widget.CardView>
+
+</layout>

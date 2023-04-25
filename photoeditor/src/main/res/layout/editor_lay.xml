@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/border_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
+    <ja.burhanrashid52.photoeditor.Sticker.StickerView
+        android:id="@+id/stickerView"
+        android:background="#BB00FF"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ja.burhanrashid52.photoeditor.Sticker.StickerView>
+</RelativeLayout>

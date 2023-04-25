@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/frameMainLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/_8sdp"
+    android:orientation="vertical">
+    
+    <com.sendpost.dreamsoft.View.ShapesImage
+        android:layout_alignParentRight="true"
+        android:id="@+id/bussiness_pic"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:src="@drawable/rounded_bg"
+        app:shapeDrawable="@drawable/ic_frame_shape_square" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/bussiness_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_edit_frame"
+            android:drawableTint="#170000"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/demo_insta"
+            android:textColor="#170000"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/email_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawableRight="@drawable/ic_edit_frame"
+            android:drawablePadding="5dp"
+            android:drawableTint="#170000"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/demo_email"
+            android:textColor="#170000"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/website_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawableLeft="@drawable/ic_web"
+            android:drawableRight="@drawable/ic_edit_frame"
+            android:drawablePadding="5dp"
+            android:drawableTint="#170000"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/demo_email"
+            android:textColor="#170000"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:background="@drawable/right_rounded_bg"
+            android:backgroundTint="#230000"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/address_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawableRight="@drawable/ic_edit_frame"
+                android:drawablePadding="5dp"
+                android:drawableTint="#ffff"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/demo_email"
+                android:textColor="#ffff"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/left_rounded_bg"
+            android:backgroundTint="#230000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/number_tv"
+                android:layout_marginHorizontal="@dimen/_8sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@drawable/ic_call"
+                android:drawableRight="@drawable/ic_edit_frame"
+                android:drawablePadding="5dp"
+                android:drawableTint="#ffff"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/demo_number"
+                android:textColor="#ffff"
+                android:textSize="@dimen/_13sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
