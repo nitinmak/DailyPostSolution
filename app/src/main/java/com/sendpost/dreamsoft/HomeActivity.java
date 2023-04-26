@@ -98,6 +98,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
@@ -106,11 +107,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.getBackground().setTintList(null);
                 home_btn.getDrawable().setTint(getColor(R.color.white));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
+                dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
                 search_btn.getDrawable().setTint(getColor(R.color.black));
+
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
+                dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -132,6 +136,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
@@ -139,6 +144,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 home_btn.getDrawable().setTint(getColor(R.color.black));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
+                dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
                 search_btn.getDrawable().setTint(getColor(R.color.black));
@@ -146,8 +152,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
+                dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTintList(null);
-
                 search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -169,6 +175,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
@@ -176,6 +183,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 home_btn.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
+                dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
                 search_btn.getDrawable().setTint(getColor(R.color.black));
@@ -183,6 +191,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
+                dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTintList(null);
 
                 search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -215,7 +224,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
-                 dialybusinessnew.getDrawable().setTint(getColor(R.color.white));
+                dialybusinessnew.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
                 search_btn.getDrawable().setTint(getColor(R.color.black));
 
@@ -224,7 +233,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
                 dialybusinessnew.getBackground().setTintList(null);
-
                 search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -238,6 +246,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                         fragmentManager.beginTransaction().show(dailynewfragment).hide(active).commit();
                     }
                 }
+
                 showFragmentOnFrame(dailynewfragment);
 
                 break;
@@ -246,6 +255,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon ));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
@@ -254,17 +264,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 home_btn.getDrawable().setTint(getColor(R.color.black));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
+                dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
                 search_btn.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
 
-
-
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
+                dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 search_btn.getBackground().setTintList(null);
-
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -284,6 +293,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 isHome = false;
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
@@ -292,12 +302,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
 
                 home_btn.getDrawable().setTint(getColor(R.color.black));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
+                dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
                 search_btn.getDrawable().setTint(getColor(R.color.black));
                 create_btn.getDrawable().setTint(getColor(R.color.white));
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
+                dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
                 search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTintList(null);

@@ -149,6 +149,7 @@ public class UserRespository {
     }
 
     public LiveData<UserResponse> updateProfile(String uid, String name, String email, String number, String address, String website, String parent_id) {
+        Log.d("dfnvjfdbvhfd",uid);
         MutableLiveData<UserResponse> data = new MutableLiveData<>();
         apiService.updateProfile(
                 Constants.API_KEY,
@@ -162,6 +163,7 @@ public class UserRespository {
                 ).enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+//                Log.d("responsecc",response.body());
                 data.setValue(response.body());
             }
 
@@ -348,12 +350,16 @@ public class UserRespository {
     }
 
     public LiveData<UserResponse> getpointhistory(String uid) {
+        Log.d("dfnjvfdjbdfb",uid);
+
         MutableLiveData<UserResponse> data = new MutableLiveData<>();
         apiService.getPointhistory(
                 Constants.API_KEY,
                 "" + uid).enqueue(new Callback<UserResponse>() {
+
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+
                 data.setValue(response.body());
             }
 

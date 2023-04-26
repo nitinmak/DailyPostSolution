@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="primary">#0776BC</color>
-    <color name="purple_500">#FF6200EE</color>
+    <color name="primary">#095C83</color>
+    <color name="primarywlt">#06374E</color>
+    <color name="purple_500">#032A3C</color>
     <color name="purple_700">#000000</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
@@ -36,6 +37,7 @@
     <color name="cardBackgroundColor">#FFFFFF</color>
     <color name="textColor">#000000</color>
     <color name="texteditColor">#000000</color>
+    <color name="textcolorwhite">#FFFFFF</color>
     <color name="hintColor">#313131</color>
     <color name="subscription_bg">#050047</color>
     <color name="success">#4CAF50</color>

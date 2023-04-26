@@ -91,8 +91,7 @@
                     android:drawableTint="@color/white"
                     android:gravity="center"
                     android:hint="@string/demo_number"
-                    android:textColor="@color/white"
-                    android:textColorHint="@color/white"
+                    android:textColor="@color/black"
                     android:textSize="@dimen/_15sdp"
                     android:textStyle="bold" />
 

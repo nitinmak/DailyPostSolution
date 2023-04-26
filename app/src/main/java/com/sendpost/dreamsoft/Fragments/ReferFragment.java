@@ -54,6 +54,7 @@ public class ReferFragment extends Fragment {
                 }
             });
         });
+
         binding.inviteBtn.setOnClickListener(v ->{
             Functions.shareApp(context);
         });

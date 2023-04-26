@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.sendpost.dreamsoft.Fragments.IntroFragment">
     <LinearLayout
-        android:visibility="gone"
+        android:visibility="visible"
         android:id="@+id/position_first"
         android:orientation="vertical"
         android:background="@drawable/gradiant_bg1"
@@ -19,8 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="@dimen/_350sdp"
-                android:layout_height="@dimen/_350sdp"
+                android:layout_width="@dimen/_450sdp"
+                android:layout_height="@dimen/_450sdp"
                 android:src="@drawable/a_intro_img"/>
 
         </LinearLayout>
@@ -66,8 +66,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
-                android:layout_width="@dimen/_350sdp"
-                android:layout_height="@dimen/_350sdp"
+                android:layout_width="@dimen/_450sdp"
+                android:layout_height="@dimen/_450sdp"
                 android:src="@drawable/a_intro_img2"/>
 
         </LinearLayout>
@@ -83,7 +83,7 @@
                 android:layout_marginTop="@dimen/_28sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FRAME (500+)"
+                android:text="FRAME (250+)"
                 android:textColor="@color/black"
                 android:textSize="35dp"
                 android:textStyle="bold" />
@@ -113,20 +113,11 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="@dimen/_350sdp"
-                android:layout_height="@dimen/_350sdp"
+                android:layout_width="@dimen/_450sdp"
+                android:layout_height="@dimen/_450sdp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/a_intro_celeb" />
 
-            <ImageView
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="@dimen/_30sdp"
-                android:layout_marginTop="@dimen/_30sdp"
-                android:layout_marginEnd="@dimen/_30sdp"
-                android:layout_marginBottom="@dimen/_30sdp"
-                android:src="@drawable/a_intro_cracker" />
         </RelativeLayout>
         <LinearLayout
 
@@ -140,7 +131,7 @@
                 android:layout_marginTop="@dimen/_28sdp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="VIDEO (2000+)"
+                android:text="VIDEO (1500+)"
                 android:textColor="@color/black"
                 android:textSize="35dp"
                 android:textStyle="bold" />

@@ -74,7 +74,7 @@
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="@dimen/_15sdp"
         android:textColor="@color/white"
-        android:backgroundTint="@color/blue_color_picker"/>
+        android:backgroundTint="@color/primary"/>
 
     </RelativeLayout>
 

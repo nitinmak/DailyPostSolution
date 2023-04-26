@@ -107,7 +107,7 @@ public class PinFragment extends Fragment {
             if (userResponse != null){
                 if (userResponse.code == SUCCESS){
                     activityMyWalletBinding.purchased.setText(": "+userResponse.purchased_pins);
-                    activityMyWalletBinding.remaining.setText(": "+userResponse.available_pins);
+//                    activityMyWalletBinding.remaining.setText(": "+userResponse.available_pins);
                     activityMyWalletBinding.used.setText(": "+userResponse.used_pins);
                     if (userResponse.getActiveUser().size() > 0){
                         list.clear();

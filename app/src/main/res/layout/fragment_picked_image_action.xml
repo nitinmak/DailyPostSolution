@@ -110,6 +110,7 @@
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/editor_bg"
+                android:tint="@color/primary"
                 android:scaleType="centerCrop"/>
             <TextView
                 android:layout_marginTop="@dimen/_5sdp"
@@ -133,6 +134,8 @@
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/editor_bg"
                 android:scaleType="centerCrop"
+                android:tint="@color/primary"
+
                 app:shapeDrawable="@drawable/a_frame_shape_oval"/>
             <TextView
                 android:layout_marginTop="@dimen/_5sdp"
@@ -156,6 +159,8 @@
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/editor_bg"
                 android:scaleType="centerCrop"
+                android:tint="@color/primary"
+
                 app:shapeDrawable="@drawable/ic_diamond_shap"/>
             <TextView
                 android:layout_marginTop="@dimen/_5sdp"
@@ -178,6 +183,8 @@
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/editor_bg"
+                android:tint="@color/primary"
+
                 android:scaleType="centerCrop"
                 app:shapeDrawable="@drawable/ic_frame_shape_square"/>
             <TextView
@@ -221,7 +228,6 @@
             android:textSize="@dimen/_12sdp"
             android:textColor="@color/white"
             android:background="@drawable/rounded_bg"
-            android:backgroundTint="#3F51B5"
             android:paddingVertical="10dp"
             android:gravity="center"/>
 

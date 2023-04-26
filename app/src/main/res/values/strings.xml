@@ -30,9 +30,9 @@
     <string name="newest">Most Send Post</string>
     <string name="edit_profile">Edit Personal Profile</string>
     <string name="profile_persion">Personal Profile</string>
-    <string name="username">Your Name</string>
+    <string name="username">Personal Name</string>
     <string name="referral">Referral ID</string>
-    <string name="email">Email</string>
+    <string name="email">Personal Email</string>
     <string name="phone">Phone Number</string>
     <string name="company">Company</string>
     <string name="facebook_page">FB Page Name</string>
@@ -123,7 +123,8 @@
     <string name="bussiness_name">Business Name</string>
     <string name="company_name">Company Name</string>
     <string name="address">Business City, State</string>
-    <string name="website">Website</string>
+    <string name="address_personal">Personal City, State</string>
+    <string name="website">Personal Website (If No, Write E-mail)</string>
     <string name="select_image">Select Image</string>
     <string name="add_greeting_photo">Add Greeting Photo</string>
     <string name="change_name">Change Name</string>
@@ -157,7 +158,7 @@
     <string name="please_select_bussiness_logo">Please select business logo</string>
     <string name="skip">Skip</string>
     <string name="select_yourlanguage">Select Your Language</string>
-    <string name="make_brand">POSTER (10000+)</string>
+    <string name="make_brand">POSTER (45000+)</string>
     <string name="best_and_easy_way_to_make_your_business_posters_like_a_brand">Simple and easy way to daily connect your relatives and business friends and leave a good impression on their mind..</string>
     <string name="best_way_to_wish_your_customers_and_clients_on_behalf_of_your_business_by_making_a_festival_poster">Motivation is important in life. When you get it, you use it to drive yourself to a better place.</string>
     <string name="login_in_to_continue">Log in to continue..</string>
@@ -237,6 +238,7 @@
     <string name="premium_items">Premium Items</string>
     <string name="festival">Festival</string>
     <string name="About">About</string>
+    <string name="About_here">Write Here...</string>
     <string name="lorem_ipsum">" is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"</string>
     <string name="demo_website" translatable="false"></string>
     <string name="business_card">Visiting Card </string>

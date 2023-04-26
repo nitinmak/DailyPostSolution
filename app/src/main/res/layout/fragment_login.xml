@@ -23,7 +23,6 @@
             android:layout_gravity="center"
             android:layout_width="@dimen/_100sdp"
             android:layout_height="@dimen/_100sdp"
-
             app:cardCornerRadius="@dimen/_20sdp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,8 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:src="@drawable/ic_call"
-                  />
+                android:src="@drawable/ic_call" />
 
             <TextView
                 android:id="@+id/country_code"

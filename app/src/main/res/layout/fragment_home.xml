@@ -108,7 +108,7 @@
                             <RelativeLayout
                                 android:id="@+id/top_layout"
                                 android:layout_width="wrap_content"
-                                android:layout_height="150dp">
+                                android:layout_height="180dp">
 
                                 <com.sendpost.dreamsoft.View.AutoScrollViewPager
                                     android:id="@+id/viewPager"
@@ -136,55 +136,56 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical">
-                            <!--                            <androidx.recyclerview.widget.RecyclerView-->
-                            <!--                                android:clipToPadding="true"-->
-                            <!--                                android:id="@+id/rv_custome_category"-->
-                            <!--                                android:layout_width="match_parent"-->
-                            <!--                                android:layout_height="wrap_content"-->
-                            <!--                                android:layoutAnimation="@anim/rc_animation"-->
-                            <!--                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-                            <!--                                android:orientation="horizontal"-->
-                            <!--                                tools:listitem="@layout/item_custome_category_home" />-->
 
-                            <!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
-                            <!--                                android:layout_marginVertical="@dimen/_5sdp"-->
-                            <!--                                android:id="@+id/custom_category_shimmer_lay"-->
-                            <!--                                android:layout_width="match_parent"-->
-                            <!--                                android:layout_height="wrap_content">-->
-                            <!--                                <LinearLayout-->
-                            <!--                                    android:layout_width="match_parent"-->
-                            <!--                                    android:layout_height="wrap_content"-->
-                            <!--                                    android:orientation="horizontal">-->
-                            <!--                                    <androidx.cardview.widget.CardView-->
-                            <!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
-                            <!--                                        android:layout_width="@dimen/_120sdp"-->
-                            <!--                                        android:layout_height="@dimen/_40sdp"-->
-                            <!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
-                            <!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
+<!--                            <androidx.recyclerview.widget.RecyclerView-->
+<!--                                android:clipToPadding="true"-->
+<!--                                android:id="@+id/rv_custome_category"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:layoutAnimation="@anim/rc_animation"-->
+<!--                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                                android:orientation="horizontal"-->
+<!--                                tools:listitem="@layout/item_custome_category_home" />-->
 
-                            <!--                                    <androidx.cardview.widget.CardView-->
-                            <!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
-                            <!--                                        android:layout_width="@dimen/_120sdp"-->
-                            <!--                                        android:layout_height="@dimen/_40sdp"-->
-                            <!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
-                            <!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
+<!--                            <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--                                android:layout_marginVertical="@dimen/_5sdp"-->
+<!--                                android:id="@+id/custom_category_shimmer_lay"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="wrap_content">-->
+<!--                                <LinearLayout-->
+<!--                                    android:layout_width="match_parent"-->
+<!--                                    android:layout_height="wrap_content"-->
+<!--                                    android:orientation="horizontal">-->
+<!--                                    <androidx.cardview.widget.CardView-->
+<!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
+<!--                                        android:layout_width="@dimen/_120sdp"-->
+<!--                                        android:layout_height="@dimen/_40sdp"-->
+<!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
+<!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
 
-                            <!--                                    <androidx.cardview.widget.CardView-->
-                            <!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
-                            <!--                                        android:layout_width="@dimen/_120sdp"-->
-                            <!--                                        android:layout_height="@dimen/_40sdp"-->
-                            <!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
-                            <!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
+<!--                                    <androidx.cardview.widget.CardView-->
+<!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
+<!--                                        android:layout_width="@dimen/_120sdp"-->
+<!--                                        android:layout_height="@dimen/_40sdp"-->
+<!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
+<!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
 
-                            <!--                                    <androidx.cardview.widget.CardView-->
-                            <!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
-                            <!--                                        android:layout_width="@dimen/_120sdp"-->
-                            <!--                                        android:layout_height="@dimen/_40sdp"-->
-                            <!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
-                            <!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
+<!--                                    <androidx.cardview.widget.CardView-->
+<!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
+<!--                                        android:layout_width="@dimen/_120sdp"-->
+<!--                                        android:layout_height="@dimen/_40sdp"-->
+<!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
+<!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
 
-                            <!--                                </LinearLayout>-->
-                            <!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
+<!--                                    <androidx.cardview.widget.CardView-->
+<!--                                        android:layout_marginLeft="@dimen/_13sdp"-->
+<!--                                        android:layout_width="@dimen/_120sdp"-->
+<!--                                        android:layout_height="@dimen/_40sdp"-->
+<!--                                        app:cardBackgroundColor="@color/shimmer_bg"-->
+<!--                                        app:cardCornerRadius="@dimen/_5sdp"/>-->
+
+<!--                                </LinearLayout>-->
+<!--                            </com.facebook.shimmer.ShimmerFrameLayout>-->
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -204,7 +205,8 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textColor="@color/textColor"
-                                        android:textSize="@dimen/_14sdp"
+                                        android:text="@string/upcoming_festivals"
+                                        android:textSize="@dimen/_16sdp"
                                         android:textStyle="bold" />
 
                                 </LinearLayout>

@@ -13,10 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
         <RelativeLayout
             android:id="@+id/top_lay"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="@dimen/_100sdp">
 
             <View
                 android:layout_width="match_parent"
@@ -24,43 +29,41 @@
                 android:layout_centerVertical="true"
                 android:background="#00FFE1" />
 
-
             <com.sendpost.dreamsoft.View.ShapesImage
                 android:id="@+id/bussiness_pic"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/_120sdp"
-                android:layout_alignParentTop="true"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
                 android:layout_centerInParent="true"
                 android:src="@drawable/ic_user_icon"
                 app:shapeDrawable="@drawable/a_frame_shape_oval" />
 
+        </RelativeLayout>
+
             <TextView
                 android:id="@+id/bussiness_name"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/bussiness_pic"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/_55sdp"
                 android:text="@string/app_name"
+                android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_18sdp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/about_bussiness"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bussiness_name"
                 android:layout_centerHorizontal="true"
                 android:textColorHint="@color/white"
                 android:textColor="@color/white"
-                android:text="sdfsdsfgsfgs"
+                android:text=""
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
-        </RelativeLayout>
 
-
-
+        </LinearLayout>
         <LinearLayout
             android:id="@+id/bottom_lay"
             android:orientation="vertical"

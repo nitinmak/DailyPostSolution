@@ -8,10 +8,10 @@
     tools:context="com.sendpost.dreamsoft.Account.EditProfileFragment">
 
     <RelativeLayout
-        android:background="@color/cardBackgroundColor"
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="55dp">
+        android:layout_height="55dp"
+        android:background="@color/cardBackgroundColor">
 
         <ImageButton
             android:id="@+id/back_btn"
@@ -50,40 +50,41 @@
             android:padding="12dp">
 
             <RelativeLayout
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="20dp">
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:background="@drawable/businessprof"
+                android:gravity="center">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/bussiness_pic"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/company"
-                    app:civ_border_color="@color/purple_500"
-                    app:civ_border_width="2dp" />
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/logox"
+                    >
 
-                <ImageButton
-                    android:id="@+id/upload_pic_btn"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_centerInParent="true"
-                    android:background="@color/transparent"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/ic_camera"
-                    app:tint="@color/white" />
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/bussiness_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/company"
+                        app:civ_border_color="@color/purple_500"
+                        app:civ_border_width="2dp" />
+
+                    <ImageButton
+                        android:id="@+id/upload_pic_btn"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerInParent="true"
+                        android:background="@color/transparent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_camera"
+                        app:tint="@color/white" />
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="3dp"
-                android:gravity="center_horizontal"
-                android:text="@string/bussiness_logo"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/_13sdp"
-                android:textStyle="bold" />
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -290,7 +291,7 @@
                     android:layout_toEndOf="@+id/ivUserAddress"
                     android:backgroundTint="@color/transparent"
                     android:gravity="top"
-                    android:hint="@string/About"
+                    android:hint="@string/About_here"
                     android:minHeight="@dimen/_100sdp"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"

@@ -47,19 +47,22 @@
             android:gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="12dp">
-
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:gravity="center"
+                android:background="@drawable/personalprof"
+                >
             <RelativeLayout
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginTop="20dp">
-
+                 >
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/user_pic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
                     android:src="@drawable/personalprofile"
-                    app:civ_border_color="@color/purple_500"
                     app:civ_border_width="2dp" />
 
                 <ImageButton
@@ -73,6 +76,8 @@
                     app:tint="@color/white" />
 
             </RelativeLayout>
+            </RelativeLayout>
+
 
             <TextView
                 android:layout_width="match_parent"
@@ -97,7 +102,7 @@
                     android:layout_centerVertical="true"
                     android:layout_marginStart="6dp"
                     android:scaleType="fitCenter"
-                    android:src="@drawable/nav_profile_active"
+                    android:src="@drawable/ic_share"
                     app:tint="@color/texteditColor" />
 
                 <EditText
@@ -235,7 +240,7 @@
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivUserAddressp"
                     android:backgroundTint="@color/transparent"
-                    android:hint="@string/address"
+                    android:hint="@string/address_personal"
                     android:inputType="textMultiLine"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"

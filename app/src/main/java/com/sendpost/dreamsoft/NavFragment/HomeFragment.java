@@ -91,7 +91,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+//                transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
                 transaction.addToBackStack(null);
                 transaction.replace(android.R.id.content, new SearchFragment()).commit();
             }
@@ -168,73 +168,74 @@ public class HomeFragment extends Fragment {
         version_tv.setText("Version " + BuildConfig.VERSION_NAME);
 
         businesscard_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             startActivity(new Intent(context, BusinessCardActivity_Digital.class));
         });
 
         businesscard_visiting_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             startActivity(new Intent(context, BusinessCardActivity.class));
         });
 
         contact_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             showContactFragment();
         });
 
         pinwallet.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             startActivity(new Intent(getActivity(), WalletePager.class));
         });
 
         mypost_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             startActivity(new Intent(getActivity(), MyPostsActivity.class));
         });
 
         edit_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             if (HomeActivity.fragmentManager.isDestroyed()){
                 HomeActivity.fragmentManager = getFragmentManager();
             }
             FragmentTransaction transaction = HomeActivity.fragmentManager.beginTransaction();
-            transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+//            transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);
             transaction.addToBackStack(null);
             transaction.replace(R.id.home_activity, new EditProfileFragment()).commit();
         });
 
         bussiness_lay.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             startActivity(new Intent(getActivity(), AddBussinessFragment.class));
 //          startActivity(new Intent(getActivity(), MyBussinessActivity.class));
         });
 
         privacy_policy_lay.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             Intent intent = new Intent(getContext(), WebviewA.class);
             intent.putExtra("title", getString(R.string.privacy_policy));
             startActivity(intent);
         });
 
         terms_lay.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             Intent intent = new Intent(getContext(), WebviewA.class);
             intent.putExtra("title", getString(R.string.terms_service));
             startActivity(intent);
         });
 
         share_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
-//            Functions.shareApp(getContext());
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
+
+            Functions.shareApp(getContext());
             ReferFragment comment_f = new ReferFragment();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
-            transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+//            transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);
             transaction.addToBackStack(null);
             transaction.replace(android.R.id.content, comment_f).commit();
         });
 
         rate_btn.setOnClickListener(v -> {
-            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
             Functions.rateApp(getContext());
         });
 
@@ -246,7 +247,7 @@ public class HomeFragment extends Fragment {
 
     private void showContactFragment() {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+//        transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);
         transaction.addToBackStack(null);
         transaction.replace(android.R.id.content, new ContactFragment()).commit();
     }
@@ -254,7 +255,7 @@ public class HomeFragment extends Fragment {
     private void showPremiumFragment() {
         PremiumFragment comment_f = new PremiumFragment();
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+//        transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
         Bundle args = new Bundle();
         args.putString("from", "preview");
         comment_f.setArguments(args);
