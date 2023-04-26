@@ -13,6 +13,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.sendpost.dreamsoft.adapter.UpcomingImagesAdapter;
 import com.sendpost.dreamsoft.databinding.DailyFragmentBinding;
+import com.sendpost.dreamsoft.databinding.DailynewfragmentBinding;
 import com.sendpost.dreamsoft.model.CategoryModel;
 import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 
@@ -25,11 +26,11 @@ public class DailyNewFragment extends Fragment {
     Context context;
     View view;
     HomeViewModel homeViewModel;
-    DailyFragmentBinding binding;
+    DailynewfragmentBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        binding = DailyFragmentBinding.inflate(getLayoutInflater());
+        binding = DailynewfragmentBinding.inflate(getLayoutInflater());
         return binding.getRoot();
     }
 
@@ -48,201 +49,400 @@ public class DailyNewFragment extends Fragment {
             if (homeResponse != null){
 
                 if (homeResponse.dailnewyroutin1.size() > 0){
-                    setamazingadapter(homeResponse.dailnewyroutin1,homeResponse.getDailynew1());
+                    setdaylyn1(homeResponse.dailnewyroutin1,homeResponse.getDailynew1());
                 }
 
                 if (homeResponse.dailnewyroutin2.size() > 0){
-                    setledthotsadapter(homeResponse.dailnewyroutin2,homeResponse.getDailynew2());
+                    setdaylyn2(homeResponse.dailnewyroutin2,homeResponse.getDailynew2());
                 }
 
                 if (homeResponse.dailnewyroutin3.size() > 0){
-                    setdaily3sadapter(homeResponse.dailnewyroutin3,homeResponse.dailynew3);
+                    setdaylyn3(homeResponse.dailnewyroutin3,homeResponse.dailynew3);
                 }
 
                 if (homeResponse.dailnewyroutin4.size() > 0){
-                    setmsgtsocadapter(homeResponse.dailnewyroutin4,homeResponse.dailynew4);
+                    setdaylyn4(homeResponse.dailnewyroutin4,homeResponse.dailynew4);
                 }
 
                 if (homeResponse.dailnewyroutin5.size() > 0){
-                    setgoddevaadapter(homeResponse.dailnewyroutin5,homeResponse.dailynew5);
+                    setdaylyn5(homeResponse.dailnewyroutin5,homeResponse.dailynew5);
                 }
 
                 if (homeResponse.dailnewyroutin6.size() > 0) {
-                    setgoddeviadapter(homeResponse.dailnewyroutin6,homeResponse.dailynew6);
+                    setdaylyn6(homeResponse.dailnewyroutin6,homeResponse.dailynew6);
                 }
 
                 if (homeResponse.dailnewyroutin7.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin7,homeResponse.dailynew7);
+                    setdaylyn7(homeResponse.dailnewyroutin7,homeResponse.dailynew7);
                 }
                 if (homeResponse.dailnewyroutin8.size() > 0){
-                    setrashiadapter(homeResponse.dailnewyroutin8,homeResponse.dailynew8);
+                    setdaylyn8(homeResponse.dailnewyroutin8,homeResponse.dailynew8);
                 }
                 if (homeResponse.dailnewyroutin9.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin9,homeResponse.dailynew9);
+                    setdaylyn9(homeResponse.dailnewyroutin9,homeResponse.dailynew9);
                 }
                 if (homeResponse.dailnewyroutin10.size() > 0){
-                    setrashiadapter(homeResponse.dailnewyroutin10,homeResponse.dailynew10);
+                    setdaylyn10(homeResponse.dailnewyroutin10,homeResponse.dailynew10);
                 }
                 if (homeResponse.dailnewyroutin11.size() > 0){
-                    setamazingadapter(homeResponse.dailnewyroutin11,homeResponse.dailynew11);
+                    setdaylyn11(homeResponse.dailnewyroutin11,homeResponse.dailynew11);
                 }
 
                 if (homeResponse.dailnewyroutin12.size() > 0){
-                    setledthotsadapter(homeResponse.dailnewyroutin12,homeResponse.dailynew12);
+                    setdaylyn12(homeResponse.dailnewyroutin12,homeResponse.dailynew12);
                 }
 
                 if (homeResponse.dailnewyroutin13.size() > 0){
-                    setdaily3sadapter(homeResponse.dailnewyroutin13,homeResponse.dailynew13);
+                    setdaylyn13(homeResponse.dailnewyroutin13,homeResponse.dailynew13);
                 }
 
                 if (homeResponse.dailnewyroutin14.size() > 0){
-                    setmsgtsocadapter(homeResponse.dailnewyroutin14,homeResponse.dailynew14);
+                    setdaylyn14(homeResponse.dailnewyroutin14,homeResponse.dailynew14);
                 }
 
                 if (homeResponse.dailnewyroutin15.size() > 0){
-                    setgoddevaadapter(homeResponse.dailnewyroutin15,homeResponse.dailynew15);
+                    setdaylyn15(homeResponse.dailnewyroutin15,homeResponse.dailynew15);
                 }
 
                 if (homeResponse.dailnewyroutin16.size() > 0) {
-                    setgoddeviadapter(homeResponse.dailnewyroutin16,homeResponse.dailynew16);
+                    setdaylyn16(homeResponse.dailnewyroutin16,homeResponse.dailynew16);
                 }
 
                 if (homeResponse.dailnewyroutin17.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin17,homeResponse.dailynew17);
+                    setdaylyn17(homeResponse.dailnewyroutin17,homeResponse.dailynew17);
                 }
                 if (homeResponse.dailnewyroutin18.size() > 0){
-                    setrashiadapter(homeResponse.dailnewyroutin18,homeResponse.dailynew18);
+                    setdaylyn18(homeResponse.dailnewyroutin18,homeResponse.dailynew18);
                 }
                 if (homeResponse.dailnewyroutin19.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin19,homeResponse.dailynew19);
+                    setdaylyn19(homeResponse.dailnewyroutin19,homeResponse.dailynew19);
                 }
                 if (homeResponse.dailnewyroutin20.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin20,homeResponse.dailynew20);
+                    setdaylyn20(homeResponse.dailnewyroutin20,homeResponse.dailynew20);
                 }
                 if (homeResponse.dailnewyroutin21.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin21,homeResponse.dailynew21);
+                    setdaylyn21(homeResponse.dailnewyroutin21,homeResponse.dailynew21);
                 }
 
                 if (homeResponse.dailnewyroutin22.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin22,homeResponse.dailynew22);
+                    setdaylyn22(homeResponse.dailnewyroutin22,homeResponse.dailynew22);
                 }
 
                 if (homeResponse.dailnewyroutin23.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin23,homeResponse.dailynew23);
+                    setdaylyn23(homeResponse.dailnewyroutin23,homeResponse.dailynew23);
                 }
 
                 if (homeResponse.dailnewyroutin24.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin24,homeResponse.dailynew24);
+                    setdaylyn24(homeResponse.dailnewyroutin24,homeResponse.dailynew24);
                 }
 
                 if (homeResponse.dailnewyroutin25.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin25,homeResponse.dailynew25);
+                    setdaylyn25(homeResponse.dailnewyroutin25,homeResponse.dailynew25);
                 }
 
                 if (homeResponse.dailnewyroutin26.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin26,homeResponse.dailynew26);
+                    setdaylyn26(homeResponse.dailnewyroutin26,homeResponse.dailynew26);
                 }
 
                 if (homeResponse.dailnewyroutin27.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin27,homeResponse.dailynew27);
+                    setdaylyn27(homeResponse.dailnewyroutin27,homeResponse.dailynew27);
                 }
 
                 if (homeResponse.dailnewyroutin28.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin28,homeResponse.dailynew28);
+                    setdaylyn28(homeResponse.dailnewyroutin28,homeResponse.dailynew28);
                 }
 
                 if (homeResponse.dailnewyroutin29.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin29,homeResponse.dailynew29);
+                    setdaylyn29(homeResponse.dailnewyroutin29,homeResponse.dailynew29);
                 }
 
                 if (homeResponse.dailnewyroutin30.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin30,homeResponse.dailynew30);
+                    setdaylyn30(homeResponse.dailnewyroutin30,homeResponse.dailynew30);
                 }
 
                 if (homeResponse.dailnewyroutin31.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin31,homeResponse.dailynew31);
+                    setdaylyn31(homeResponse.dailnewyroutin31,homeResponse.dailynew31);
                 }
 
                 if (homeResponse.dailnewyroutin32.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin32,homeResponse.dailynew32);
+                    setdaylyn32(homeResponse.dailnewyroutin32,homeResponse.dailynew32);
                 }
 
                 if (homeResponse.dailnewyroutin33.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin33,homeResponse.dailynew33);
+                    setdaylyn33(homeResponse.dailnewyroutin33,homeResponse.dailynew33);
                 }
 
                 if (homeResponse.dailnewyroutin34.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin34,homeResponse.dailynew34);
+                    setdaylyn34(homeResponse.dailnewyroutin34,homeResponse.dailynew34);
                 }
 
                 if (homeResponse.dailnewyroutin35.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin35,homeResponse.dailynew35);
+                    setdaylyn35(homeResponse.dailnewyroutin35,homeResponse.dailynew35);
                 }
 
                 if (homeResponse.dailnewyroutin36.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin36,homeResponse.dailynew36);
+                    setdaylyn36(homeResponse.dailnewyroutin36,homeResponse.dailynew36);
                 }
 
                 if (homeResponse.dailnewyroutin37.size() > 0){
-                    setnumrologyadapter(homeResponse.dailnewyroutin37,homeResponse.dailynew37);
+                    setdaylyn37(homeResponse.dailnewyroutin37,homeResponse.dailynew37);
                 }
             }
         });
     }
 
-    private void setamazingadapter(List<CategoryModel> amazing, String dailyc1) {
-        binding.dailyShimmerLay.stopShimmer();
-        binding.dailyShimmerLay.setVisibility(View.GONE);
-        binding.daily1.setText(" ("+dailyc1+")");
-        binding.rvdailyCategory.setAdapter(new UpcomingImagesAdapter(context, amazing,false));
+    private void setdaylyn1(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.agriShimmerLay.stopShimmer();
+        binding.agriShimmerLay.setVisibility(View.GONE);
+        binding.daynew1.setText(" ("+dailycgoddevi+")");
+        binding.agriculturenew.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setledthotsadapter(List<CategoryModel> ledth, String dailyc2) {
-        binding.motiShimmerLay.stopShimmer();
-        binding.motiShimmerLay.setVisibility(View.GONE);
-        binding.daily2.setText(" ("+dailyc2+")");
-        binding.rvledmotivationalCategory.setAdapter(new UpcomingImagesAdapter(context, ledth,false));
+    private void setdaylyn2(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.animalShimmerLay.stopShimmer();
+        binding.animalShimmerLay.setVisibility(View.GONE);
+        binding.daynew2.setText(" ("+dailycgoddevi+")");
+        binding.rvanimalfoodCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setdaily3sadapter(List<CategoryModel> day3, String dailyc3) {
-        binding.daily3ShimmerLay.stopShimmer();
-        binding.daily3ShimmerLay.setVisibility(View.GONE);
-        binding.daily3.setText(" ("+dailyc3+")");
-        binding.rvdaylyr3Category.setAdapter(new UpcomingImagesAdapter(context, day3,false));
+    private void setdaylyn3(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.automativeShimmerLay.stopShimmer();
+        binding.automativeShimmerLay.setVisibility(View.GONE);
+        binding.dailynew3.setText(" ("+dailycgoddevi+")");
+        binding.automativeCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setmsgtsocadapter(List<CategoryModel> msgtsoc, String dailycmsgsoc) {
-        binding.msgtosocShimmerLay.stopShimmer();
-        binding.msgtosocShimmerLay.setVisibility(View.GONE);
-        binding.dailycmsgsoc.setText(" ("+dailycmsgsoc+")");
-        binding.rvmsgtosocCategory.setAdapter(new UpcomingImagesAdapter(context, msgtsoc,false));
+    private void setdaylyn4(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.beautysalonShimmerLay.stopShimmer();
+        binding.beautysalonShimmerLay.setVisibility(View.GONE);
+        binding.dailynew4.setText(" ("+dailycgoddevi+")");
+        binding.rvbeautysalonCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setnumrologyadapter(List<CategoryModel> numro, String dailycnumro) {
-//        binding.numShimmerLay.stopShimmer();
-//        binding.numShimmerLay.setVisibility(View.GONE);
-//        binding.dailycnumrolo.setText(" ("+dailycnumro+")");
-//        binding.rvnumrologyCategory.setAdapter(new UpcomingImagesAdapter(context, numro,false));
+    private void setdaylyn5(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.buildingShimmerLay.stopShimmer();
+        binding.buildingShimmerLay.setVisibility(View.GONE);
+        binding.dailynew5.setText(" ("+dailycgoddevi+")");
+        binding.rvbuildingCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setrashiadapter(List<CategoryModel> rashi, String dailycrashi) {
-//        binding.rashiShimmerLay.stopShimmer();
-//        binding.rashiShimmerLay.setVisibility(View.GONE);
-//        binding.dailycrashi.setText(" ("+dailycrashi+")");
-//        binding.rvrashiCategory.setAdapter(new UpcomingImagesAdapter(context, rashi,false));
+    private void setdaylyn6(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.clothingtextShimmerLay.stopShimmer();
+        binding.clothingtextShimmerLay.setVisibility(View.GONE);
+        binding.dailynew6.setText(" ("+dailycgoddevi+")");
+        binding.rvclothingtextCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setgoddevaadapter(List<CategoryModel> goddeva, String dailycgoddeva) {
-        binding.goddevaShimmerLay.stopShimmer();
-        binding.goddevaShimmerLay.setVisibility(View.GONE);
-        binding.dailycgoddeva.setText(" ("+dailycgoddeva+")");
-        binding.rvgoddevaCategory.setAdapter(new UpcomingImagesAdapter(context, goddeva,false));
+    private void setdaylyn7(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.cunstructioncontracShimmerLay.stopShimmer();
+        binding.cunstructioncontracShimmerLay.setVisibility(View.GONE);
+        binding.dailynew7.setText(" ("+dailycgoddevi+")");
+        binding.rvcustomerservicecenCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
-    private void setgoddeviadapter(List<CategoryModel> devi, String dailycgoddevi) {
-//        binding.goddeviShimmerLay.stopShimmer();
-//        binding.goddeviShimmerLay.setVisibility(View.GONE);
-//        binding.dailycgoddevi.setText(" ("+dailycgoddevi+")");
-//        binding.rvgoddeviCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    private void setdaylyn8(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.customerservicecenShimmerLay.stopShimmer();
+        binding.customerservicecenShimmerLay.setVisibility(View.GONE);
+        binding.dailynew8.setText(" ("+dailycgoddevi+")");
+        binding.rvcustomerservicecenCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn9(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.educationShimmerLay.stopShimmer();
+        binding.educationShimmerLay.setVisibility(View.GONE);
+        binding.dailynew9.setText(" ("+dailycgoddevi+")");
+        binding.rveducationCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn10(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.electricalShimmerLay.stopShimmer();
+        binding.electricalShimmerLay.setVisibility(View.GONE);
+        binding.dailynew10.setText(" ("+dailycgoddevi+")");
+        binding.rvelectricalCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn11(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.entertainmentShimmerLay.stopShimmer();
+        binding.entertainmentShimmerLay.setVisibility(View.GONE);
+        binding.dailynew11.setText(" ("+dailycgoddevi+")");
+        binding.rventertainmentCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+    private void setdaylyn12(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.fashionlifeShimmerLay.stopShimmer();
+        binding.fashionlifeShimmerLay.setVisibility(View.GONE);
+        binding.dailynew12.setText(" ("+dailycgoddevi+")");
+        binding.rvfashionlifeCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn13(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.cookingmakingShimmerLay.stopShimmer();
+        binding.cookingmakingShimmerLay.setVisibility(View.GONE);
+        binding.dailynew13.setText(" ("+dailycgoddevi+")");
+        binding.rvcookingmakingCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+    private void setdaylyn14(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.preecoockedShimmerLay.stopShimmer();
+        binding.preecoockedShimmerLay.setVisibility(View.GONE);
+        binding.dailynew14.setText(" ("+dailycgoddevi+")");
+        binding.rvpreecoockedCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn15(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.furnitureShimmerLay.stopShimmer();
+        binding.furnitureShimmerLay.setVisibility(View.GONE);
+        binding.dailynew15.setText(" ("+dailycgoddevi+")");
+        binding.rvfurnitureCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+    private void setdaylyn16(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.handloomShimmerLay.stopShimmer();
+        binding.handloomShimmerLay.setVisibility(View.GONE);
+        binding.dailynew16.setText(" ("+dailycgoddevi+")");
+        binding.rvhandloomCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+    private void setdaylyn17(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.hardwareShimmerLay.stopShimmer();
+        binding.hardwareShimmerLay.setVisibility(View.GONE);
+        binding.dailynew17.setText(" ("+dailycgoddevi+")");
+        binding.rvithardwareCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn18(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.homegardenShimmerLay.stopShimmer();
+        binding.homegardenShimmerLay.setVisibility(View.GONE);
+        binding.dailynew18.setText(" ("+dailycgoddevi+")");
+        binding.rvhomegardenCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn19(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.hospitalclicnickShimmerLay.stopShimmer();
+        binding.hospitalclicnickShimmerLay.setVisibility(View.GONE);
+        binding.dailynew19.setText(" ("+dailycgoddevi+")");
+        binding.rvhospitalclicnickCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn20(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.industrialequipmentShimmerLay.stopShimmer();
+        binding.industrialequipmentShimmerLay.setVisibility(View.GONE);
+        binding.dailynew20.setText(" ("+dailycgoddevi+")");
+        binding.rvindustrialequipmentCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn21(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.insuranceShimmerLay.stopShimmer();
+        binding.insuranceShimmerLay.setVisibility(View.GONE);
+        binding.dailynew21.setText(" ("+dailycgoddevi+")");
+        binding.rvinsuranceCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn22(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.interiorShimmerLay.stopShimmer();
+        binding.interiorShimmerLay.setVisibility(View.GONE);
+        binding.dailynew22.setText(" ("+dailycgoddevi+")");
+        binding.rvinteriorCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn23(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.investmentShimmerLay.stopShimmer();
+        binding.investmentShimmerLay.setVisibility(View.GONE);
+        binding.dailynew23.setText(" ("+dailycgoddevi+")");
+        binding.rvinvestmentCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn24(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.ithardwareShimmerLay.stopShimmer();
+        binding.ithardwareShimmerLay.setVisibility(View.GONE);
+        binding.dailynew24.setText(" ("+dailycgoddevi+")");
+        binding.rvithardwareCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn25(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.jewllaryShimmerLay.stopShimmer();
+        binding.jewllaryShimmerLay.setVisibility(View.GONE);
+        binding.dailynew25.setText(" ("+dailycgoddevi+")");
+        binding.rvjewllaryCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn26(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.laboretroyShimmerLay.stopShimmer();
+        binding.laboretroyShimmerLay.setVisibility(View.GONE);
+        binding.dailynew26.setText(" ("+dailycgoddevi+")");
+        binding.rvlaboretroyCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn27(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.loanShimmerLay.stopShimmer();
+        binding.loanShimmerLay.setVisibility(View.GONE);
+        binding.dailynew27.setText(" ("+dailycgoddevi+")");
+        binding.rvloanCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn28(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.mobilestoreShimmerLay.stopShimmer();
+        binding.mobilestoreShimmerLay.setVisibility(View.GONE);
+        binding.dailynew28.setText(" ("+dailycgoddevi+")");
+        binding.rvmobilestoreCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn29(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.profassionalShimmerLay.stopShimmer();
+        binding.profassionalShimmerLay.setVisibility(View.GONE);
+        binding.dailynew29.setText(" ("+dailycgoddevi+")");
+        binding.rvprofassionalCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn30(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.realestateShimmerLay.stopShimmer();
+        binding.realestateShimmerLay.setVisibility(View.GONE);
+        binding.dailynew30.setText(" ("+dailycgoddevi+")");
+        binding.rvrealestateCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn31(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.securitysurvilanceShimmerLay.stopShimmer();
+        binding.securitysurvilanceShimmerLay.setVisibility(View.GONE);
+        binding.dailynew31.setText(" ("+dailycgoddevi+")");
+        binding.rvsecuritysurvilanceCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn32(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.spiritualShimmerLay.stopShimmer();
+        binding.spiritualShimmerLay.setVisibility(View.GONE);
+        binding.dailynew32.setText(" ("+dailycgoddevi+")");
+        binding.rvspiritualCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn33(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.toursandtravelsSimmer.stopShimmer();
+        binding.toursandtravelsSimmer.setVisibility(View.GONE);
+        binding.dailynew33.setText(" ("+dailycgoddevi+")");
+        binding.rvtoursandtravels.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn34(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.ttinternationalShimmerLay.stopShimmer();
+        binding.ttinternationalShimmerLay.setVisibility(View.GONE);
+        binding.dailynew34.setText(" ("+dailycgoddevi+")");
+        binding.rvttinternationalCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn35(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.transportationShimmerLay.stopShimmer();
+        binding.transportationShimmerLay.setVisibility(View.GONE);
+        binding.dailynew35.setText(" ("+dailycgoddevi+")");
+        binding.rvtransportationCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn36(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.visaimigrationShimmerLay.stopShimmer();
+        binding.visaimigrationShimmerLay.setVisibility(View.GONE);
+        binding.dailynew36.setText(" ("+dailycgoddevi+")");
+        binding.rvvisaimigrationCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+    }
+
+    private void setdaylyn37(List<CategoryModel> devi, String dailycgoddevi) {
+        binding.healthgymwellShimmerLay.stopShimmer();
+        binding.healthgymwellShimmerLay.setVisibility(View.GONE);
+        binding.dailynew37.setText(" ("+dailycgoddevi+")");
+        binding.rvhealthgymwellCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 }

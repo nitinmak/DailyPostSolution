@@ -1314,6 +1314,86 @@
                 </LinearLayout>
             </com.facebook.shimmer.ShimmerFrameLayout>
 
+            <RelativeLayout
+                android:layout_marginTop="@dimen/_10sdp"
+                android:paddingBottom="5dp"
+                android:paddingHorizontal="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/dailynewrouting17"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/dailynew17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(0)"
+                        android:textColor="@color/textColor"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:clipToPadding="true"
+                android:layoutAnimation="@anim/rc_animation"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:id="@+id/rvhardware"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_upcoming_images_home" />
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:layout_marginVertical="@dimen/_5sdp"
+                android:id="@+id/hardware_shimmer_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:orientation="horizontal">
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                    <androidx.cardview.widget.CardView
+                        app:cardBackgroundColor="@color/shimmer_bg"
+                        android:layout_marginLeft="12dp"
+                        app:cardCornerRadius="15dp"
+                        android:layout_width="120dp"
+                        android:layout_height="130dp"
+                        app:cardElevation="10dp"/>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
 
             <RelativeLayout
                 android:layout_marginTop="@dimen/_10sdp"
@@ -2602,7 +2682,7 @@
                 android:clipToPadding="true"
                 android:layoutAnimation="@anim/rc_animation"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior"
-                android:id="@+id/rvttdomesticCategory"
+                android:id="@+id/rvtoursandtravels"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -2611,7 +2691,7 @@
 
             <com.facebook.shimmer.ShimmerFrameLayout
                 android:layout_marginVertical="@dimen/_5sdp"
-                android:id="@+id/ttdomestic_shimmer_lay"
+                android:id="@+id/toursandtravels_simmer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 

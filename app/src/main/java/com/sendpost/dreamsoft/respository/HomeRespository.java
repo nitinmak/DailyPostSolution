@@ -77,7 +77,7 @@ public class HomeRespository {
 
         Log.d("sdsfs",Constants.API_KEY);
         Log.d("sdsfs",apiService.getdailynewData(Constants.API_KEY).toString());
-        apiService.getdailyData(Constants.API_KEY).enqueue(new Callback<HomeResponse>() {
+        apiService.getdailynewData(Constants.API_KEY).enqueue(new Callback<HomeResponse>() {
             @Override
             public void onResponse(Call<HomeResponse> call, Response<HomeResponse> response) {
                 data.setValue(response.body());
