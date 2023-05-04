@@ -107,6 +107,7 @@ public class LoginFragment extends Fragment {
 
         mAuth = FirebaseAuth.getInstance();
         LoginManager.getInstance().logOut();
+
         sharedPreferences = context.getSharedPreferences(Variables.PREF_NAME, MODE_PRIVATE);
 
         ccp = new CountryCodePicker(view.getContext());

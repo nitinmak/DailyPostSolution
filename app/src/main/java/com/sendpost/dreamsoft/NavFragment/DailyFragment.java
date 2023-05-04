@@ -8,9 +8,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
+
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.adapter.UpcomingImagesAdapter;
 import com.sendpost.dreamsoft.databinding.DailyFragmentBinding;
 import com.sendpost.dreamsoft.model.CategoryModel;
@@ -37,6 +40,15 @@ public class DailyFragment extends Fragment {
         context = getContext();
 
         this.view  = view;
+        binding.searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+                transaction.addToBackStack(null);
+                transaction.replace(android.R.id.content, new SearchFragment()).commit();
+            }
+        });
 
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 

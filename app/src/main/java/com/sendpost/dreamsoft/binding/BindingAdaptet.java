@@ -48,7 +48,7 @@ public class BindingAdaptet {
     }
 
 
-    @BindingAdapter("android:EditimageURL")
+    @BindingAdapter("android:Edit-imageURL")
     public static void setEditImageUrl(CircleImageView imageView, String url){
         try {
             Glide.with(imageView.getContext()).load(Functions.getItemBaseUrl(url)).placeholder(R.drawable.personalprofile).into(imageView);

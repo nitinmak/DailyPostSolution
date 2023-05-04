@@ -44,7 +44,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onPageSelected(int position) {
                 if (position == 2){
-                    next_btn.setText("Let's Start");
+                    next_btn.setText("Start");
                 }else {
                     next_btn.setText("Next");
                 }
@@ -75,10 +75,8 @@ public class IntroActivity extends AppCompatActivity {
                 finish();
             }
         });
-
-
     }
-    class ViewPagerAdapter extends FragmentPagerAdapter {
+    static class ViewPagerAdapter extends FragmentPagerAdapter {
 
         public ViewPagerAdapter(@NonNull FragmentManager fm) {
             super(fm);

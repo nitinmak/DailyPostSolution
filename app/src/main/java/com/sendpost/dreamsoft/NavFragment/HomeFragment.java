@@ -13,6 +13,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -97,6 +99,14 @@ public class HomeFragment extends Fragment {
             }
         });
 
+//        binding.swipeRefresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                getHomeData();
+//                binding.swipeRefresh.setRefreshing(false);
+//            }
+//        });
+
         binding.languageBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -126,6 +136,9 @@ public class HomeFragment extends Fragment {
 //        });
 
         getHomeData();
+
+
+
         iniNavigation(view);
     }
 
@@ -226,7 +239,7 @@ public class HomeFragment extends Fragment {
         share_btn.setOnClickListener(v -> {
 //            binding.drawerLay.closeDrawer(Gravity.LEFT);
 
-            Functions.shareApp(getContext());
+
             ReferFragment comment_f = new ReferFragment();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
 //            transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);

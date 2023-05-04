@@ -44,8 +44,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_5sdp"
                 android:hint="@string/app_name"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
                 android:textSize="@dimen/_22sdp"
                 android:textStyle="bold" />
 
@@ -58,10 +58,11 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:ellipsize="end"
                 android:gravity="center|top"
-                android:hint="@string/address"
-                android:maxLines="4"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                android:hint=""
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:lines="3"
+                android:textColor="@color/white"
                 android:textSize="@dimen/_12sdp"
                 android:textStyle="bold" />
 
@@ -79,6 +80,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
                 android:orientation="vertical">
 
 
@@ -94,6 +96,7 @@
                     android:textColor="@color/white"
                     android:textColorHint="@color/white"
                     android:textSize="@dimen/_15sdp"
+
                     android:textStyle="bold" />
 
                 <TextView

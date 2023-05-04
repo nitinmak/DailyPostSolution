@@ -54,6 +54,9 @@
             <TextView
                 android:id="@+id/about_bussiness"
                 android:layout_width="match_parent"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:lines="3"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/bussiness_name"
                 android:layout_centerHorizontal="true"

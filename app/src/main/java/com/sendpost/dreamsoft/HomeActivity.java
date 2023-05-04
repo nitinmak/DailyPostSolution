@@ -215,7 +215,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
-                dialybusinessnew.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
@@ -293,8 +293,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 isHome = false;
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon));
-                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+                dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
                 search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //                premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));

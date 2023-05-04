@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.adapter.SectionAdapter;
 import com.sendpost.dreamsoft.BusinessCard.BusinessCardActivity_Digital;
 import com.sendpost.dreamsoft.ImageEditor.EditImageActivity;
@@ -46,6 +48,15 @@ public class CreateFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
 
+        binding.searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+                transaction.addToBackStack(null);
+                transaction.replace(android.R.id.content, new SearchFragment()).commit();
+            }
+        });
         binding.customPhoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

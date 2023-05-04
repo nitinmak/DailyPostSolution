@@ -5,19 +5,21 @@ import android.app.Dialog
 import android.graphics.Bitmap
 import android.view.View
 import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomsheet.BottomSheetBehavior
 import com.google.android.material.bottomsheet.BottomSheetBehavior.BottomSheetCallback
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ogaclejapan.smarttablayout.SmartTabLayout
+import com.sendpost.dreamsoft.Classes.Functions
 import com.sendpost.dreamsoft.R
+import com.sendpost.dreamsoft.viewmodel.FrameViewModel
+import java.util.Objects
 
 class StickerBSFragment : BottomSheetDialogFragment() {
 
     private var mStickerListener: StickerListener? = null
-    var list : ArrayList<com.sendpost.dreamsoft.ImageEditor.Stickers.StickerModelCategory> = ArrayList()
+    var list : ArrayList<StickerModelCategory> = ArrayList()
 
     fun setStickerListener(stickerListener: StickerListener?) {
         mStickerListener = stickerListener
@@ -37,7 +39,8 @@ class StickerBSFragment : BottomSheetDialogFragment() {
         override fun onSlide(bottomSheet: View, slideOffset: Float) {}
     }
 
-    var framViewModel: com.sendpost.dreamsoft.viewmodel.FrameViewModel? = null
+    var framViewModel: FrameViewModel ? = null
+
     @SuppressLint("RestrictedApi")
     override fun setupDialog(dialog: Dialog, style: Int) {
         super.setupDialog(dialog, style)
@@ -49,29 +52,29 @@ class StickerBSFragment : BottomSheetDialogFragment() {
             behavior.setBottomSheetCallback(mBottomSheetBehaviorCallback)
         }
         list.clear()
-        framViewModel = ViewModelProvider(this).get(com.sendpost.dreamsoft.viewmodel.FrameViewModel::class.java)
-        framViewModel!!.getStickers().observe(this, object : Observer<com.sendpost.dreamsoft.responses.FrameResponse?> {
-            override fun onChanged(response: com.sendpost.dreamsoft.responses.FrameResponse?) {
-                com.sendpost.dreamsoft.Classes.Functions.cancelLoader()
-                if (response != null){
-                    list.addAll(response.stickercategory)
-                    setupAdapter(contentView)
-                }
+        framViewModel = ViewModelProvider(this)[FrameViewModel::class.java]
+        framViewModel!!.stickers.observe(this)
+        { response -> Functions.cancelLoader()
+            if (response != null) {
+                list.addAll(response.stickercategory)
+                setupAdapter(contentView)
             }
-        })
+        }
     }
 
     private fun setupAdapter(contentView: View) {
         val pager: ViewPager = contentView.findViewById(R.id.viewPager)
         val tabLayout: SmartTabLayout = contentView.findViewById(R.id.tabLayout)
-        pager.adapter =
-            StickerPagerAdapter(
-                childFragmentManager,
-                list,
-                object : StickerListener {
+
+
+
+        pager.adapter = StickerPagerAdapter(childFragmentManager, list, object : StickerListener {
+
                     override fun onStickerClick(bitmap: Bitmap?) {
+
                         mStickerListener!!.onStickerClick(bitmap)
                         dismiss()
+
                     }
                 }
             )

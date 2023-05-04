@@ -54,7 +54,7 @@
                 android:paddingVertical="@dimen/_3sdp"
                 android:setDate="@{category.event_date}"
                 android:textColor="@color/white"
-                android:textSize="12dp"
+                android:textSize="@dimen/_10sdp"
                 android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>

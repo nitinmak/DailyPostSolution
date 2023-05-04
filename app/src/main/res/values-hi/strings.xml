@@ -99,7 +99,7 @@
     <string name="read_our_privacy_policy">हमारी गोपनीयता नीति पढ़ें।</string>
     <string name="please_accept_our_terms">कृपया हमारी शर्तें स्वीकार करें।</string>
     <string name="payment">भुगतान</string>
-    <string name="create">अधिक बनाएँ</string>
+    <string name="create">अधिक और अभिवादन बनाएँ</string>
     <string name="custome">कस्टम</string>
     <string name="greeting_poster">ग्रीटिंग पोस्टर</string>
     <string name="personal_details">व्यक्तिगत विवरण</string>
@@ -341,6 +341,14 @@
     <string name="dailynewrouting34">पर्यटन और यात्रा (अंतर्राष्ट्रीय)</string>
     <string name="dailynewrouting35">यातायात</string>
     <string name="dailynewrouting36">वीजा और आप्रवासन</string>
+    <string name="address_personal">व्यक्तिगत शहर, राज्य</string>
+    <string name="About_here">यहाँ लिखें...</string>
+    <string name="dailynewrouting27">ऋृण</string>
+    <string name="dailynewrouting37">तंदुरुस्ती, जिम और योग</string>
+    <string name="daytoday">दैनिक उपयोग</string>
+    <string name="business">व्यवसाय श्रेणी (व्यक्तिगत)</string>
+    <string name="allbusiness">व्यवसाय श्रेणी (समूह)</string>
+    <string name="spacialforyou">आपके लिए विशेष</string>
 
 
 </resources>

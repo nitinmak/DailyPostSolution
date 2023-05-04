@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "896064149727-02mqdq0v4o2eglo7rdrjgd3kqf5vb9in.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sendpost.dreamsoft",
+            "certificate_hash": "57b9dda637495a510a43291defa71be3a8dcd7d4"
+          }
+        },
+        {
           "client_id": "896064149727-6mtjft4r3csrdn9a0cgq541fjgb39mb0.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
@@ -46,7 +54,7 @@
           }
         },
         {
-          "client_id": "896064149727-t85vua8ljun1gd6bm5pp30s8emi78f9f.apps.googleusercontent.com",
+          "client_id": "896064149727-gfrqjbs67vu9ao0pore6ca9n1brst1ai.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -59,7 +67,7 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "896064149727-t85vua8ljun1gd6bm5pp30s8emi78f9f.apps.googleusercontent.com",
+              "client_id": "896064149727-gfrqjbs67vu9ao0pore6ca9n1brst1ai.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

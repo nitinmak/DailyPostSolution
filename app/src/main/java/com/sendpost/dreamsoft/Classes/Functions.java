@@ -21,6 +21,7 @@ import android.provider.MediaStore;
 import android.provider.Settings;
 import android.util.Base64;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -143,7 +144,9 @@ public class Functions {
     }
 
     public static void showToast(Context context, String msg) {
-        Toast.makeText(context, "" + msg, Toast.LENGTH_SHORT).show();
+        Toast toast = Toast.makeText(context, "" + msg, Toast.LENGTH_LONG);
+        toast.setGravity(Gravity.TOP | Gravity.CENTER, 0, 0);
+        toast.show();
     }
 
     public static String getPermissionStatus(Activity activity, String androidPermissionName) {

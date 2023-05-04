@@ -25,6 +25,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,7 +75,7 @@ public class EditProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         context = getContext();
-
+        Log.d("nitinmakwana",Functions.getSharedPreference(getContext()).getString(Variables.P_PIC,""));
         binding.usernameEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.NAME,""));
         binding.emailEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.U_EMAIL,""));
         binding.ivUseraddress.setText(Functions.getSharedPreference(getContext()).getString(Variables.ADDRESSP,""));
@@ -85,18 +86,22 @@ public class EditProfileFragment extends Fragment {
         if (!Functions.getSharedPreference(getContext()).getString(Variables.NUMBER,"").equals("null")){
             binding.numberEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.NUMBER,""));
         }
+
         if (!Functions.getSharedPreference(getContext()).getString(Variables.ADDRESSP,"").equals("null")){
             binding.ivUseraddress.setText(Functions.getSharedPreference(getContext()).getString(Variables.ADDRESSP,""));
         }
+
         if (!Functions.getSharedPreference(getContext()).getString(Variables.WEBSITEP,"").equals("null")){
             binding.webEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.WEBSITEP,""));
         }
+
         if (Functions.getSharedPreference(getContext()).getString(Variables.SOCIAL,"").equals("phone")){
             binding.numberEdit.setEnabled(false);
         }
 
         try {
             BindingAdaptet.setEditImageUrl(binding.userPic,Functions.getItemBaseUrl(Functions.getSharedPreference(getContext()).getString(Variables.P_PIC,"")));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -259,7 +264,7 @@ public class EditProfileFragment extends Fragment {
                     binding.ivUseraddress.getText().toString(),
                     binding.webEdit.getText().toString(),
                     binding.referralEdit.getText().toString()
-                    ).observe(this, userResponse -> {
+                    ).observe(getViewLifecycleOwner(), userResponse -> {
                         Functions.cancelLoader();
                         if (userResponse != null){
                             if(userResponse.code == SUCCESS){

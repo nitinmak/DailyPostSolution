@@ -95,7 +95,7 @@
     <string name="read_our_privacy_policy">અમારી ગોપનીયતા નીતિ વાંચો.</string>
     <string name="please_accept_our_terms">કૃપા કરીને અમારી શરતો સ્વીકારો.</string>
     <string name="payment">ચુકવણી</string>
-    <string name="create">વધુ બનાવો</string>
+    <string name="create">વધુ અને શુભેચ્છાઓ બનાવો</string>
     <string name="custome">કસ્ટમ</string>
     <string name="greeting_poster">શુભેચ્છા પોસ્ટર</string>
     <string name="personal_details">અંગત વિગતો</string>
@@ -339,4 +339,11 @@
     <string name="dailynewrouting34">ટુર્સ એન્ડ ટ્રાવેલ્સ (આંતરરાષ્ટ્રીય)</string>
     <string name="dailynewrouting35">પરિવહન</string>
     <string name="dailynewrouting36">વિઝા અને ઇમિગ્રેશન</string>
+    <string name="address_personal">વ્યક્તિગત શહેર, રાજ્ય</string>
+    <string name="About_here">અહીં લખો...</string>
+    <string name="dailynewrouting37">સ્વાસ્થ્ય, જિમ અને યોગા</string>
+    <string name="daytoday">દૈનિક ઉપયોગો</string>
+    <string name="business">વ્યવસાય શ્રેણી (વ્યક્તિગત)</string>
+    <string name="allbusiness">વ્યવસાય શ્રેણી (જૂથ)</string>
+    <string name="spacialforyou">ખાસ તારા માટે છે</string>
 </resources>

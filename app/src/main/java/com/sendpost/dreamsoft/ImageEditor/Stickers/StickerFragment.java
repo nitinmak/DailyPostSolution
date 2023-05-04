@@ -5,11 +5,14 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.ViewCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -42,12 +45,40 @@ public class StickerFragment extends Fragment {
 
         rvEmoji = view.findViewById(R.id.rvEmoji);
         rvEmoji.setLayoutManager(new GridLayoutManager(getContext(),4));
-        rvEmoji.setAdapter(new StickersAdapter(getContext(), stickerList, new StickerBSFragment.StickerListener() {
+        ViewCompat.setNestedScrollingEnabled(rvEmoji, false);
+        Log.d("rvEmoji","rvEmoji---------------------------------");
+
+        rvEmoji.setAdapter(new StickersAdapter(getContext(), stickerList,
+                bitmap -> stickerListener.onStickerClick(bitmap)
+        ));
+
+        rvEmoji.addOnItemTouchListener(new RecyclerView.OnItemTouchListener() {
             @Override
-            public void onStickerClick(@Nullable Bitmap bitmap) {
-                stickerListener.onStickerClick(bitmap);
+            public boolean onInterceptTouchEvent(@NonNull RecyclerView view, @NonNull MotionEvent event) {
+                int action = event.getAction();
+
+                if (action == MotionEvent.ACTION_DOWN) {
+                    rvEmoji.getParent().requestDisallowInterceptTouchEvent(true);
+                }
+                return false;
             }
-        }));
+
+            @Override
+            public void onTouchEvent(@NonNull RecyclerView view, @NonNull MotionEvent event) {
+
+            }
+
+            @Override
+            public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
+
+            }
+        });
+
+
     }
 
 }
+
+
+
+

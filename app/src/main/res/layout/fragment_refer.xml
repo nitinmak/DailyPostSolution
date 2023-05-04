@@ -6,6 +6,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Fragments.ReferFragment">
 
@@ -21,7 +22,8 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:padding="15dp"
-            android:src="@drawable/ic_arrow_back"
+            android:rotation="180"
+            android:src="@drawable/ic_right_arrow"
             app:tint="@color/white" />
 
         <TextView

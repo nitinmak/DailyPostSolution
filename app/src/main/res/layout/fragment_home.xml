@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            app:cardBackgroundColor="@color/cardBackgroundColor"
+            app:cardBackgroundColor="@color/primary"
             app:cardElevation="@dimen/_10sdp">
 
             <RelativeLayout
@@ -31,7 +31,7 @@
                     android:layout_marginLeft="@dimen/_5sdp"
                     android:padding="@dimen/_12sdp"
                     android:src="@drawable/ic_menu"
-                    app:tint="@color/textColor" />
+                    app:tint="@color/white" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -40,8 +40,8 @@
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_toRightOf="@+id/menu_btn"
                     android:text="@string/home"
-                    android:textColor="@color/textColor"
-                    android:textSize="@dimen/_18sdp" />
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_22sdp" />
 
                 <ImageView
                     android:id="@+id/search_btn"
@@ -51,7 +51,7 @@
                     android:layout_toLeftOf="@id/language_btn"
                     android:padding="@dimen/_10sdp"
                     android:src="@drawable/nav_search"
-                    app:tint="@color/textColor" />
+                    app:tint="@color/white" />
 
                 <ImageView
                     android:id="@+id/language_btn"
@@ -60,19 +60,21 @@
                     android:layout_alignParentEnd="true"
                     android:layout_centerVertical="true"
                     android:layout_marginEnd="@dimen/_7sdp"
-                    android:padding="@dimen/_10sdp"
+                    android:padding="@dimen/_5sdp"
                     android:src="@drawable/language"
-                    app:tint="@color/textColor" />
+                    app:tint="@color/white" />
 
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
 
+
         <androidx.coordinatorlayout.widget.CoordinatorLayout
             android:id="@+id/dataContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/toolbar">
+            android:layout_marginTop="@dimen/_50sdp"
+            >
 
             <com.google.android.material.appbar.AppBarLayout
                 android:id="@+id/app_bar"
@@ -103,6 +105,7 @@
                             android:layout_height="wrap_content"
                             android:layout_margin="10dp"
                             app:cardCornerRadius="10dp"
+
                             app:cardElevation="0dp">
 
                             <RelativeLayout
@@ -1057,6 +1060,7 @@
                 android:textColor="@color/darkgray"
                 android:textSize="15dp" />
         </LinearLayout>
+
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

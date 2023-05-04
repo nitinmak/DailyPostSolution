@@ -34,6 +34,8 @@ import android.widget.*
 import android.widget.SeekBar.GONE
 import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.NonNull
+import androidx.annotation.Nullable
 import androidx.annotation.RequiresApi
 import androidx.annotation.VisibleForTesting
 import androidx.appcompat.app.AppCompatActivity
@@ -52,6 +54,7 @@ import com.ainapage.vr.ImageEditor.FileSaveHelper
 import com.arthenica.mobileffmpeg.Config
 import com.arthenica.mobileffmpeg.FFmpeg
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.target.CustomTarget
 import com.bumptech.glide.request.target.SimpleTarget
 import com.bumptech.glide.request.transition.Transition
 import com.downloader.Error
@@ -59,13 +62,6 @@ import com.downloader.OnDownloadListener
 import com.downloader.PRDownloader
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ogaclejapan.smarttablayout.SmartTabLayout
-import com.theartofdev.edmodo.cropper.CropImage
-import com.theartofdev.edmodo.cropper.CropImageView
-import ja.burhanrashid52.photoeditor.*
-import ja.burhanrashid52.photoeditor.Filter.PhotoFilter
-import kotlinx.android.synthetic.main.activity_edit_image.*
-import me.iwf.photopicker.PhotoPicker
-import org.json.JSONObject
 import com.sendpost.dreamsoft.BgEraser.EraserActivity
 import com.sendpost.dreamsoft.Classes.*
 import com.sendpost.dreamsoft.ImageEditor.Border.BorderListener
@@ -82,6 +78,7 @@ import com.sendpost.dreamsoft.ImageEditor.tools.EditingToolsAdapter
 import com.sendpost.dreamsoft.ImageEditor.tools.ToolType
 import com.sendpost.dreamsoft.Interface.Properties
 import com.sendpost.dreamsoft.NavFragment.PremiumFragment
+import com.sendpost.dreamsoft.R
 import com.sendpost.dreamsoft.RazorpayActivity
 import com.sendpost.dreamsoft.binding.BindingAdaptet
 import com.sendpost.dreamsoft.dialog.CustomeDialogFragment
@@ -93,9 +90,16 @@ import com.sendpost.dreamsoft.model.FrameModel
 import com.sendpost.dreamsoft.model.PostsModel
 import com.sendpost.dreamsoft.responses.FrameResponse
 import com.sendpost.dreamsoft.viewmodel.FrameViewModel
+import com.theartofdev.edmodo.cropper.CropImage
+import com.theartofdev.edmodo.cropper.CropImageView
+import ja.burhanrashid52.photoeditor.*
+import ja.burhanrashid52.photoeditor.Filter.PhotoFilter
+import kotlinx.android.synthetic.main.activity_edit_image.*
+import me.iwf.photopicker.PhotoPicker
+import org.json.JSONObject
 import java.io.*
 import java.nio.channels.FileChannel
-import com.sendpost.dreamsoft.R
+
 
 class EditImageActivity : AppCompatActivity(), View.OnClickListener,
     PropertiesBSFragment.Properties, Properties, EmojiBSFragment.EmojiListener,
@@ -208,6 +212,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
             imgSave.isActivated = true
 
             var path = intent.getStringExtra("path")
+
             if (path?.contains(".mp4")!!) {
                 editType = "Video"
                 mPhotoEditorView?.initVideo()
@@ -259,8 +264,6 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
         go_premium?.setOnClickListener {
             showPremiumFragment()
         }
-
-
     }
 
     private val mPermissionResult = registerForActivityResult(
@@ -576,8 +579,6 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
     private fun setFramesAdapter() {
         val pager: ViewPager = findViewById(R.id.viewPager)
       val tabLayout: SmartTabLayout = findViewById(R.id.tabLayout)
-
-
 
         pager.adapter = FramePagerAdapter(supportFragmentManager, frameList,
             object : FrameListener {
@@ -1001,6 +1002,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                         imgSave.isActivated = true
                     }
                 }
+
                 PhotoPicker.REQUEST_CODE -> {
                     findViewById<TextView>(R.id.selectPhotos).visibility = View.GONE
                     val photos = data!!.getStringArrayListExtra(PhotoPicker.KEY_SELECTED_PHOTOS)
@@ -1240,17 +1242,21 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
                 Functions.cancelLoader()
-                mPhotoEditorView?.webView?.loadUrl(
-                    "javascript:setLocation('" + Functions.getSharedPreference(
-                        activity
-                    ).getString(Variables.BUSSINESS_ADDRESS, "") + "')"
-                )
-                mPhotoEditorView?.webView?.loadUrl(
-                    "javascript:setBusinessPic('" + Functions.getItemBaseUrl(
-                        Functions.getSharedPreference(activity)
-                            .getString(Variables.BUSSINESS_LOGO, "")
-                    ) + "')"
-                )
+
+                if (model?.type.equals("business")) {
+                    mPhotoEditorView?.webView?.loadUrl(
+                        "javascript:setLocation('" + Functions.getSharedPreference(
+                            activity
+                        ).getString(Variables.BUSSINESS_ADDRESS, "") + "')"
+                    )
+
+                    mPhotoEditorView?.webView?.loadUrl(
+                        "javascript:setBusinessPic('" + Functions.getItemBaseUrl(
+                            Functions.getSharedPreference(activity)
+                                .getString(Variables.BUSSINESS_LOGO, "")
+                        ) + "')"
+                    )
+                }
             }
         }
 
@@ -1293,8 +1299,9 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                     if (buttonObject.getBoolean("logo")) {
                         logoBtn?.visibility = VISIBLE
                         logoBtn?.isActivated = true
-
-                        if (model?.type.equals("business")) {
+                        Log.d("modeltype",model?.type.toString())
+                        if (model?.type.equals("business"))
+                        {
                             Glide.with(activity!!)
                                 .asBitmap()
                                 .load(
@@ -1317,34 +1324,38 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                                     }
                                 })
                         }
-
-                        else {
-                            Log.d("fvnjfjfdbjfb",Functions.getItemBaseUrl(
-                                Functions.getSharedPreference(
-                                    activity
-                                ).getString(Variables.P_PIC, "")
-                            ))
-                            Glide.with(activity!!)
-                                .asBitmap()
-                                .load(
-                                    Functions.getItemBaseUrl(
-                                        Functions.getSharedPreference(
-                                            activity
-                                        ).getString(Variables.P_PIC, "")
+                        else
+                        {
+            var xl = Functions.getItemBaseUrl(Functions.getSharedPreference(activity).getString(Variables.P_PIC, ""))
+             Log.d("fvnjfjfdbjfb",xl)
+                            Glide.with(applicationContext).asBitmap().load(xl).into(object : CustomTarget<Bitmap?>() {
+                                override fun onResourceReady(
+                                    resource: Bitmap,
+                                    @Nullable transition: Transition<in Bitmap?>?
+                                ) {
+                                    mPhotoEditorView?.webView?.loadUrl(
+                                        "javascript:setBase64('logo','" + Functions.bitmapToBase64(
+                                            resource
+                                        ) + "')"
                                     )
-                                )
-                                .into(object : SimpleTarget<Bitmap?>() {
-                                    override fun onResourceReady(
-                                        resource: Bitmap,
-                                        transition: Transition<in Bitmap?>?
-                                    ) {
-                                        mPhotoEditorView?.webView?.loadUrl(
-                                            "javascript:setBase64('logo','" + Functions.bitmapToBase64(
-                                                resource
-                                            ) + "')"
-                                        )
-                                    }
-                                })
+                                }
+
+                                override fun onLoadCleared(@Nullable placeholder: Drawable?) {}
+                            })
+
+//                                .into(object : SimpleTarget<Bitmap?>() {
+//                                    override fun onResourceReady(
+//                                        resource: Bitmap,
+//                                        transition: Transition<in Bitmap?>?
+//                                    ) {
+//                                        Log.d("NITINMAKWANA",resource.toString());
+//                                        mPhotoEditorView?.webView?.loadUrl(
+//                                            "javascript:setBase64('logo','" + Functions.bitmapToBase64(
+//                                                resource
+//                                            ) + "')"
+//                                        )
+//                                    }
+//                                })
                         }
 
                     } else {
@@ -1464,7 +1475,6 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                                     getString(R.string.demo_address)
                                 ) + "')"
                             )
-
                         } else {
                             locationBtn?.visibility = GONE
                             mPhotoEditorView?.webView?.loadUrl("javascript:invisibleItem('address')")

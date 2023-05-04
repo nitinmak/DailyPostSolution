@@ -36,7 +36,7 @@
 
     </RelativeLayout>
     <RelativeLayout
-        android:layout_above="@id/ad_container"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar">
@@ -200,30 +200,30 @@
 
 
     </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/ad_container"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:padding="@dimen/_5sdp"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:orientation="horizontal">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/ad_container"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:gravity="center"-->
+<!--        android:padding="@dimen/_5sdp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="55dp"-->
+<!--        android:orientation="horizontal">-->
 
-        <com.facebook.shimmer.ShimmerFrameLayout
-            android:id="@+id/frame_lay"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/shimmer_bg"/>
-        </com.facebook.shimmer.ShimmerFrameLayout>
-        <LinearLayout
-            android:id="@+id/ad_layout"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:orientation="vertical" />
-    </LinearLayout>
+<!--        <com.facebook.shimmer.ShimmerFrameLayout-->
+<!--            android:id="@+id/frame_lay"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@color/shimmer_bg"/>-->
+<!--        </com.facebook.shimmer.ShimmerFrameLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ad_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="vertical" />-->
+<!--    </LinearLayout>-->
 
 </RelativeLayout>

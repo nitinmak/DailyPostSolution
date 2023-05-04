@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.sendpost.dreamsoft.Fragments.IntroFragment">
     <LinearLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:id="@+id/position_first"
         android:orientation="vertical"
         android:background="@drawable/gradiant_bg1"
@@ -21,7 +21,7 @@
             <ImageView
                 android:layout_width="@dimen/_450sdp"
                 android:layout_height="@dimen/_450sdp"
-                android:src="@drawable/a_intro_img"/>
+                android:src="@drawable/a_intro_celeb"/>
 
         </LinearLayout>
 
@@ -68,7 +68,7 @@
             <ImageView
                 android:layout_width="@dimen/_450sdp"
                 android:layout_height="@dimen/_450sdp"
-                android:src="@drawable/a_intro_img2"/>
+                android:src="@drawable/a_intro_img"/>
 
         </LinearLayout>
 
@@ -116,7 +116,7 @@
                 android:layout_width="@dimen/_450sdp"
                 android:layout_height="@dimen/_450sdp"
                 android:layout_centerInParent="true"
-                android:src="@drawable/a_intro_celeb" />
+                android:src="@drawable/a_intro_img2" />
 
         </RelativeLayout>
         <LinearLayout

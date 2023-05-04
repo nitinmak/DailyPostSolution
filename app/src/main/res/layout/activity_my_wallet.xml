@@ -63,6 +63,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/tops"
+                    android:paddingBottom="@dimen/_5sdp"
                     android:layout_marginStart="@dimen/_12sdp"
                     android:text="Before activating, provide complete knowledge of this app"
                     android:textColor="@color/black"
@@ -148,7 +149,7 @@
                     android:layout_weight="0.4"
                     android:text="PURCHASE PIN "
                     android:textColor="@color/textColor"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_18sdp"
                     android:textStyle="" />
 
                 <TextView
@@ -160,7 +161,7 @@
                     android:gravity="left"
                     android:text=": 0000"
                     android:textColor="@color/textColor"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_18sdp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -183,7 +184,7 @@
                     android:layout_weight="0.4"
                     android:text="USED PIN "
                     android:textColor="@color/textColor"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_18sdp"
                     android:gravity="right"
                     android:textStyle="" />
 
@@ -196,7 +197,7 @@
                     android:gravity="left"
                     android:text=": 0000"
                     android:textColor="@color/textColor"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/_18sdp"
                     android:textStyle="bold" />
             </LinearLayout>
 

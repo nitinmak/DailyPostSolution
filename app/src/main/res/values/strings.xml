@@ -114,7 +114,7 @@
     <string name="read_our_privacy_policy">Read our privacy policy.</string>
     <string name="please_accept_our_terms">Please accept our terms.</string>
     <string name="payment">payment</string>
-    <string name="create">Create More</string>
+    <string name="create"><![CDATA[Create More & Greetings]]></string>
     <string name="custome">Custome</string>
     <string name="greeting_poster">Greeting Poster</string>
     <string name="personal_details">Personal Details</string>
@@ -164,11 +164,11 @@
     <string name="login_in_to_continue">Log in to continue..</string>
     <string name="bussiness_email">Business Email</string>
     <string name="enter_bussiness_email">Please enter business email</string>
-    <string name="demo_number"></string>
-    <string name="demo_name"></string>
-    <string name="demo_email"></string>
-    <string name="demo_insta"></string>
-    <string name="demo_address"></string>
+    <string name="demo_number" translatable="false"></string>
+    <string name="demo_name" translatable="false"></string>
+    <string name="demo_email" translatable="false"></string>
+    <string name="demo_insta" translatable="false"></string>
+    <string name="demo_address" translatable="false"></string>
     <string name="upcoming_festivals">Upcoming Festivals</string>
     <string name="upcoming_h_days">Upcoming Days</string>
     <string name="upcoming_days">Week Days</string>
@@ -356,8 +356,10 @@
     <string name="dailynewrouting35">Transportation</string>
     <string name="dailynewrouting36"><![CDATA[Visa & Immigration]]></string>
     <string name="dailynewrouting37"><![CDATA[Wellness, GYM & Yoga]]></string>
-
-
+    <string name="daytoday">Daily Uses</string>
+    <string name="business">Business Category (Individual)</string>
+    <string name="allbusiness">Business Category (Group)</string>
+    <string name="spacialforyou">Special For You</string>
 
 
 </resources>

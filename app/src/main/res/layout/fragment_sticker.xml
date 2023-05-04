@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
     tools:context="com.sendpost.dreamsoft.ImageEditor.Stickers.StickerFragment">
-
 
     <LinearLayout
         android:id="@+id/no_frame_found_tv"
-        android:gravity="center"
-        android:layout_centerInParent="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
         android:orientation="vertical"
         android:visibility="invisible">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -25,25 +24,26 @@
 
         <TextView
             android:id="@+id/get_frame"
-            android:layout_marginTop="3dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/rounded_bg"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:paddingVertical="5dp"
             android:text="@string/get_your_frame"
             android:textColor="@color/textColor"
-            android:background="@drawable/rounded_bg"
-            android:paddingVertical="5dp"
-            android:paddingHorizontal="@dimen/_12sdp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvEmoji"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/row_frame_view" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEmoji"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_frame_view" />
 
 </RelativeLayout>

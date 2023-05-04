@@ -5,6 +5,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +43,9 @@ public class ReferFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         context = getActivity();
+
         binding.referCode.setText(Functions.getSharedPreference(context).getString(Variables.REFER_ID,""));
+
         binding.copyBtn.setOnClickListener(v -> {
             ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText("ReferCode", binding.referCode.getText());
@@ -56,6 +59,7 @@ public class ReferFragment extends Fragment {
         });
 
         binding.inviteBtn.setOnClickListener(v ->{
+            Log.d("skvnjfbvjfs","sfvjfvnjfnv");
             Functions.shareApp(context);
         });
 

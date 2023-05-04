@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.adapter.UpcomingImagesAdapter;
 import com.sendpost.dreamsoft.databinding.DailyFragmentBinding;
 import com.sendpost.dreamsoft.databinding.DailynewfragmentBinding;
@@ -41,6 +43,16 @@ public class DailyNewFragment extends Fragment {
         context = getContext();
 
         this.view  = view;
+
+        binding.searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//                transaction.setCustomAnimations(R.anim.in_from_bottom, R.anim.out_to_top, R.anim.in_from_top, R.anim.out_from_bottom);
+                transaction.addToBackStack(null);
+                transaction.replace(android.R.id.content, new SearchFragment()).commit();
+            }
+        });
 
         homeViewModel = new ViewModelProvider(this).get(HomeViewModel.class);
 
@@ -237,7 +249,7 @@ public class DailyNewFragment extends Fragment {
         binding.cunstructioncontracShimmerLay.stopShimmer();
         binding.cunstructioncontracShimmerLay.setVisibility(View.GONE);
         binding.dailynew7.setText(" ("+dailycgoddevi+")");
-        binding.rvcustomerservicecenCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+        binding.rvcunstructioncontracCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
     private void setdaylyn8(List<CategoryModel> devi, String dailycgoddevi) {
@@ -303,7 +315,7 @@ public class DailyNewFragment extends Fragment {
         binding.hardwareShimmerLay.stopShimmer();
         binding.hardwareShimmerLay.setVisibility(View.GONE);
         binding.dailynew17.setText(" ("+dailycgoddevi+")");
-        binding.rvithardwareCategory.setAdapter(new UpcomingImagesAdapter(context, devi,false));
+        binding.rvhardware.setAdapter(new UpcomingImagesAdapter(context, devi,false));
     }
 
     private void setdaylyn18(List<CategoryModel> devi, String dailycgoddevi) {
