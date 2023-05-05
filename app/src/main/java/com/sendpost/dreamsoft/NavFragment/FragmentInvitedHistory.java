@@ -38,7 +38,16 @@ public class FragmentInvitedHistory extends BottomSheetDialogFragment {
     FragmentInvitedHistoryBinding binding;
     Activity context;
 
+    private BottomSheetBehavior.BottomSheetCallback mBottomSheetBehaviorCallback = new BottomSheetBehavior.BottomSheetCallback() {
+        @Override
+        public void onStateChanged(@NonNull View bottomSheet, int newState) {
+            if (newState == BottomSheetBehavior.STATE_HIDDEN) {}
+        }
 
+        @Override
+        public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+        }
+    };
 
     UserViewModel viewModel;
     @Override
@@ -62,7 +71,6 @@ public class FragmentInvitedHistory extends BottomSheetDialogFragment {
                         binding.userList.setAdapter(new UsersAdapter(context, userResponse.getUserslist(), new AdapterClickListener() {
                             @Override
                             public void onItemClick(View view, int pos, Object object) {
-
                             }
                         }));
                     }else{
@@ -73,7 +81,6 @@ public class FragmentInvitedHistory extends BottomSheetDialogFragment {
                 }
             }
         });
-
     }
 }
 
