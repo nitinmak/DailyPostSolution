@@ -8,6 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
+import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.ContactFragment
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel
 import com.sendpost.dreamsoft.R
 import kotlinx.android.synthetic.main.fragment_sticker.*
 
@@ -18,7 +20,7 @@ class PersonalFragment(list: ArrayList<com.sendpost.dreamsoft.model.FrameModel>,
     private var frame_list = ArrayList<com.sendpost.dreamsoft.model.FrameModel>()
     var frameListner = frameListner
 
-    var userViewModel: com.sendpost.dreamsoft.viewmodel.UserViewModel? = null
+    var userViewModel: UserViewModel? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,7 +33,7 @@ class PersonalFragment(list: ArrayList<com.sendpost.dreamsoft.model.FrameModel>,
         super.onViewCreated(view, savedInstanceState)
 
         rvPersonalFrame = view.findViewById(R.id.rvEmoji)
-        userViewModel = ViewModelProvider(this).get(com.sendpost.dreamsoft.viewmodel.UserViewModel::class.java);
+        userViewModel = ViewModelProvider(this).get(UserViewModel::class.java);
         userViewModel!!.getUserFrames(com.sendpost.dreamsoft.Classes.Functions.getUID(context))
             .observe(viewLifecycleOwner, object : Observer<com.sendpost.dreamsoft.responses.UserResponse> {
                 override fun onChanged(response: com.sendpost.dreamsoft.responses.UserResponse?) {
@@ -76,7 +78,7 @@ class PersonalFragment(list: ArrayList<com.sendpost.dreamsoft.model.FrameModel>,
         )
         transaction.addToBackStack(null)
         transaction.replace(android.R.id.content,
-            com.sendpost.dreamsoft.Fragments.ContactFragment()
+            ContactFragment()
         ).commit()
     }
 }

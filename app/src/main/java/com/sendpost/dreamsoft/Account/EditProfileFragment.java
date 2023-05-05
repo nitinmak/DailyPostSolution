@@ -2,11 +2,14 @@ package com.sendpost.dreamsoft.Account;
 
 import static com.sendpost.dreamsoft.Classes.Constants.FAILD;
 import static com.sendpost.dreamsoft.Classes.Constants.SUCCESS;
+import static com.sendpost.dreamsoft.Classes.Functions.getSharedPreference;
 
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -24,6 +27,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.provider.MediaStore;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -33,13 +37,14 @@ import android.widget.Toast;
 
 import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.databinding.FragmentEditProfileBinding;
+import com.sendpost.dreamsoft.dialog.PickedImageActionFragment;
 import com.sendpost.dreamsoft.model.UserModel;
 import com.sendpost.dreamsoft.binding.BindingAdaptet;
 import com.sendpost.dreamsoft.dialog.CustomeDialogFragment;
 import com.sendpost.dreamsoft.dialog.DialogType;
 import com.sendpost.dreamsoft.dialog.PickFromFragment;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -49,9 +54,12 @@ import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.IntroActivity;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 
 public class EditProfileFragment extends Fragment {
@@ -75,38 +83,38 @@ public class EditProfileFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         context = getContext();
-        Log.d("nitinmakwana",Functions.getSharedPreference(getContext()).getString(Variables.P_PIC,""));
-        binding.usernameEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.NAME,""));
-        binding.emailEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.U_EMAIL,""));
-        binding.ivUseraddress.setText(Functions.getSharedPreference(getContext()).getString(Variables.ADDRESSP,""));
-        binding.webEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.WEBSITEP,""));
+        Log.d("nitinmakwana", getSharedPreference(getContext()).getString(Variables.P_PIC,""));
+        binding.usernameEdit.setText(getSharedPreference(getContext()).getString(Variables.NAME,""));
+        binding.emailEdit.setText(getSharedPreference(getContext()).getString(Variables.U_EMAIL,""));
+        binding.ivUseraddress.setText(getSharedPreference(getContext()).getString(Variables.ADDRESSP,""));
+        binding.webEdit.setText(getSharedPreference(getContext()).getString(Variables.WEBSITEP,""));
 
-        binding.referralEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.REFERRAL,""));
+        binding.referralEdit.setText(getSharedPreference(getContext()).getString(Variables.REFERRAL,""));
 
-        if (!Functions.getSharedPreference(getContext()).getString(Variables.NUMBER,"").equals("null")){
-            binding.numberEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.NUMBER,""));
+        if (!getSharedPreference(getContext()).getString(Variables.NUMBER,"").equals("null")){
+            binding.numberEdit.setText(getSharedPreference(getContext()).getString(Variables.NUMBER,""));
         }
 
-        if (!Functions.getSharedPreference(getContext()).getString(Variables.ADDRESSP,"").equals("null")){
-            binding.ivUseraddress.setText(Functions.getSharedPreference(getContext()).getString(Variables.ADDRESSP,""));
+        if (!getSharedPreference(getContext()).getString(Variables.ADDRESSP,"").equals("null")){
+            binding.ivUseraddress.setText(getSharedPreference(getContext()).getString(Variables.ADDRESSP,""));
         }
 
-        if (!Functions.getSharedPreference(getContext()).getString(Variables.WEBSITEP,"").equals("null")){
-            binding.webEdit.setText(Functions.getSharedPreference(getContext()).getString(Variables.WEBSITEP,""));
+        if (!getSharedPreference(getContext()).getString(Variables.WEBSITEP,"").equals("null")){
+            binding.webEdit.setText(getSharedPreference(getContext()).getString(Variables.WEBSITEP,""));
         }
 
-        if (Functions.getSharedPreference(getContext()).getString(Variables.SOCIAL,"").equals("phone")){
+        if (getSharedPreference(getContext()).getString(Variables.SOCIAL,"").equals("phone")){
             binding.numberEdit.setEnabled(false);
         }
 
         try {
-            BindingAdaptet.setEditImageUrl(binding.userPic,Functions.getItemBaseUrl(Functions.getSharedPreference(getContext()).getString(Variables.P_PIC,"")));
+            BindingAdaptet.setEditImageUrl(binding.userPic,Functions.getItemBaseUrl(getSharedPreference(getContext()).getString(Variables.P_PIC,"")));
 
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        if (Functions.getSharedPreference(getContext()).getString(Variables.NAME,"").equals("")){
+        if (getSharedPreference(getContext()).getString(Variables.NAME,"").equals("")){
             binding.backBtn.setVisibility(View.GONE);
         }
 
@@ -132,6 +140,9 @@ public class EditProfileFragment extends Fragment {
 
         binding.submitBtn.setOnClickListener(view1 -> submitClick());
         userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+
+        binding.emailEdit.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
+
     }
 
     private void selectImage() {
@@ -213,7 +224,40 @@ public class EditProfileFragment extends Fragment {
                 }
             });
 
+    String path = "";
     private void handleCrop(Uri userimageuri) {
+        InputStream imageStream = null;
+        try {
+            imageStream = context.getContentResolver().openInputStream(userimageuri);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+
+        final Bitmap bitmp = BitmapFactory.decodeStream(imageStream);
+        new PickedImageActionFragment(bitmp, bitmap -> {
+            binding.userPic.setImageBitmap(bitmap);
+            path = Functions.saveImage(bitmap,context);
+
+            userViewModel.updateProfilePic(Functions.getUID(context),path).observe(this, new Observer<UserResponse>() {
+                @Override
+                public void onChanged(UserResponse userResponse) {
+                    Functions.cancelLoader();
+                    if(userResponse != null){
+                        if (userResponse.code == SUCCESS){
+                            BindingAdaptet.setEditImageUrl(binding.userPic,Functions.getItemBaseUrl(userResponse.getUserModel().getProfile_pic()));
+                            Log.d("IMAGEURL",Functions.getItemBaseUrl(userResponse.getUserModel().getProfile_pic()));
+                            getSharedPreference(context).edit().putString(Variables.P_PIC,Functions.getItemBaseUrl(userResponse.getUserModel().getProfile_pic())).apply();
+
+                        }else {
+                            Functions.showToast(context,userResponse.message);
+                        }
+                    }
+                }
+            });
+        }).show(getChildFragmentManager(),"");
+    }
+
+    private void handleCropx(Uri userimageuri) {
         String path = userimageuri.getPath();
         Functions.showLoader(context);
 
@@ -223,7 +267,7 @@ public class EditProfileFragment extends Fragment {
                 Functions.cancelLoader();
                 if(userResponse != null){
                     if (userResponse.code == SUCCESS){
-                        BindingAdaptet.setImageUrl(binding.userPic,Functions.getItemBaseUrl(userResponse.getUserModel().getProfile_pic()));
+                        BindingAdaptet.setEditImageUrl(binding.userPic,Functions.getItemBaseUrl(userResponse.getUserModel().getProfile_pic()));
                     }else {
                         Functions.showToast(context,userResponse.message);
                     }
@@ -232,25 +276,26 @@ public class EditProfileFragment extends Fragment {
         });
     }
 
-    private ActivityResultLauncher<String[]> mPermissionResult = registerForActivityResult(
+    private final ActivityResultLauncher<String[]> mPermissionResult = registerForActivityResult(
+
             new ActivityResultContracts.RequestMultiplePermissions(), new ActivityResultCallback<Map<String, Boolean>>() {
-                @RequiresApi(api = Build.VERSION_CODES.M)
                 @Override
                 public void onActivityResult(Map<String, Boolean> result) {
                     boolean allPermissionClear=true;
                     List<String> blockPermissionCheck=new ArrayList<>();
                     for (String key : result.keySet()) {
-                        if (!(result.get(key))) {
+                        if (Boolean.FALSE.equals(result.get(key))) {
                             allPermissionClear=false;
                             blockPermissionCheck.add(Functions.getPermissionStatus(getActivity(),key));
                         }
                     }if (blockPermissionCheck.contains("blocked")) {
-                        Functions.showPermissionSetting(getActivity(),getString(R.string.we_need_storage_and_camera_permission_for_upload_profile_pic));
+                        Functions.showPermissionSetting(requireActivity(),getString(R.string.we_need_storage_and_camera_permission_for_upload_profile_pic));
                     } else if (allPermissionClear) {
                         selectImage();
                     }
                 }
-            });
+            }
+    );
 
     public void submitClick() {
 
@@ -299,8 +344,8 @@ public class EditProfileFragment extends Fragment {
     }
 
     private void saveData(UserModel userModel) {
-        if (Functions.getSharedPreference(getContext()).getString(Variables.NAME,"").equals("")
-                || Functions.getSharedPreference(getContext()).getString(Variables.NAME,"").equals("null")){
+        if (getSharedPreference(getContext()).getString(Variables.NAME,"").equals("")
+                || getSharedPreference(getContext()).getString(Variables.NAME,"").equals("null")){
             Functions.saveUserData(userModel,context);
             Intent intent=new Intent(getContext(), IntroActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);

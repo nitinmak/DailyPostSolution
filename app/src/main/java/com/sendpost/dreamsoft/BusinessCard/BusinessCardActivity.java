@@ -23,7 +23,7 @@ import com.ainapage.vr.ImageEditor.FileSaveHelper;
 
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.PermissionUtils;
-import com.sendpost.dreamsoft.Fragments.AddBussinessFragment;
+import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment;
 import com.sendpost.dreamsoft.NavFragment.PremiumFragment;
 import com.sendpost.dreamsoft.R;
 

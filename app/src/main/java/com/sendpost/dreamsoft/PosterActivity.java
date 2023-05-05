@@ -16,14 +16,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.sendpost.dreamsoft.ImageEditor.EditImageActivity;
-import com.sendpost.dreamsoft.R;
 
 import com.sendpost.dreamsoft.adapter.PostsAdapter;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.model.PostsModel;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

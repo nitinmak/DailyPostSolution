@@ -163,7 +163,7 @@ public class UserRespository {
                 ).enqueue(new Callback<UserResponse>() {
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
-//                Log.d("responsecc",response.body());
+//              Log.d("responsecc",response.body());
                 data.setValue(response.body());
             }
 
@@ -275,7 +275,6 @@ public class UserRespository {
         return data;
     }
 
-
     public LiveData<UserResponse> getInvitedUser(String uid) {
         MutableLiveData<UserResponse> data = new MutableLiveData<>();
         apiService.getInvitedUser(
@@ -293,7 +292,6 @@ public class UserRespository {
         });
         return data;
     }
-
 
     public LiveData<UserResponse> getUserBusiness(String uid) {
         MutableLiveData<UserResponse> data = new MutableLiveData<>();

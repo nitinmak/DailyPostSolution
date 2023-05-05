@@ -34,7 +34,6 @@ import android.widget.*
 import android.widget.SeekBar.GONE
 import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.annotation.RequiresApi
 import androidx.annotation.VisibleForTesting
@@ -89,7 +88,7 @@ import com.sendpost.dreamsoft.model.FrameCategoryModel
 import com.sendpost.dreamsoft.model.FrameModel
 import com.sendpost.dreamsoft.model.PostsModel
 import com.sendpost.dreamsoft.responses.FrameResponse
-import com.sendpost.dreamsoft.viewmodel.FrameViewModel
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.FrameViewModel
 import com.theartofdev.edmodo.cropper.CropImage
 import com.theartofdev.edmodo.cropper.CropImageView
 import ja.burhanrashid52.photoeditor.*
@@ -214,12 +213,14 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
             var path = intent.getStringExtra("path")
 
             if (path?.contains(".mp4")!!) {
+
                 editType = "Video"
                 mPhotoEditorView?.initVideo()
                 mPhotoEditorView?.source?.setImageDrawable(getDrawable(R.drawable.editor_bg))
                 val proxy = App.getProxy(App.app)
                 val proxyUrl = proxy.getProxyUrl(Functions.getItemBaseUrl(path))
                 photoEditorView.setVideoUrl(proxyUrl)
+
             } else {
                 editType = "Photo"
                 mPhotoEditorView?.initImage()
@@ -267,8 +268,8 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
     }
 
     private val mPermissionResult = registerForActivityResult(
-        ActivityResultContracts.RequestMultiplePermissions()
-    ) { result ->
+        ActivityResultContracts.RequestMultiplePermissions()) {
+        result ->
         var allPermissionClear = true
         val blockPermissionCheck: MutableList<String> = java.util.ArrayList()
         for (key in result.keys) {
@@ -1254,6 +1255,19 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                         "javascript:setBusinessPic('" + Functions.getItemBaseUrl(
                             Functions.getSharedPreference(activity)
                                 .getString(Variables.BUSSINESS_LOGO, "")
+                        ) + "')"
+                    )
+                }else{
+                    mPhotoEditorView?.webView?.loadUrl(
+                        "javascript:setLocation('" + Functions.getSharedPreference(
+                            activity
+                        ).getString(Variables.P_PIC, "") + "')"
+                    )
+
+                    mPhotoEditorView?.webView?.loadUrl(
+                        "javascript:setBusinessPic('" + Functions.getItemBaseUrl(
+                            Functions.getSharedPreference(activity)
+                                .getString(Variables.P_PIC, "")
                         ) + "')"
                     )
                 }

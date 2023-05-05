@@ -1,4 +1,4 @@
-package com.sendpost.dreamsoft.Fragments;
+package com.sendpost.dreamsoft.ImageEditor.filters.Fragments;
 
 import android.app.Activity;
 import android.content.ClipData;
@@ -23,7 +23,7 @@ import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.UsersAdapter;
 import com.sendpost.dreamsoft.databinding.FragmentReferBinding;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 public class ReferFragment extends Fragment {
 

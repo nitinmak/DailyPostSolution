@@ -11,8 +11,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.sendpost.dreamsoft.Classes.Constants;
 
-import com.sendpost.dreamsoft.R;
-
 import com.sendpost.dreamsoft.adapter.BussinessAdapter;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
@@ -21,7 +19,7 @@ import com.sendpost.dreamsoft.model.BussinessModel;
 import com.sendpost.dreamsoft.network.ApiClient;
 import com.sendpost.dreamsoft.network.ApiService;
 import com.sendpost.dreamsoft.responses.SimpleResponse;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

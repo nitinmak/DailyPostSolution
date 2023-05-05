@@ -19,7 +19,7 @@ import com.sendpost.dreamsoft.model.UserPostModel;
 import com.sendpost.dreamsoft.network.ApiClient;
 import com.sendpost.dreamsoft.network.ApiService;
 import com.sendpost.dreamsoft.responses.SimpleResponse;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

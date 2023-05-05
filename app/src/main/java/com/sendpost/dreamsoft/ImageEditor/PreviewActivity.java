@@ -42,7 +42,7 @@ import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 import com.sendpost.dreamsoft.Classes.Constants;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;

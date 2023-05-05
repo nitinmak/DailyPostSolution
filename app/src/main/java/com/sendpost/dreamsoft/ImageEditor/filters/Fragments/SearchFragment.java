@@ -1,4 +1,4 @@
-package com.sendpost.dreamsoft.Fragments;
+package com.sendpost.dreamsoft.ImageEditor.filters.Fragments;
 
 import static com.sendpost.dreamsoft.PosterPreviewActivity.postsModel;
 
@@ -28,7 +28,7 @@ import com.sendpost.dreamsoft.model.PostsModel;
 import com.sendpost.dreamsoft.PosterPreviewActivity;
 import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
 
 import java.util.ArrayList;
 import java.util.List;

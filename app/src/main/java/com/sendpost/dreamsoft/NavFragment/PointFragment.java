@@ -25,10 +25,9 @@ import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.MyPostsActivity;
 import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.adapter.PointAdapter;
-import com.sendpost.dreamsoft.databinding.ActivityMyWalletBinding;
 import com.sendpost.dreamsoft.databinding.ActivitypointhistoryBinding;
 import com.sendpost.dreamsoft.responses.PointHistoey;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 public class PointFragment extends Fragment {
 

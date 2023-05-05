@@ -71,7 +71,7 @@
             android:exported="false" />
 
         <activity
-            android:name="com.sendpost.dreamsoft.Fragments.AddBussinessFragment"
+            android:name="com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment"
             android:exported="false" />
 
         <activity

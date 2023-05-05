@@ -13,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.adapter.MyPagerWalleteAdapter;
 import com.sendpost.dreamsoft.databinding.WalleteviewpagerBinding;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 public class WalletePager extends AppCompatActivity {
     WalleteviewpagerBinding binding;

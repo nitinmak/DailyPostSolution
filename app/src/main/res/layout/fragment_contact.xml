@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:clickable="false"
-    tools:context="com.sendpost.dreamsoft.Fragments.ContactFragment">
+    tools:context="com.sendpost.dreamsoft.ImageEditor.filters.Fragments.ContactFragment">
 
     <RelativeLayout
         android:id="@+id/toolbar"

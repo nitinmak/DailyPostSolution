@@ -13,8 +13,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.sendpost.dreamsoft.Classes.Functions
 import com.sendpost.dreamsoft.R
-import com.sendpost.dreamsoft.viewmodel.FrameViewModel
-import java.util.Objects
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.FrameViewModel
 
 class StickerBSFragment : BottomSheetDialogFragment() {
 
@@ -39,7 +38,7 @@ class StickerBSFragment : BottomSheetDialogFragment() {
         override fun onSlide(bottomSheet: View, slideOffset: Float) {}
     }
 
-    var framViewModel: FrameViewModel ? = null
+    var framViewModel: FrameViewModel? = null
 
     @SuppressLint("RestrictedApi")
     override fun setupDialog(dialog: Dialog, style: Int) {

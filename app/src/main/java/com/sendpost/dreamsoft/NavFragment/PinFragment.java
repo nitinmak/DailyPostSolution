@@ -28,7 +28,7 @@ import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.adapter.ActiveUserAdapter;
 import com.sendpost.dreamsoft.databinding.ActivityMyWalletBinding;
 import com.sendpost.dreamsoft.responses.ActiveUser;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 public class PinFragment extends Fragment {
 

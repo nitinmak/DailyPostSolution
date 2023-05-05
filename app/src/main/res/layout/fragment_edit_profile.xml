@@ -107,13 +107,14 @@
 
                 <EditText
                     android:id="@+id/referral_edit"
+                    android:selectAllOnFocus="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/referral"
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/referral"
-                    android:inputType="text"
+                    android:inputType="textNoSuggestions|text"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
@@ -139,13 +140,14 @@
 
                 <EditText
                     android:id="@+id/username_edit"
+                    android:selectAllOnFocus="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivUserName"
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/username"
-                    android:inputType="text"
+                    android:inputType="textNoSuggestions|text"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
@@ -171,19 +173,21 @@
 
                 <EditText
                     android:id="@+id/email_edit"
+                    android:selectAllOnFocus="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivUserEmail"
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress"
+                    android:importantForAutofill="no"
+                    android:inputType="textNoSuggestions|textEmailAddress"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
                     android:textSize="15dp" />
-
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -203,13 +207,14 @@
 
                 <EditText
                     android:id="@+id/web_edit"
+                    android:selectAllOnFocus="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivUserwebs"
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/website"
-                    android:inputType="textEmailAddress"
+                    android:inputType="textNoSuggestions|textEmailAddress"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
@@ -235,13 +240,14 @@
 
                 <EditText
                     android:id="@+id/iv_useraddress"
+                    android:selectAllOnFocus="true"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_toEndOf="@+id/ivUserAddressp"
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/address_personal"
-                    android:inputType="textMultiLine"
+                    android:inputType="textNoSuggestions|textNoSuggestions|textMultiLine"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"

@@ -2,7 +2,6 @@ package com.sendpost.dreamsoft;
 
 import static com.sendpost.dreamsoft.Classes.Constants.SUCCESS;
 import static com.sendpost.dreamsoft.Classes.Constants.languageList;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -12,28 +11,26 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-
+import androidx.multidex.BuildConfig;
 import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-
 import com.sendpost.dreamsoft.Account.EditProfileFragment;
 import com.sendpost.dreamsoft.Account.LoginFragment;
 import com.sendpost.dreamsoft.Classes.App;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
-
 import com.sendpost.dreamsoft.dialog.CustomeDialogFragment;
-import com.sendpost.dreamsoft.Fragments.SplashFragment;
+import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SplashFragment;
 import com.sendpost.dreamsoft.model.LanguageModel;
 import com.sendpost.dreamsoft.View.NonSwipeableViewPager;
 import com.sendpost.dreamsoft.dialog.DialogType;
-import com.sendpost.dreamsoft.viewmodel.LanguageViewModel;
-import com.sendpost.dreamsoft.viewmodel.SettingsViewModel;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.LanguageViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.SettingsViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 
 import java.util.List;
 
@@ -119,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void cheakUpdate() {
         if (sharedPreferences.getString(Variables.SHOW_UPDATE_DIALOG,"").equals("true")) {
-            if (!sharedPreferences.getString(Variables.APP_VERSION_CODE,""+BuildConfig.VERSION_CODE).equals(""+BuildConfig.VERSION_CODE)){
+            if (!sharedPreferences.getString(Variables.APP_VERSION_CODE,""+ BuildConfig.VERSION_CODE).equals(""+BuildConfig.VERSION_CODE)){
                 new CustomeDialogFragment(
                         getString(R.string.app_update),
                         getString(R.string.please_update_app),

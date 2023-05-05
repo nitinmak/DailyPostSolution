@@ -54,7 +54,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.sendpost.dreamsoft.Classes.Constants;
 import com.sendpost.dreamsoft.model.UserModel;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
 import com.rilixtech.widget.countrycodepicker.Country;
 import com.rilixtech.widget.countrycodepicker.CountryCodePicker;
 import com.sendpost.dreamsoft.Classes.Functions;

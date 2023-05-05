@@ -43,14 +43,13 @@ import com.google.android.exoplayer2.upstream.DefaultDataSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource;
 import com.google.android.material.appbar.AppBarLayout;
-import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.binding.BindingAdaptet;
 import com.ogaclejapan.smarttablayout.SmartTabLayout;
 
 import com.sendpost.dreamsoft.Classes.App;
 import com.sendpost.dreamsoft.Classes.Constants;
 import com.sendpost.dreamsoft.Classes.Functions;
-import com.sendpost.dreamsoft.Fragments.PagerPosterByLanguageFragment;
+import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.PagerPosterByLanguageFragment;
 import com.sendpost.dreamsoft.ImageEditor.EditImageActivity;
 import com.sendpost.dreamsoft.model.PostsModel;
 import com.sendpost.dreamsoft.NavFragment.PremiumFragment;
