@@ -27,8 +27,8 @@ public class WalletePager extends AppCompatActivity {
 
         viewModel = new ViewModelProvider(this).get(UserViewModel.class);
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("PIN"));
         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("POINT"));
+        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("PIN"));
 
         getpoint(Functions.getUID(getApplicationContext()));
 
@@ -41,9 +41,8 @@ public class WalletePager extends AppCompatActivity {
                 if (userResponse != null){
                     if (userResponse.code == SUCCESS){
                         binding.tabLayout.removeAllTabs();
-
-                        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("PIN ("+ userResponse.available_pins+")"));
                         binding.tabLayout.addTab(binding.tabLayout.newTab().setText("POINT ("+ userResponse.available_points+")"));
+                        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("PIN ("+ userResponse.available_pins+")"));
                         binding.tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
                         final MyPagerWalleteAdapter adapter = new MyPagerWalleteAdapter(this,getSupportFragmentManager(), binding.tabLayout.getTabCount());
                         binding.viewPager.setAdapter(adapter);

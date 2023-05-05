@@ -21,12 +21,14 @@ public class MyPagerWalleteAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
         switch (position) {
+
             case 0:
-                PinFragment page1 = new PinFragment();
-                return page1;
-            case 1:
                 PointFragment page2 = new PointFragment();
                 return page2;
+
+            case 1:
+                PinFragment page1 = new PinFragment();
+                return page1;
 
             default:
                 return null;

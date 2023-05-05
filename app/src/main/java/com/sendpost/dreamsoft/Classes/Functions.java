@@ -55,6 +55,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import java.util.Objects;
 
 import retrofit2.Call;
 
@@ -303,7 +304,10 @@ public class Functions {
         getSharedPreference(context).edit().putString(Variables.WHATSAPP,bussiness.getWhatsapp()).apply();
     }
 
-    public static void shareApp(Context context) {
+    public static void shareApp(Context context,String lang) {
+
+
+    if(Objects.equals(lang, "english")){
         Functions.showLoader(context);
         File directory = new File(getAppFolder(context)+Variables.APP_HIDED_FOLDER);
         String filename = System.currentTimeMillis()+".jpg";
@@ -323,6 +327,61 @@ public class Functions {
                 Functions.cancelLoader();
             }
         });
+
+
+    } else if (Objects.equals(lang, "hi")) {
+        Functions.showLoader(context);
+        File directory = new File(getAppFolder(context)+Variables.APP_HIDED_FOLDER);
+        String filename = System.currentTimeMillis()+".jpg";
+        AndroidNetworking.download(getItemBaseUrl(getSharedPreference(context).getString("share_image_url","")), directory.getPath(), filename).build().startDownload(new DownloadListener() {
+            public void onDownloadComplete() {
+                Functions.cancelLoader();
+
+                String shareText = "नमस्ते! मुझे भरोसा है कि SENDPOST ऐप हमारे व्यवसाय को बढ़ाने, हमारे व्यवसाय को अलग करने, ग्राहकों के साथ संबंध बनाने, व्यवसायों को अधिक उचाइयो प् ले जाने के लिए है। साथ ही sendpost  का उद्देश्य हमारे ग्राहकों, दोस्तों, परिवार और निकट और प्रिय लोगों के बीच हमारी उपस्थिति और व्यक्तित्व को बढ़ाना है।\n" +
+                        "यदि आप अगले 48 घंटों में मेरे रेफरल कोड  " + getSharedPreference(context).getString(Variables.REFER_ID,"") + "  के साथ मेरे लिंक का उपयोग करके sendpost ऐप डाउनलोड करते हैं तो आप मुफ्त 200 रजिस्ट्रेशन बोनस पॉइंट भी जीत सकते हैं।\n" +
+                        "https://play.google.com/store/apps/details?id=com.sendpost.dreamsoft";
+
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("image/*");
+                intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", new File(directory.getPath()+"/"+filename)));
+                intent.putExtra(Intent.EXTRA_TEXT,shareText);
+                intent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name));
+                context.startActivity(intent);
+            }
+
+            public void onError(ANError aNError) {
+                Functions.cancelLoader();
+            }
+        });
+
+
+    }else {
+        Functions.showLoader(context);
+        File directory = new File(getAppFolder(context)+Variables.APP_HIDED_FOLDER);
+        String filename = System.currentTimeMillis()+".jpg";
+        AndroidNetworking.download(getItemBaseUrl(getSharedPreference(context).getString("share_image_url","")), directory.getPath(), filename).build().startDownload(new DownloadListener() {
+            public void onDownloadComplete() {
+                Functions.cancelLoader();
+                String shareText = "હાય! અમારા વ્યવસાયને વધારવામાં, અમારા વ્યવસાયને અલગ પાડવામાં, ગ્રાહક સાથે સંબંધો બનાવવા," +
+                        " વ્યવસાયોને વધુ એક્સપોઝર આપવા માટે મને SENDPOST એપ્લિકેશન પર વિશ્વાસ છે. તેમજ Sendpost નો હેતુ અમારા ગ્રાહકો, મિત્રો, કુટુંબીજનો અને નજીકના અને પ્રિયજનોમાં અમારી હાજરી અને વ્યક્તિત્વ વધારવાનો છે.\n" +
+                        "જો તમે આગામી 48 કલાકમાં મારા રેફરલ કોડ " + getSharedPreference(context).getString(Variables.REFER_ID,"") + " સાથેની મારી લિંકનો ઉપયોગ કરીને Sendpost એપ ડાઉનલોડ કરશો તો તમને મફત 200 રજીસ્ટ્રેશન બોનસ પોઈન્ટ પણ જીતી શકો છો..\n" +
+                        "https://play.google.com/store/apps/details?id=com.sendpost.dreamsoft";
+//getSharedPreference(context).getString(Variables.REFER_ID,"");
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("image/*");
+                intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", new File(directory.getPath()+"/"+filename)));
+                intent.putExtra(Intent.EXTRA_TEXT,shareText);
+                intent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name));
+                context.startActivity(intent);
+            }
+
+            public void onError(ANError aNError) {
+                Functions.cancelLoader();
+            }
+        });
+    }
+
+
     }
 
 //

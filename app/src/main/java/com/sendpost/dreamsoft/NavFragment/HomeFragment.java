@@ -215,6 +215,8 @@ public class HomeFragment extends Fragment {
             transaction.replace(R.id.home_activity, new EditProfileFragment()).commit();
         });
 
+
+
         bussiness_lay.setOnClickListener(v -> {
 //            binding.drawerLay.closeDrawer(Gravity.LEFT);
             startActivity(new Intent(getActivity(), AddBussinessFragment.class));
@@ -237,8 +239,6 @@ public class HomeFragment extends Fragment {
 
         share_btn.setOnClickListener(v -> {
 //            binding.drawerLay.closeDrawer(Gravity.LEFT);
-
-
             ReferFragment comment_f = new ReferFragment();
             FragmentTransaction transaction = getFragmentManager().beginTransaction();
 //            transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);

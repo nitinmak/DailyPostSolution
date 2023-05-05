@@ -114,7 +114,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
     private var mTxtCurrentTool: TextView? = null
     private var seekBar: SeekBar? = null
 
-    //    private var mWonderFont: Typeface? = null
+//  private var mWonderFont: Typeface? = null
     private var mRvTools: RecyclerView? = null
     private var mRvFilters: RecyclerView? = null
     private var mRvBorder: RecyclerView? = null

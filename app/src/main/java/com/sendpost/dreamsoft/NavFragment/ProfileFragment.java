@@ -75,7 +75,7 @@ public class ProfileFragment extends Fragment {
             startActivity(new Intent(getActivity(), AddBussinessFragment.class));
 //                startActivity(new Intent(getActivity(), MyBussinessActivity.class));
         });
-        view.findViewById(R.id.share_lay).setOnClickListener(v -> Functions.shareApp(getContext()));
+//        view.findViewById(R.id.share_lay).setOnClickListener(v -> Functions.shareApp(getContext()));
         view.findViewById(R.id.rate_lay).setOnClickListener(v -> Functions.rateApp(getContext()));
         view.findViewById(R.id.privacy_policy_lay).setOnClickListener(v -> {
             Intent intent = new Intent(getContext(), WebviewA.class);

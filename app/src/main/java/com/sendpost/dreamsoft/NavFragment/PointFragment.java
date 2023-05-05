@@ -14,12 +14,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.MyPostsActivity;
@@ -35,6 +38,8 @@ public class PointFragment extends Fragment {
     ActivitypointhistoryBinding activityMyWalletBinding;
     List<PointHistoey> list = new ArrayList<>();
     Context context;
+
+    private  FragmentInvitedHistory invitedHistory = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -72,12 +77,38 @@ public class PointFragment extends Fragment {
                 sendapi(Functions.getUID(context),activityMyWalletBinding.usernameEdit.getText().toString());
                 dialogInterface.dismiss();
             });
-
             builder.create().show();
-
         });
 
-        getuserhistory(Functions.getUID(context));
+//      getuserhistory(Functions.getUID(context));
+
+        invitedHistory = new FragmentInvitedHistory();
+        showBottomSheetDialogFragment(invitedHistory);
+
+        CoordinatorLayout.LayoutParams params = (CoordinatorLayout.LayoutParams) ((View) activityMyWalletBinding.getRoot()).getLayoutParams();
+        CoordinatorLayout.Behavior behavior = params.getBehavior();
+
+        if( behavior != null && behavior instanceof BottomSheetBehavior ) {
+            ((BottomSheetBehavior) behavior).setBottomSheetCallback(mBottomSheetBehaviorCallback);
+            ((BottomSheetBehavior) behavior).setPeekHeight(97);
+            ((BottomSheetBehavior) behavior).setHideable(false);
+        }
+    }
+    private BottomSheetBehavior.BottomSheetCallback mBottomSheetBehaviorCallback = new BottomSheetBehavior.BottomSheetCallback() {
+        @Override
+        public void onStateChanged(@NonNull View bottomSheet, int newState) {
+            if (newState == BottomSheetBehavior.STATE_HIDDEN) {}
+        }
+
+        @Override
+        public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+        }
+    };
+    private void showBottomSheetDialogFragment(BottomSheetDialogFragment fragment) {
+        if (fragment == null || fragment.isAdded()) {
+            return;
+        }
+        fragment.show(getChildFragmentManager(), fragment.getTag());
     }
 
     private void sendapi(String uid, String text) {
@@ -99,26 +130,25 @@ public class PointFragment extends Fragment {
     }
 
     private void getuserhistory(String uid) {
-            viewModel.getpointhistory(Functions.getUID(context)).observe(getViewLifecycleOwner(), userResponse -> {
+//            viewModel.activeuserhistory(Functions.getUID(context)).observe(getViewLifecycleOwner(), userResponse -> {
 //            binding.refereshLay.setRefreshing(false);
 //            binding.shimmerLay.stopShimmer();
 //            binding.shimmerLay.setVisibility(View.GONE);
-            if (userResponse != null){
-                if (userResponse.code == SUCCESS){
-
-                    if (userResponse.getPointhistory().size() > 0){
-                        list.clear();
-                        list.addAll(userResponse.pointhistory);
-                        setAdapter();
-                        activityMyWalletBinding.noDataLayout.setVisibility(View.GONE);
-                    }else {
-                        activityMyWalletBinding.noDataLayout.setVisibility(View.VISIBLE);
-                    }
-                }else {
-                    Functions.showToast(context,userResponse.message);
-                }
-            }
-        });
+//            if (userResponse != null){
+//                if (userResponse.code == SUCCESS){
+//                    if (userResponse.getPointhistory().size() > 0){
+//                        list.clear();
+//                        list.addAll(userResponse.pointhistory);
+//                        setAdapter();
+//                        activityMyWalletBinding.noDataLayout.setVisibility(View.GONE);
+//                    }else {
+//                        activityMyWalletBinding.noDataLayout.setVisibility(View.VISIBLE);
+//                    }
+//                }else {
+//                    Functions.showToast(context,userResponse.message);
+//                }
+//            }
+//        });
 
 //        viewModel.activeuserhistory(uid).observe(this, userResponse -> {
 //            if (userResponse != null) {
@@ -134,7 +164,7 @@ public class PointFragment extends Fragment {
     PointAdapter adapter;
     private void setAdapter() {
             adapter = new PointAdapter(context, list);
-            activityMyWalletBinding.rvNewest.setAdapter(adapter);
+//            activityMyWalletBinding.rvNewest.setAdapter(adapter);
     }
 
     public void finish(View view) {

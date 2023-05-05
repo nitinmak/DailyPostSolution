@@ -248,6 +248,125 @@
             android:textColor="@color/white"
             android:textStyle="bold"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:background="@drawable/full_rounded_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:padding="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_whatsapp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_facebook"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:tint="@color/white"/>
+        <ImageView
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_instagram"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:tint="@color/white"/>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_below="@id/img_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="शेयर करने के लिए शेयर पर क्लिक करें"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inviteBtnHindi"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="शेयर"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/full_rounded_bg"
+            android:backgroundTint="#5CFFFFFF"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:padding="@dimen/_8sdp"
+        android:gravity="center_vertical"
+        android:background="@drawable/full_rounded_bg"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:padding="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_whatsapp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:tint="@color/white" />
+        <ImageView
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_facebook"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:tint="@color/white"/>
+        <ImageView
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_instagram"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:tint="@color/white"/>
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_below="@id/img_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="શેર કરવા માટે શેર પર ક્લિક કરો"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/inviteBtnGujrati"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="શેર"
+            android:textSize="@dimen/_12sdp"
+            android:background="@drawable/full_rounded_bg"
+            android:backgroundTint="#5CFFFFFF"
+            android:paddingHorizontal="@dimen/_20sdp"
+            android:paddingVertical="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+    </LinearLayout>
 
     <RelativeLayout
         android:layout_margin="@dimen/_10sdp"

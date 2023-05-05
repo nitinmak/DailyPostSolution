@@ -30,6 +30,7 @@
                     android:scaleType="centerCrop"
                     android:imageURL="@{users.profile_pic}"/>
             </androidx.cardview.widget.CardView>
+
             <LinearLayout
                 android:layout_weight="1"
                 android:gravity="center_vertical"
@@ -48,7 +49,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:text="@{users.email}"
+                    android:text="@{users.number}"
                     android:textColor="@color/gray_darl"
                     android:textSize="@dimen/_13sdp" />
 
