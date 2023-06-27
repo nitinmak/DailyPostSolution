@@ -54,7 +54,7 @@ import com.google.firebase.auth.PhoneAuthProvider;
 import com.sendpost.dreamsoft.Classes.Constants;
 import com.sendpost.dreamsoft.model.UserModel;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 import com.rilixtech.widget.countrycodepicker.Country;
 import com.rilixtech.widget.countrycodepicker.CountryCodePicker;
 import com.sendpost.dreamsoft.Classes.Functions;
@@ -229,12 +229,12 @@ public class LoginFragment extends Fragment {
         });
     }
 
-    int sec = 30;
+    int sec = 60;
     boolean isTimerRunning = false;
     private void startCountdown() {
-        sec = 30;
+        sec = 60;
         isTimerRunning = true;
-        new CountDownTimer(30000, 1000) {
+        new CountDownTimer(60000, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
                 sec--;
@@ -280,6 +280,8 @@ public class LoginFragment extends Fragment {
     }
 
     private CallbackManager mCallbackManager;
+
+
     public void loginwithfacebook(View view) {
         try {
             LoginManager.getInstance().logOut();

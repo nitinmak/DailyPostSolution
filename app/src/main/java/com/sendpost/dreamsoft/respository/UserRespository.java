@@ -276,10 +276,12 @@ public class UserRespository {
     }
 
     public LiveData<UserResponse> getInvitedUser(String uid) {
+        Log.d("dfhsfvyhfv",uid);
         MutableLiveData<UserResponse> data = new MutableLiveData<>();
         apiService.getInvitedUser(
                 Constants.API_KEY,
                 "" + uid).enqueue(new Callback<UserResponse>() {
+
             @Override
             public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
                 data.setValue(response.body());
@@ -346,6 +348,23 @@ public class UserRespository {
         });
         return data;
     }
+        public LiveData<UserResponse> getActivedList(String uid) {
+            MutableLiveData<UserResponse> data = new MutableLiveData<>();
+            apiService.getActivateduserlist(
+                    Constants.API_KEY,
+                    "" + uid).enqueue(new Callback<UserResponse>() {
+                @Override
+                public void onResponse(Call<UserResponse> call, Response<UserResponse> response) {
+                    data.setValue(response.body());
+                }
+
+                @Override
+                public void onFailure(Call<UserResponse> call, Throwable t) {
+                    data.setValue(null);
+                }
+            });
+            return data;
+        }
 
     public LiveData<UserResponse> getpointhistory(String uid) {
         Log.d("dfnjvfdjbdfb",uid);

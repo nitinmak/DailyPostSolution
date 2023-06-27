@@ -11,6 +11,9 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,21 +24,24 @@ import androidx.lifecycle.ViewModelProvider;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.MyPostsActivity;
 import com.sendpost.dreamsoft.R;
-import com.sendpost.dreamsoft.adapter.ActiveUserAdapter;
 import com.sendpost.dreamsoft.databinding.ActivityMyWalletBinding;
 import com.sendpost.dreamsoft.responses.ActiveUser;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 
 public class PinFragment extends Fragment {
 
     UserViewModel viewModel;
     ActivityMyWalletBinding activityMyWalletBinding;
-    List<ActiveUser> list = new ArrayList<>();
     Context context;
+    ImageButton back_btn;
+    TextView pinbook;
+    private  FragmenActivatedHistory invitedHistory = null;
+    private  PinbookFragment pinfragment = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -79,6 +85,39 @@ public class PinFragment extends Fragment {
             builder.create().show();
         });
         getuserhistory(Functions.getUID(context));
+        invitedHistory = new FragmenActivatedHistory("Pin");
+//        showBottomSheetDialogFragment(invitedHistory);
+        activityMyWalletBinding.showactiveuser.setOnClickListener(view1 -> {
+            showBottomSheetDialogFragment(invitedHistory);
+        });
+
+        back_btn = view.findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        pinfragment = new PinbookFragment();
+        activityMyWalletBinding.pinbook.setOnClickListener(view1 -> {
+            showBottomSheetDialogFragment(pinfragment);
+        });
+
+//        pinbook = view.findViewById(R.id.pinbook);
+//        pinbook.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show();
+//            }
+//        });
+    }
+
+    private void showBottomSheetDialogFragment(BottomSheetDialogFragment fragment) {
+        if (fragment == null || fragment.isAdded()) {
+            return;
+        }
+        fragment.show(getChildFragmentManager(), fragment.getTag());
     }
 
     private void sendapi(String uid, String text) {
@@ -100,28 +139,22 @@ public class PinFragment extends Fragment {
     }
 
     private void getuserhistory(String uid) {
-            viewModel.activeuserhistory(Functions.getUID(context)).observe(getViewLifecycleOwner(), userResponse -> {
+        viewModel.activeuserhistory(Functions.getUID(context)).observe(getViewLifecycleOwner(), userResponse -> {
 //            binding.refereshLay.setRefreshing(false);
 //            binding.shimmerLay.stopShimmer();
 //            binding.shimmerLay.setVisibility(View.GONE);
-            if (userResponse != null){
-                if (userResponse.code == SUCCESS){
-                    activityMyWalletBinding.purchased.setText(": "+userResponse.purchased_pins);
-//                    activityMyWalletBinding.remaining.setText(": "+userResponse.available_pins);
-                    activityMyWalletBinding.used.setText(": "+userResponse.used_pins);
-                    if (userResponse.getActiveUser().size() > 0){
-                        list.clear();
-                        list.addAll(userResponse.getActiveUser());
-                        setAdapter();
-                        activityMyWalletBinding.noDataLayout.setVisibility(View.GONE);
-                    }else {
-                        activityMyWalletBinding.noDataLayout.setVisibility(View.VISIBLE);
-                    }
-                }else {
-                    Functions.showToast(context,userResponse.message);
+            if (userResponse != null) {
+                if (userResponse.code == SUCCESS) {
+                    activityMyWalletBinding.purchased.setText(": " + userResponse.purchased_pins);
+                    activityMyWalletBinding.remaining.setText(": "+userResponse.available_pins);
+                    activityMyWalletBinding.used.setText(": " + userResponse.used_pins);
+
+                } else {
+                    Functions.showToast(context, userResponse.message);
                 }
             }
         });
+    }
 
 //        viewModel.activeuserhistory(uid).observe(this, userResponse -> {
 //            if (userResponse != null) {
@@ -132,16 +165,13 @@ public class PinFragment extends Fragment {
 //                Toast.makeText(MyWalletActivity.this, userResponse.message, Toast.LENGTH_SHORT).show();
 //            }
 //        });
-    }
+//    }
 
-    ActiveUserAdapter adapter;
-    private void setAdapter() {
-            adapter = new ActiveUserAdapter(context, list);
-            activityMyWalletBinding.rvNewest.setAdapter(adapter);
-    }
+//    ActiveUserAdapter adapter;
+//    private void setAdapter() {
+//            adapter = new ActiveUserAdapter(context, list);
+//            activityMyWalletBinding.rvNewest.setAdapter(adapter);
+//    }
 
-    public void finish(View view) {
-
-    }
 
 }

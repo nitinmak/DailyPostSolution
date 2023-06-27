@@ -27,7 +27,7 @@
     <string name="login_error">Login error</string>
     <string name="authentication_failed">Authentication faild</string>
     <string name="tap_to_view_more_content">Tap to view more posters</string>
-    <string name="newest">Most Send Post</string>
+    <string name="newest">MOST SEND POST</string>
     <string name="edit_profile">Edit Personal Profile</string>
     <string name="profile_persion">Personal Profile</string>
     <string name="username">Personal Name</string>
@@ -122,7 +122,7 @@
     <string name="social_details">Social Details</string>
     <string name="bussiness_name">Business Name</string>
     <string name="company_name">Company Name</string>
-    <string name="address">Business City, State</string>
+    <string name="address">Address</string>
     <string name="address_personal">Personal City, State</string>
     <string name="website">Personal Website (If No, Write E-mail)</string>
     <string name="select_image">Select Image</string>
@@ -145,12 +145,15 @@
     <string name="payment_cencelled">Payment Cancelled</string>
     <string name="use_all_premium">Use All Premium Stickers</string>
     <string name="use_all_premium_frame">Use All Premium Frames</string>
-    <string name="add_bussiness">Add Business</string>
+    <string name="add_bussiness">Edit Business Profile</string>
+    <string name="point">Point Wallet</string>
+    <string name="pin">Pin Wallet</string>
     <string name="bussiness_logo">Business Logo</string>
     <string name="bussiness_number">Business Number</string>
     <string name="Youtube_channel_name">Youtube Channel Name</string>
     <string name="instagrame_username">Instagram Username</string>
     <string name="enter_bussiness_name">Please enter business name</string>
+    <string name="enter_details">Please enter details</string>
     <string name="edit_bussiness">Edit Business</string>
     <string name="my_bussiness">My Business</string>
     <string name="add_new">Add New</string>
@@ -164,6 +167,7 @@
     <string name="login_in_to_continue">Log in to continue..</string>
     <string name="bussiness_email">Business Email</string>
     <string name="enter_bussiness_email">Please enter business email</string>
+    <string name="enter_bussiness_number">Please enter number</string>
     <string name="demo_number" translatable="false"></string>
     <string name="demo_name" translatable="false"></string>
     <string name="demo_email" translatable="false"></string>
@@ -182,7 +186,7 @@
     <string name="msgtosoc">Msg. to Society</string>
     <string name="goddeva">God (Deva)</string>
     <string name="goddevi">God (Devi)</string>
-    <string name="leader_thought">LEADERS THOUGHT</string>
+    <string name="leader_thought"><![CDATA[Leader\'s thought]]></string>
     <string name="numrology">NUMEROLOGY</string>
     <string name="rashi">Rashi</string>
     <string name="occasion">Occasion</string>
@@ -232,7 +236,7 @@
     <string name="youtube">Youtube</string>
     <string name="photo_to_video">Photo to Video</string>
     <string name="select_video">Select Video</string>
-    <string name="max_video_duration_error">Max video duration is 60 Secound</string>
+    <string name="max_video_duration_error">Max video duration is 15 Minutes</string>
     <string name="label_animation">Animation</string>
     <string name="label_music">Music</string>
     <string name="premium_items">Premium Items</string>
@@ -243,7 +247,7 @@
     <string name="demo_website" translatable="false"></string>
     <string name="business_card">Visiting Card </string>
     <string name="digital_b_card">Digital B Card </string>
-    <string name="about_business">About Business</string>
+    <string name="about_business">About Us</string>
     <string name="add_or_edit_business_detail">Add or edit business detail</string>
     <string name="click_here">Click Here</string>
     <string name="create_">Create</string>
@@ -306,17 +310,13 @@
     <string name="telegram">Telegram</string>
     <string name="instagram">Instagram</string>
     <string name="savetophone">Save to phone</string>
-    <string name="wallet">My Wallet</string>
+    <string name="wallet">Point Wallet</string>
     <string name="Daily_Routine">Daily Routine</string>
     <string name="msg_act_user">Are you sure you want to ACTIVE this user</string>
     <string name="download_complete">Download Complete</string>
     <string name="business_digtal_card">Digital Card</string>
     <string name="faild">Warning</string>
     <string name="business_support">Business Support</string>
-
-
-
-
 
 
     <string name="dailynewrouting1">Agriculture</string>
@@ -360,6 +360,14 @@
     <string name="business">Business Category (Individual)</string>
     <string name="allbusiness">Business Category (Group)</string>
     <string name="spacialforyou">Special For You</string>
+    <string name="digital_card1">Digital Card</string>
+    <string name="date_remark">Date/Remark</string>
+    <string name="point_">Point</string>
+    <string name="balance_">Balance</string>
+    <string name="notice">* Cannot be modified under any circumstances.</string>
+    <string name="notice2">*You can change only by sending mail with proof.</string>
+    <string name="edit_visiting_card">Edit Visiting Card</string>
+    <string name="notice3">*.One Mobile Number is Compulsary from personal or business</string>
 
 
 </resources>

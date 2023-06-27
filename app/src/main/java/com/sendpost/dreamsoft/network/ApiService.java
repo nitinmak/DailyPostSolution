@@ -84,8 +84,8 @@ public interface ApiService {
     @POST("{API_KEY}/addcontact")
     Call<UserResponse> addContact(@Path("API_KEY") String apikey,
                                   @Field("user_id") String user_id,
-                                  @Field("number") String email,
-                                  @Field("message") String number);
+                                  @Field("number") String number,
+                                  @Field("message") String message);
 
     @FormUrlEncoded
     @POST("{API_KEY}/updateUserSubscription")
@@ -110,13 +110,12 @@ public interface ApiService {
     Call<UserResponse> getInvitedUser(@Path("API_KEY") String apikey,
                                       @Query("user_id") String user_id);
 
-    @GET("{API_KEY}/useractiveinvitelist")
-    Call<UserResponse> getActivInvitedUser(@Path("API_KEY") String apikey,
-                                      @Query("user_id") String user_id);
-
-
     @GET("{API_KEY}/getactiveuser")
     Call<UserResponse> getActiveuser(@Path("API_KEY") String apikey,
+                                       @Query("id") String user_id);
+
+    @GET("{API_KEY}/activateduserlist")
+    Call<UserResponse> getActivateduserlist(@Path("API_KEY") String apikey,
                                        @Query("id") String user_id);
 
     @GET("{API_KEY}/pointhistory")

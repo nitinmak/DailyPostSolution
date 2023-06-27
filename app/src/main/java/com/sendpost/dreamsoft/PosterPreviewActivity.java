@@ -49,7 +49,7 @@ import com.ogaclejapan.smarttablayout.SmartTabLayout;
 import com.sendpost.dreamsoft.Classes.App;
 import com.sendpost.dreamsoft.Classes.Constants;
 import com.sendpost.dreamsoft.Classes.Functions;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.PagerPosterByLanguageFragment;
+import com.sendpost.dreamsoft.Fragments.PagerPosterByLanguageFragment;
 import com.sendpost.dreamsoft.ImageEditor.EditImageActivity;
 import com.sendpost.dreamsoft.model.PostsModel;
 import com.sendpost.dreamsoft.NavFragment.PremiumFragment;
@@ -87,11 +87,11 @@ public class PosterPreviewActivity extends AppCompatActivity implements Player.L
 
         playerview = findViewById(R.id.playerview);
 
-        findViewById(R.id.remove_watermark_tv).setOnClickListener(v -> {
-            Intent intent = new Intent(PosterPreviewActivity.this, RazorpayActivity.class);
-            intent.putExtra("price", Functions.getSharedPreference(PosterPreviewActivity.this).getString("single_post_subsciption_amount","10"));
-            resultCallbackForPayment.launch(intent);
-        });
+//        findViewById(R.id.remove_watermark_tv).setOnClickListener(v -> {
+//            Intent intent = new Intent(PosterPreviewActivity.this, RazorpayActivity.class);
+//            intent.putExtra("price", Functions.getSharedPreference(PosterPreviewActivity.this).getString("single_post_subsciption_amount","10"));
+//            resultCallbackForPayment.launch(intent);
+//        });
 
         initializePlayer();
         setData();
@@ -108,7 +108,11 @@ public class PosterPreviewActivity extends AppCompatActivity implements Player.L
                         EditImageActivity.postModel = postsModel;
                         if (Functions.isLogin(PosterPreviewActivity.this)){
 
-                            startActivity(new Intent(PosterPreviewActivity.this, EditImageActivity.class).putExtra("isBuyed",true).putExtra("type",type).putExtra("path",Functions.getItemBaseUrl(postsModel.item_url)));
+                            startActivity(new Intent(PosterPreviewActivity.this, EditImageActivity.class)
+                                    .putExtra("isBuyed",true)
+                                    .putExtra("type",type)
+                                    .putExtra("path",Functions.getItemBaseUrl(postsModel.item_url)));
+
                         }else {
                             startActivity(new Intent(PosterPreviewActivity.this, MainActivity.class));
                         }

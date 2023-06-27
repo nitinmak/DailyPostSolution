@@ -50,8 +50,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/instagram_btn"
                     android:backgroundTint="@color/transparent"
-                    android:src="@drawable/daily_page_icon"
-                    />
+                    android:src="@drawable/daily_page_icon" />
 
                 <ImageButton
                     android:id="@+id/images_btn"
@@ -84,7 +83,7 @@
                     android:src="@drawable/frame_page_icon" />
 
                 <ImageButton
-                    android:id="@+id/search_btn"
+                    android:id="@+id/video1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_margin="10dp"
@@ -92,6 +91,8 @@
                     android:background="@drawable/instagram_btn"
                     android:backgroundTint="@color/transparent"
                     android:src="@drawable/video_page_icon" />
+
+
 
                 <!--                <ImageButton-->
                 <!--                    android:id="@+id/premium_btn"-->

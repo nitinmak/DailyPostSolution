@@ -13,12 +13,12 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import java.util.List;
 
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SearchFragment;
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.adapter.BussinessCategoryAdapter;
 import com.sendpost.dreamsoft.databinding.ImageFragmentBinding;
 import com.sendpost.dreamsoft.model.CategoryModel;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 
 public class ImageFragment extends Fragment {
 

@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.rd.PageIndicatorView;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.IntroFragment;
+import com.sendpost.dreamsoft.Fragments.IntroFragment;
 
 public class IntroActivity extends AppCompatActivity {
 

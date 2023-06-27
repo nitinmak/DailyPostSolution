@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@color/backgroundColor"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SearchFragment">
+    tools:context="com.sendpost.dreamsoft.Fragments.SearchFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/search_layout"

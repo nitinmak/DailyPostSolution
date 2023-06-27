@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.sendpost.dreamsoft.ImageEditor.filters.Fragments.PagerPosterByLanguageFragment">
+    tools:context="com.sendpost.dreamsoft.Fragments.PagerPosterByLanguageFragment">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"

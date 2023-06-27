@@ -22,7 +22,7 @@ import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.databinding.FragmentPaymentTypeDialogBinding;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 
 public class PaymentTypeDialogFragment extends BottomSheetDialogFragment {
 

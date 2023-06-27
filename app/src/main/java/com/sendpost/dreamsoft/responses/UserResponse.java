@@ -22,6 +22,17 @@ public class UserResponse {
     @SerializedName("userslist")
     public List<UserModel> userslist;
 
+    public List<UserModel> getActuserslist() {
+        return actuserslist;
+    }
+
+    public void setActuserslist(List<UserModel> actuserslist) {
+        this.actuserslist = actuserslist;
+    }
+
+    @SerializedName("actuserslist")
+    public List<UserModel> actuserslist;
+
     public List<UserModel> getUserslist() {
         return userslist;
     }
@@ -71,6 +82,28 @@ public class UserResponse {
 
     @SerializedName("purchased_pins")
     public String purchased_pins;
+
+    @SerializedName("used_point")
+    public String used_point;
+
+    public String getUsed_point() {
+        return used_point;
+    }
+
+    public void setUsed_point(String used_point) {
+        this.used_point = used_point;
+    }
+
+    public String getRemain_point() {
+        return remain_point;
+    }
+
+    public void setRemain_point(String remain_point) {
+        this.remain_point = remain_point;
+    }
+
+    @SerializedName("remain_point")
+    public String remain_point;
 
     @SerializedName("user")
     public UserModel userModel;

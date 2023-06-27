@@ -3,13 +3,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.sendpost.dreamsoft">
 
+
+
+
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_COMPANION_APP"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
-    <!-- <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" /> -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+<!--    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />-->
     <queries
         android:enabled="true">
         <package android:name="net.one97.paytm" />
@@ -71,7 +82,7 @@
             android:exported="false" />
 
         <activity
-            android:name="com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment"
+            android:name="com.sendpost.dreamsoft.Fragments.AddBussinessFragment"
             android:exported="false" />
 
         <activity
@@ -111,12 +122,11 @@
             android:exported="false" />
 
         <activity
-            android:name="com.sendpost.dreamsoft.HomeActivity"
-            android:configChanges="locale"
+            android:name="com.sendpost.dreamsoft.Fragments.EditvisitcardFragment"
             android:exported="false" />
 
         <activity
-            android:name=".NavFragment.MyWalletActivity"
+            android:name="com.sendpost.dreamsoft.HomeActivity"
             android:configChanges="locale"
             android:exported="false" />
 

@@ -11,12 +11,12 @@
         android:layout_margin="4dp"
         app:cardCornerRadius="5dp"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_200sdp">
+        android:layout_height="@dimen/_170sdp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:maxHeight="500dp">
+            android:maxHeight="300dp">
 
             <ImageView
                 android:id="@+id/iv"

@@ -22,17 +22,19 @@ import java.security.NoSuchAlgorithmException;
 public class App extends Application {
 
     public static App app;
-    private static final String ONESIGNAL_APP_ID = "9303d1de-db9c-4d99-9f1e-c251a3f9bf05";
+    private static final String ONESIGNAL_APP_ID = "6694d321-ed16-46ac-a834-d2dc3f7f3981";
 
     @Override
     public void onCreate() {
         super.onCreate();
         app = this;
+
         if (Functions.getSharedPreference(this).getBoolean(Variables.NIGHT_MODE,false)){
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         }else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
+
         FacebookSdk.sdkInitialize(this);
 
         // Enable verbose OneSignal logging to debug issues if needed.
@@ -44,10 +46,12 @@ public class App extends Application {
 
         // promptForPushNotifications will show the native Android notification permission prompt.
         // We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 7)
-        OneSignal.promptForPushNotifications();
+
+        // OneSignal.promptForPushNotifications();
+
         try {
             PackageInfo info = getPackageManager().getPackageInfo(
-                    "unique.festivalpost.maker", PackageManager.GET_SIGNATURES);
+                    "com.sendpost.dreamsoft", PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {
                 MessageDigest md = MessageDigest.getInstance("SHA");
                 md.update(signature.toByteArray());

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     android:clickable="false"
-    tools:context="com.sendpost.dreamsoft.ImageEditor.filters.Fragments.ContactFragment">
+    tools:context="com.sendpost.dreamsoft.Fragments.ContactFragment">
 
     <RelativeLayout
         android:id="@+id/toolbar"
@@ -78,8 +78,9 @@
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/contact_number"
                     android:inputType="number"
+                    android:maxLength="10"
                     android:paddingHorizontal="8dp"
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
                     android:textSize="15dp" />
 
@@ -98,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/edittx_bg"
                 android:paddingHorizontal="8dp">
 
@@ -111,9 +113,61 @@
                     android:gravity="top"
                     android:hint="@string/message"
                     android:paddingHorizontal="8dp"
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
                     android:textSize="15dp" />
+
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/uploadimg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_20sdp"
+                android:visibility="invisible"
+                android:text="UPLOAD IMAGE"
+                android:background="@color/graycolor"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/browser"-->
+<!--                android:layout_width="@dimen/_40sdp"-->
+<!--                android:layout_height="@dimen/_40sdp"-->
+<!--                android:src="@drawable/ic_bg"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:layout_gravity="bottom"/>-->
+
+        </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/imglayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="invisible"
+                android:background="@drawable/edittx_bg"
+                android:paddingHorizontal="8dp">
+
+                <ImageView
+                    android:id="@+id/message_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_190sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="0dp"
+                    android:padding="@dimen/_10sdp"
+                    android:visibility="invisible"
+                    android:backgroundTint="@color/transparent"
+                    android:gravity="center"
+                    android:scaleType="fitCenter" />
 
             </RelativeLayout>
         </LinearLayout>

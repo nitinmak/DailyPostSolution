@@ -13,7 +13,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.ogaclejapan.smarttablayout.SmartTabLayout
 import com.sendpost.dreamsoft.Classes.Functions
 import com.sendpost.dreamsoft.R
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.FrameViewModel
+import com.sendpost.dreamsoft.viewmodel.FrameViewModel
 
 class StickerBSFragment : BottomSheetDialogFragment() {
 

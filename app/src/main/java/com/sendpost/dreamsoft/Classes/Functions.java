@@ -29,6 +29,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
+import com.google.android.exoplayer2.C;
 import com.sendpost.dreamsoft.dialog.CustomeDialogFragment;
 import com.sendpost.dreamsoft.dialog.DialogType;
 import com.sendpost.dreamsoft.model.UserModel;
@@ -304,6 +305,7 @@ public class Functions {
         getSharedPreference(context).edit().putString(Variables.WHATSAPP,bussiness.getWhatsapp()).apply();
     }
 
+
     public static void shareApp(Context context,String lang) {
 
 
@@ -333,58 +335,57 @@ public class Functions {
         Functions.showLoader(context);
         File directory = new File(getAppFolder(context)+Variables.APP_HIDED_FOLDER);
         String filename = System.currentTimeMillis()+".jpg";
-        AndroidNetworking.download(getItemBaseUrl(getSharedPreference(context).getString("share_image_url","")), directory.getPath(), filename).build().startDownload(new DownloadListener() {
-            public void onDownloadComplete() {
-                Functions.cancelLoader();
+                AndroidNetworking.download(getItemBaseUrl("images/hindi.png"), directory.getPath(), filename).build().startDownload(new DownloadListener() {
+                    public void onDownloadComplete() {
+                        Functions.cancelLoader();
 
-                String shareText = "नमस्ते! मुझे भरोसा है कि SENDPOST ऐप हमारे व्यवसाय को बढ़ाने, हमारे व्यवसाय को अलग करने, ग्राहकों के साथ संबंध बनाने, व्यवसायों को अधिक उचाइयो प् ले जाने के लिए है। साथ ही sendpost  का उद्देश्य हमारे ग्राहकों, दोस्तों, परिवार और निकट और प्रिय लोगों के बीच हमारी उपस्थिति और व्यक्तित्व को बढ़ाना है।\n" +
-                        "यदि आप अगले 48 घंटों में मेरे रेफरल कोड  " + getSharedPreference(context).getString(Variables.REFER_ID,"") + "  के साथ मेरे लिंक का उपयोग करके sendpost ऐप डाउनलोड करते हैं तो आप मुफ्त 200 रजिस्ट्रेशन बोनस पॉइंट भी जीत सकते हैं।\n" +
-                        "https://play.google.com/store/apps/details?id=com.sendpost.dreamsoft";
+                        String shareText = "नमस्ते!  सेंडपोस्ट(SENDPOST) ऐप से हमें अपने बिजनेस को बढ़ाने, ग्राहकों के साथ अच्छे संबंध बनाने, बिजनेस को नई ऊंचाइयों पर ले जाने और हमारे काम को आसान बनाने के लिए बहुत मदद की है और इसके लिए मुझे सेंडपोस्ट(SendPost) ऐप पर भरोसा है।\n" +
+                                "व्यापार के साथ सेंडपोस्ट(SendPost) का उद्देश्य हमारे ग्राहकों, दोस्तों, परिवार, निकट और प्रियजनों के बीच हमारी उपस्थिति(Presence) और व्यक्तित्व(Personality) को बढ़ाना है।\n" +
+                                "यदि आप अगले 48 घंटों में नीचे दिए गए लिंक का उपयोग करके सेंडपोस्ट(SendPost) ऐप डाउनलोड करते हैं और रजिस्ट्रेशन के समय मेरे रेफरल कोड "+getSharedPreference(context).getString(Variables.REFER_ID,"")+" का उपयोग करते हैं, तो आप 400 रजिस्ट्रेशन पॉइंट मुफ्त में प्राप्त कर सकते हैं।\n" +
+                                "https://play.google.com/store/apps/details?id=com.sendpost.dreamsoft";
 
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("image/*");
-                intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", new File(directory.getPath()+"/"+filename)));
-                intent.putExtra(Intent.EXTRA_TEXT,shareText);
-                intent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name));
-                context.startActivity(intent);
-            }
+                        Intent intent = new Intent(Intent.ACTION_SEND);
+                        intent.setType("image/*");
+                        intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", new File(directory.getPath()+"/"+filename)));
+                        intent.putExtra(Intent.EXTRA_TEXT,shareText);
+                        intent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name));
+                        context.startActivity(intent);
+                    }
 
-            public void onError(ANError aNError) {
-                Functions.cancelLoader();
-            }
+                    public void onError(ANError aNError) {
+                        Functions.cancelLoader();
+                    }
         });
-
 
     }else {
-        Functions.showLoader(context);
-        File directory = new File(getAppFolder(context)+Variables.APP_HIDED_FOLDER);
-        String filename = System.currentTimeMillis()+".jpg";
-        AndroidNetworking.download(getItemBaseUrl(getSharedPreference(context).getString("share_image_url","")), directory.getPath(), filename).build().startDownload(new DownloadListener() {
-            public void onDownloadComplete() {
-                Functions.cancelLoader();
-                String shareText = "હાય! અમારા વ્યવસાયને વધારવામાં, અમારા વ્યવસાયને અલગ પાડવામાં, ગ્રાહક સાથે સંબંધો બનાવવા," +
-                        " વ્યવસાયોને વધુ એક્સપોઝર આપવા માટે મને SENDPOST એપ્લિકેશન પર વિશ્વાસ છે. તેમજ Sendpost નો હેતુ અમારા ગ્રાહકો, મિત્રો, કુટુંબીજનો અને નજીકના અને પ્રિયજનોમાં અમારી હાજરી અને વ્યક્તિત્વ વધારવાનો છે.\n" +
-                        "જો તમે આગામી 48 કલાકમાં મારા રેફરલ કોડ " + getSharedPreference(context).getString(Variables.REFER_ID,"") + " સાથેની મારી લિંકનો ઉપયોગ કરીને Sendpost એપ ડાઉનલોડ કરશો તો તમને મફત 200 રજીસ્ટ્રેશન બોનસ પોઈન્ટ પણ જીતી શકો છો..\n" +
-                        "https://play.google.com/store/apps/details?id=com.sendpost.dreamsoft";
-//getSharedPreference(context).getString(Variables.REFER_ID,"");
-                Intent intent = new Intent(Intent.ACTION_SEND);
-                intent.setType("image/*");
-                intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", new File(directory.getPath()+"/"+filename)));
-                intent.putExtra(Intent.EXTRA_TEXT,shareText);
-                intent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name));
-                context.startActivity(intent);
-            }
 
-            public void onError(ANError aNError) {
-                Functions.cancelLoader();
-            }
-        });
+            Functions.showLoader(context);
+            File directory = new File(getAppFolder(context)+Variables.APP_HIDED_FOLDER);
+            String filename = System.currentTimeMillis()+".jpg";
+            AndroidNetworking.download(getItemBaseUrl("images/gujrati.png"), directory.getPath(), filename).build().startDownload(new DownloadListener() {
+                public void onDownloadComplete() {
+                    Functions.cancelLoader();
+                    String shareText = "નમસ્તે ! સેન્ડપોસ્ટ(SENDPOST) એપ્લિકેશને અમને અમારા વ્યવસાયને વધારવામાં, ગ્રાહકો સાથે સારા સંબંધો બનાવવા, વ્યવસાયને નવી ઊંચાઈઓ પર લઈ જવા અને અમારા કામને સરળ બનાવવા માટે ઘણી મદદ કરી છે અને આ માટે સેન્ડપોસ્ટ(SendPost) એપ્લિકેશન પર વિશ્વાસ છે.\n" +
+                            "વ્યવસાય સાથે સેન્ડપોસ્ટનો હેતુ અમારા ગ્રાહકો, મિત્રો, કુટુંબીજનો, નજીકના અને પ્રિયજનોમાં આપણી હાજરી(Presence) અને વ્યક્તિત્વ(Personality) વધારવાનો છે.\n" +
+                            "જો તમે આગામી 48 કલાકમાં નીચે આપેલ લિંકનો ઉપયોગ કરીને સેન્ડપોસ્ટ(SendPost) એપ ડાઉનલોડ કરશો અને તેમાં રજીસ્ટ્રેશન વખતે મારા રેફરલ કોડ "+getSharedPreference(context).getString(Variables.REFER_ID,"")+" નો ઉપયોગ કરીને તમે 400 રજીસ્ટ્રેશન પોઇન્ટ મફત મેળવી શકો છો.\n"   +
+                            "https://play.google.com/store/apps/details?id=com.sendpost.dreamsoft";
+    //getSharedPreference(context).getString(Variables.REFER_ID,"");
+                    Intent intent = new Intent(Intent.ACTION_SEND);
+                    intent.setType("image/*");
+                    intent.putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".fileprovider", new File(directory.getPath()+"/"+filename)));
+                    intent.putExtra(Intent.EXTRA_TEXT,shareText);
+                    intent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name));
+                    context.startActivity(intent);
+                }
+
+                public void onError(ANError aNError) {
+                    Functions.cancelLoader();
+                }
+            });
+        }
     }
 
 
-    }
-
-//
 //    public static void shareApp(Context context) {
 //        Functions.showLoader(context);
 //        new OmegaIntentBuilder(context)
@@ -426,8 +427,9 @@ public class Functions {
     }
 
     public static String getFormatedDate(String time) {
+
         String inputPattern = "yyyy-MM-dd";
-        String outputPattern = "dd MMM yyyy";
+        String outputPattern = "EEE dd-MM-yyyy";
         SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
         SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
 
@@ -440,7 +442,9 @@ public class Functions {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+
         return str;
+
     }
 
     public static long getDuration(Context context,String path) {

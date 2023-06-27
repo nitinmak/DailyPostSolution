@@ -5,24 +5,25 @@ import static com.sendpost.dreamsoft.Classes.Constants.SUCCESS;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
@@ -30,17 +31,22 @@ import com.sendpost.dreamsoft.MyPostsActivity;
 import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.adapter.PointAdapter;
 import com.sendpost.dreamsoft.databinding.ActivitypointhistoryBinding;
+import com.sendpost.dreamsoft.databinding.FragmentPointbookBinding;
 import com.sendpost.dreamsoft.responses.PointHistoey;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 
 public class PointFragment extends Fragment {
 
     UserViewModel viewModel;
     ActivitypointhistoryBinding activityMyWalletBinding;
+    FragmentPointbookBinding fragmentPointbookBinding;
     List<PointHistoey> list = new ArrayList<>();
     Context context;
+    ImageButton back_btn;
+    TextView pointbook;
 
     private  FragmentInvitedHistory invitedHistory = null;
+    private  PointbookFragment pointfragment = null;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -81,13 +87,36 @@ public class PointFragment extends Fragment {
             builder.create().show();
         });
 
-//      getuserhistory(Functions.getUID(context));
+      getuserhistory(Functions.getUID(context));
 
-        invitedHistory = new FragmentInvitedHistory();
-        showBottomSheetDialogFragment(invitedHistory);
+        invitedHistory = new FragmentInvitedHistory("Point");
+//        showBottomSheetDialogFragment(invitedHistory);
+        activityMyWalletBinding.showuser.setOnClickListener(view1 -> {
+            showBottomSheetDialogFragment(invitedHistory);
+        });
 
+        back_btn = view.findViewById(R.id.back_btn);
+        back_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().onBackPressed();
+            }
+        });
+
+        pointfragment = new PointbookFragment();
+        activityMyWalletBinding.pointbook.setOnClickListener(view1 -> {
+            showBottomSheetDialogFragment(pointfragment);
+                });
+
+
+//        pointbook = view.findViewById(R.id.pointbook);
+//        pointbook.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(context, "Coming soon", Toast.LENGTH_SHORT).show();
+//            }
+//        });
     }
-
 
     private void showBottomSheetDialogFragment(BottomSheetDialogFragment fragment) {
         if (fragment == null || fragment.isAdded()) {
@@ -115,25 +144,18 @@ public class PointFragment extends Fragment {
     }
 
     private void getuserhistory(String uid) {
-//            viewModel.activeuserhistory(Functions.getUID(context)).observe(getViewLifecycleOwner(), userResponse -> {
-//            binding.refereshLay.setRefreshing(false);
-//            binding.shimmerLay.stopShimmer();
-//            binding.shimmerLay.setVisibility(View.GONE);
-//            if (userResponse != null){
-//                if (userResponse.code == SUCCESS){
-//                    if (userResponse.getPointhistory().size() > 0){
-//                        list.clear();
-//                        list.addAll(userResponse.pointhistory);
-//                        setAdapter();
-//                        activityMyWalletBinding.noDataLayout.setVisibility(View.GONE);
-//                    }else {
-//                        activityMyWalletBinding.noDataLayout.setVisibility(View.VISIBLE);
-//                    }
-//                }else {
-//                    Functions.showToast(context,userResponse.message);
-//                }
-//            }
-//        });
+            viewModel.getpointhistory(Functions.getUID(context)).observe(getViewLifecycleOwner(), userResponse -> {
+
+            if (userResponse != null){
+                if (userResponse.code == SUCCESS){
+                    activityMyWalletBinding.purchased.setText(": " + userResponse.purchased_pins);
+                    activityMyWalletBinding.rem.setText(": "+userResponse.remain_point);
+                    activityMyWalletBinding.used.setText(": " + userResponse.used_point);
+                }else {
+                    Functions.showToast(context,userResponse.message);
+                }
+            }
+        });
 
 //        viewModel.activeuserhistory(uid).observe(this, userResponse -> {
 //            if (userResponse != null) {

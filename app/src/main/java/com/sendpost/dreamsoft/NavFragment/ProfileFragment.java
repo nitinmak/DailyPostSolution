@@ -16,7 +16,7 @@ import android.widget.TextView;
 import com.sendpost.dreamsoft.Account.EditProfileFragment;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment;
+import com.sendpost.dreamsoft.Fragments.AddBussinessFragment;
 import com.sendpost.dreamsoft.HomeActivity;
 import com.sendpost.dreamsoft.MyPostsActivity;
 import com.sendpost.dreamsoft.R;

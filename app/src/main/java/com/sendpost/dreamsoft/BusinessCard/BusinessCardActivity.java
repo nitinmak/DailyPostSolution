@@ -6,8 +6,8 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -15,15 +15,18 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.ainapage.vr.ImageEditor.FileSaveHelper;
 
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.PermissionUtils;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment;
+import com.sendpost.dreamsoft.Fragments.AddBussinessFragment;
+import com.sendpost.dreamsoft.Fragments.EditvisitcardFragment;
 import com.sendpost.dreamsoft.NavFragment.PremiumFragment;
 import com.sendpost.dreamsoft.R;
 
@@ -39,21 +42,28 @@ import java.util.Map;
 public class BusinessCardActivity extends AppCompatActivity {
 
     DiscreteScrollView recycler;
-    LinearLayout mAdView;
+    LinearLayout mAdView,premium_lay,sv_btn;
     BusinessCardAdapter adapter;
     PermissionUtils takePermissionUtils;
     private FileSaveHelper mSaveFileHelper;
     String fileName;
     ImageView telegram,instagram;
+    TextView editvisit;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_visting_card);
+//        setContentView(R.layout.editvisitcard);
 
         recycler = findViewById(R.id.recycler);
         telegram = findViewById(R.id.telegram);
         instagram = findViewById(R.id.instagram);
+        editvisit = findViewById(R.id.editvisit);
+        premium_lay = findViewById(R.id.premium_lay);
+        sv_btn = findViewById(R.id.save_main_btn);
 
         recycler.setItemTransitionTimeMillis(150);
         recycler.setItemTransformer(new ScaleTransformer.Builder()
@@ -73,6 +83,10 @@ public class BusinessCardActivity extends AppCompatActivity {
             createBussinessCard("instagram");
         });
 
+        editvisit.setOnClickListener(view -> {
+            startActivity(new Intent(this, EditvisitcardFragment.class));
+        });
+
 //        findViewById(R.id.premium_tag).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -80,20 +94,27 @@ public class BusinessCardActivity extends AppCompatActivity {
 //            }
 //        });
 
-        recycler.addOnItemChangedListener(new DiscreteScrollView.OnItemChangedListener<RecyclerView.ViewHolder>() {
-            @Override
-            public void onCurrentItemChanged(@Nullable RecyclerView.ViewHolder viewHolder, int adapterPosition) {
-                if (adapter.premiumlist.get(adapterPosition).equals(1)){
-                    if (Functions.IsPremiumEnable(BusinessCardActivity.this)){
-//                        findViewById(R.id.premium_tag).setVisibility(View.GONE);
-                    }else {
-//                        findViewById(R.id.premium_tag).setVisibility(View.VISIBLE);
-                    }
-                }else {
+        if (Functions.IsPremiumEnable(BusinessCardActivity.this)){
+            findViewById(R.id.premium_tag).setVisibility(View.GONE);
+            premium_lay.setVisibility(View.VISIBLE);
+            sv_btn.setVisibility(View.GONE);
+        }else {
+            findViewById(R.id.premium_tag).setVisibility(View.VISIBLE);
+            premium_lay.setVisibility(View.GONE);
+            sv_btn.setVisibility(View.GONE);
+        }
+
+//        recycler.addOnItemChangedListener((viewHolder, adapterPosition) -> {
+//            if (adapter.premiumlist.get(adapterPosition).equals(1)){
+//                if (Functions.IsPremiumEnable(BusinessCardActivity.this)){
 //                    findViewById(R.id.premium_tag).setVisibility(View.GONE);
-                }
-            }
-        });
+//                }else {
+//                    findViewById(R.id.premium_tag).setVisibility(View.VISIBLE);
+//                }
+//            }else {
+//                findViewById(R.id.premium_tag).setVisibility(View.GONE);
+//            }
+//        });
     }
 
     private void showPremiumFragment() {

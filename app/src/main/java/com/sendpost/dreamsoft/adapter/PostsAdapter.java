@@ -7,11 +7,13 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.lifecycle.Observer;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.sendpost.dreamsoft.databinding.ItemMostSendedBinding;
 import com.sendpost.dreamsoft.databinding.ItemPosterVerticalBinding;
 import com.sendpost.dreamsoft.model.PostsModel;
+import com.sendpost.dreamsoft.responses.HomeResponse;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,6 +32,7 @@ public class PostsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         this.context = context;
         this.onItemClickListener = onItemClickListener;
         this.list = list;
+
     }
 
     @NonNull
@@ -45,6 +48,7 @@ public class PostsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         ViewHolder holder = (ViewHolder) holde;int position = pos;
         holder.binding.setPosts(list.get(pos));
         holder.binding.viewTv.setText(list.get(position).views);
+        Log.d("dfnvjfv",list.get(pos).item_url);
         holder.binding.getRoot().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

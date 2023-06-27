@@ -16,7 +16,7 @@ import com.sendpost.dreamsoft.adapter.FestivalCategoryAdapter;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.model.CategoryModel;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 import java.util.ArrayList;
 import java.util.List;
 

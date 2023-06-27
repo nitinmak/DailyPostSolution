@@ -14,12 +14,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SearchFragment;
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.adapter.FestivalCategoryAdapter;
 import com.sendpost.dreamsoft.databinding.FragmentVideoBinding;
 import com.sendpost.dreamsoft.model.CategoryModel;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 
 import java.util.List;
 

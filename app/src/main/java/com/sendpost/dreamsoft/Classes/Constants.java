@@ -7,7 +7,7 @@ public class Constants {
 
     //BASE URL
     public static final String API_KEY ="GD45FDf45DS1";
-    public static final String BASE_URL ="https://phplaravel-984147-3451002.cloudwaysapps.com/";
+    public static final String BASE_URL ="https://sendpostapp.com/";
     public static final int SUCCESS = 200;
     public static final int FAILD = 201;
     public static final String CATEGORY = "category";

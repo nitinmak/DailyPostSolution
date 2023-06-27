@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment;
+import com.sendpost.dreamsoft.Fragments.AddBussinessFragment;
 import com.sendpost.dreamsoft.databinding.RowFrameViewBinding;
 import com.sendpost.dreamsoft.model.FrameModel;
 import com.sendpost.dreamsoft.Classes.Functions;

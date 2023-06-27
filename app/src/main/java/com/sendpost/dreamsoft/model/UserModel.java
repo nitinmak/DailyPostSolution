@@ -11,6 +11,16 @@ public class UserModel {
     private String website;
     private String member_id;
 
+    public String getPurchased() {
+        return purchased;
+    }
+
+    public void setPurchased(String purchased) {
+        this.purchased = purchased;
+    }
+
+    private String purchased;
+
     public String getParent_id() {
         return parent_id;
     }

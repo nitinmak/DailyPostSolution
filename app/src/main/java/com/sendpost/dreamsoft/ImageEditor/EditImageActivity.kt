@@ -88,7 +88,8 @@ import com.sendpost.dreamsoft.model.FrameCategoryModel
 import com.sendpost.dreamsoft.model.FrameModel
 import com.sendpost.dreamsoft.model.PostsModel
 import com.sendpost.dreamsoft.responses.FrameResponse
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.FrameViewModel
+import com.sendpost.dreamsoft.viewmodel.FrameViewModel
+
 import com.theartofdev.edmodo.cropper.CropImage
 import com.theartofdev.edmodo.cropper.CropImageView
 import ja.burhanrashid52.photoeditor.*
@@ -103,7 +104,6 @@ import java.nio.channels.FileChannel
 class EditImageActivity : AppCompatActivity(), View.OnClickListener,
     PropertiesBSFragment.Properties, Properties, EmojiBSFragment.EmojiListener,
     StickerBSFragment.StickerListener,EditingToolsAdapter.OnItemSelected, FilterListener, BorderListener {
-
 
     private var mPhotoEditorView: PhotoEditorView? = null
     private var mPropertiesBSFragment: PropertiesBSFragment? = null
@@ -149,10 +149,14 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
         VIDEO_TO_PHOTO = false
         activity = this
         initViews()
+        if (Functions.IsPremiumEnable(activity)) {
+            go_premium?.visibility ?:  GONE
+        }
 
         takePermissionUtils = PermissionUtils(this, mPermissionResult)
         isPostSubsBuy = intent.getBooleanExtra("isBuyed",false)
         if (intent.getStringExtra("type").equals("PhotoVideo")) {
+
             postModel = PostsModel()
             VIDEO_TO_PHOTO = true
             imgSave.isActivated = false
@@ -712,6 +716,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                 }
             }
             R.id.selectPhotos -> {
+
                 if (takePermissionUtils!!.isStorageCameraPermissionGranted) {
                     PhotoPicker.builder()
                         .setShowCamera(false)
@@ -719,6 +724,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                         .setPreviewEnabled(false)
                         .start(this, PhotoPicker.REQUEST_CODE)
                 } else {
+                    Log.d("wfdffwfw","jnjbhbhbnn")
                     takePermissionUtils!!.takeStorageCameraPermission()
                 }
             }
@@ -988,7 +994,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                 PICK_REQUEST_VIDEO -> {
                     val uri = data?.data
                     Log.d("vbhvfvfsv",Functions.getDuration(activity,FileUtils.getFileFromUri(this, uri).absolutePath).toString())
-                    if (Functions.getDuration(activity,FileUtils.getFileFromUri(this, uri).absolutePath) > 60000) {
+                    if (Functions.getDuration(activity,FileUtils.getFileFromUri(this, uri).absolutePath) > 900000) {
                         Functions.showToast(activity, getString(R.string.max_video_duration_error))
                     } else {
 
@@ -1699,7 +1705,7 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
                 rvideoItems?.visibility = View.GONE
                 mIsBorderVisible = true
                 findViewById<LinearLayout>(R.id.border_recycler_lay).visibility = View.VISIBLE
-                var progressBorder = 50
+                var progressBorder = 30
                 val fromAsset = getBitmapFromAsset(activity!!, "border/1.png")
                 val drawable: Drawable = BitmapDrawable(resources, fromAsset)
                 photoEditorView.borderView.setBackgroundDrawable(drawable)
@@ -1995,41 +2001,74 @@ class EditImageActivity : AppCompatActivity(), View.OnClickListener,
 
             Log.d("khvhsvhsbvs",FINAL_AUDIO_PATH);
 
-
             if(editTypex == "PhotoVideo"){
 
-                val inputCode1  =  arrayOf(
-                    "-i",
-                    VIDEO_PATH,
-                    "-i",
-                    FRAME_PATH,
-                    "-i",
-                    FINAL_AUDIO_PATH,
-                    "-filter_complex",
-                    "[0]scale=1200:1200:force_original_aspect_ratio=decrease,pad=1200:1200:(ow-iw)/2:(oh-ih)/2,setsar=1[backd],[1]scale=1200X1200[scaled_image],[backd][scaled_image]overlay",
-                    "-shortest",
-                    OUT_VIDEO_PATH
-                )
-
-                val rc = FFmpeg.execute(inputCode1)
-                if (rc == Config.RETURN_CODE_SUCCESS) {
-                    file.delete()
-                    File(FRAME_PATH).delete()
-                    File(VIDEO_PATH).delete()
-                    Log.i(Config.TAG, "Command execution completed successfully.")
-                }
-                else if (rc == Config.RETURN_CODE_CANCEL) {
-                    Log.i(Config.TAG, "Command execution cancelled by user.")
-                }
-                else {
-                    Log.i(
-                        Config.TAG, String.format(
-                            "Command execution failed with rc=%d and the output below.",
-                            rc
-                        )
+                if (FINAL_AUDIO_PATH.equals("")){
+                    var inputCode1 = arrayOf(
+                        "-i",
+                        VIDEO_PATH,
+                        "-i",
+                        FRAME_PATH,
+                        "-filter_complex",
+                        "[0]scale=1200:1200:force_original_aspect_ratio=decrease,pad=1200:1200:(ow-iw)/2:(oh-ih)/2,setsar=1[backd],[1]scale=1200X1200[scaled_image],[backd][scaled_image]overlay",
+                        "-shortest",
+                        OUT_VIDEO_PATH
                     )
-                    Config.printLastCommandOutput(Log.INFO)
+
+                    val rc = FFmpeg.execute(inputCode1)
+                    if (rc == Config.RETURN_CODE_SUCCESS) {
+                        file.delete()
+                        File(FRAME_PATH).delete()
+                        File(VIDEO_PATH).delete()
+                        Log.i(Config.TAG, "Command execution completed successfully.")
+                    }
+                    else if (rc == Config.RETURN_CODE_CANCEL) {
+                        Log.i(Config.TAG, "Command execution cancelled by user.")
+                    }
+                    else {
+                        Log.i(
+                            Config.TAG, String.format(
+                                "Command execution failed with rc=%d and the output below.",
+                                rc
+                            )
+                        )
+                        Config.printLastCommandOutput(Log.INFO)
+                    }
+
+                }else {
+                    var  inputCode1 = arrayOf(
+                        "-i",
+                        VIDEO_PATH,
+                        "-i",
+                        FRAME_PATH,
+                        "-i",
+                        FINAL_AUDIO_PATH,
+                        "-filter_complex",
+                        "[0]scale=1200:1200:force_original_aspect_ratio=decrease,pad=1200:1200:(ow-iw)/2:(oh-ih)/2,setsar=1[backd],[1]scale=1200X1200[scaled_image],[backd][scaled_image]overlay",
+                        "-shortest",
+                        OUT_VIDEO_PATH
+                    )
+                    val rc = FFmpeg.execute(inputCode1)
+                    if (rc == Config.RETURN_CODE_SUCCESS) {
+                        file.delete()
+                        File(FRAME_PATH).delete()
+                        File(VIDEO_PATH).delete()
+                        Log.i(Config.TAG, "Command execution completed successfully.")
+                    }
+                    else if (rc == Config.RETURN_CODE_CANCEL) {
+                        Log.i(Config.TAG, "Command execution cancelled by user.")
+                    }
+                    else {
+                        Log.i(
+                            Config.TAG, String.format(
+                                "Command execution failed with rc=%d and the output below.",
+                                rc
+                            )
+                        )
+                        Config.printLastCommandOutput(Log.INFO)
+                    }
                 }
+
 
             }else{
 

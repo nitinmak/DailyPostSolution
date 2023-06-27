@@ -20,7 +20,7 @@ public class PhotoPicker {
 
   public static final int REQUEST_CODE             = 233;
 
-  public final static int DEFAULT_MAX_COUNT        = 9;
+  public final static int DEFAULT_MAX_COUNT        = 50;
   public final static int DEFAULT_COLUMN_NUMBER    = 3;
 
   public final static String KEY_SELECTED_PHOTOS   = "SELECTED_PHOTOS";

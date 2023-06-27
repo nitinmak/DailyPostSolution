@@ -1,9 +1,13 @@
 package com.sendpost.dreamsoft.NavFragment;
 
+import static android.view.View.VISIBLE;
+
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -24,13 +28,16 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 import com.google.android.material.navigation.NavigationView;
+import com.onesignal.OneSignal;
 import com.sendpost.dreamsoft.Account.EditProfileFragment;
 import com.sendpost.dreamsoft.BusinessCard.BusinessCardActivity;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.AddBussinessFragment;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.ReferFragment;
+import com.sendpost.dreamsoft.Fragments.AddBussinessFragment;
+import com.sendpost.dreamsoft.Fragments.ReferFragment;
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.HomeActivity;
 import com.sendpost.dreamsoft.PosterActivity;
 import com.sendpost.dreamsoft.WebviewA;
@@ -47,8 +54,7 @@ import com.sendpost.dreamsoft.adapter.UpcomingRelationAdapter;
 import com.sendpost.dreamsoft.binding.BindingAdaptet;
 import com.sendpost.dreamsoft.databinding.FragmentHomeBinding;
 import com.sendpost.dreamsoft.dialog.LanguageDialogFragment;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.ContactFragment;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SearchFragment;
+import com.sendpost.dreamsoft.Fragments.ContactFragment;
 import com.sendpost.dreamsoft.Interface.AdapterClickListener;
 import com.sendpost.dreamsoft.MainActivity;
 import com.sendpost.dreamsoft.model.CategoryModel;
@@ -59,7 +65,7 @@ import com.sendpost.dreamsoft.PosterPreviewActivity;
 import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.model.SliderModel;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
@@ -149,8 +155,14 @@ public class HomeFragment extends Fragment {
         NavigationView navigationView = (NavigationView) view.findViewById(R.id.navigation);
         View headerview = navigationView.getHeaderView(0);
         LinearLayout pinwallet = (LinearLayout) headerview.findViewById(R.id.my_wallate_btn);
+        LinearLayout pinwa = (LinearLayout) headerview.findViewById(R.id.pinwa);
         LinearLayout mypost_btn = (LinearLayout) headerview.findViewById(R.id.my_post_btn);
+        LinearLayout personal = (LinearLayout) headerview.findViewById(R.id.personal);
+        LinearLayout personalmenu = (LinearLayout) headerview.findViewById(R.id.personalmenu);
+        LinearLayout sales = (LinearLayout) headerview.findViewById(R.id.sales);
+        LinearLayout salesmenu = (LinearLayout) headerview.findViewById(R.id.salesmenu);
         LinearLayout edit_btn = (LinearLayout) headerview.findViewById(R.id.edit_btn);
+        LinearLayout sectionlay = (LinearLayout) headerview.findViewById(R.id.sectionlay);
         LinearLayout bussiness_lay = (LinearLayout) headerview.findViewById(R.id.bussiness_lay);
         LinearLayout privacy_policy_lay = (LinearLayout) headerview.findViewById(R.id.privacy_policy_lay);
         LinearLayout terms_lay = (LinearLayout) headerview.findViewById(R.id.terms_lay);
@@ -160,7 +172,7 @@ public class HomeFragment extends Fragment {
         LinearLayout contact_btn = (LinearLayout) headerview.findViewById(R.id.contact_btn);
         LinearLayout businesscard_btn = (LinearLayout) headerview.findViewById(R.id.businesscard_btn);
         LinearLayout businesscard_visiting_btn = (LinearLayout) headerview.findViewById(R.id.businesscard_visiting_btn);
-        ToggleButton toggleButton = (ToggleButton) headerview.findViewById(R.id.toggleButton);
+        Switch toggleButton = (Switch) headerview.findViewById(R.id.toggleButton);
         TextView version_tv = (TextView) headerview.findViewById(R.id.version_tv);
 
         if (Functions.getSharedPreference(getActivity()).getBoolean(Variables.NIGHT_MODE,false)){
@@ -195,9 +207,26 @@ public class HomeFragment extends Fragment {
         });
 
         pinwallet.setOnClickListener(v -> {
+
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//        transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);
+            transaction.addToBackStack(null);
+            transaction.replace(android.R.id.content, new PointFragment()).commit();
 //            binding.drawerLay.closeDrawer(Gravity.LEFT);
-            startActivity(new Intent(getActivity(), WalletePager.class));
+//            startActivity(new Intent(getActivity(), WalletePager.class));
         });
+
+        pinwa.setOnClickListener(v -> {
+//            binding.drawerLay.closeDrawer(Gravity.LEFT);
+//            startActivity(new Intent(getActivity(), PinFragment.class));
+
+            FragmentTransaction transaction = getFragmentManager().beginTransaction();
+//        transaction.setCustomAnimations(R.anim.in_from_right, R.anim.in_from_left, R.anim.in_from_top, R.anim.out_from_bottom);
+            transaction.addToBackStack(null);
+            transaction.replace(android.R.id.content, new PinFragment()).commit();
+        });
+
+
 
         mypost_btn.setOnClickListener(v -> {
 //            binding.drawerLay.closeDrawer(Gravity.LEFT);
@@ -255,7 +284,30 @@ public class HomeFragment extends Fragment {
             binding.drawerLay.closeDrawer(Gravity.LEFT);
             Functions.logOut(getActivity());
         });
+
+        personal.setOnClickListener(v -> {
+            personalmenu.setVisibility(View.VISIBLE);
+            salesmenu.setVisibility(View.GONE);
+//            sales.setBackgroundColor(Color.parseColor("#C6F1ED"));
+            sales.setBackgroundColor(Color.WHITE);
+            personal.setBackgroundColor(Color.parseColor("#96CBE4"));
+        });
+
+        sales.setOnClickListener(v -> {
+            personalmenu.setVisibility(View.GONE);
+            personal.setBackgroundColor(Color.WHITE);
+            salesmenu.setVisibility(View.VISIBLE);
+            sales.setBackgroundColor(Color.parseColor("#96CBE4"));
+        });
+
+//        sectionlay.setVisibility(){
+//                showview();
+//        }
     }
+
+//    private void showview(){
+//
+//    }
 
     private void showContactFragment() {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
@@ -326,7 +378,13 @@ public class HomeFragment extends Fragment {
                 }
             }
         });
+
+        if(android.os.Build.VERSION.SDK_INT >= 33){
+            OneSignal.promptForPushNotifications();
+        }
+
     }
+
 
     private void showOfferDialog(OfferDialogModel offerdialog) {
         Dialog dialog = new Dialog(context);

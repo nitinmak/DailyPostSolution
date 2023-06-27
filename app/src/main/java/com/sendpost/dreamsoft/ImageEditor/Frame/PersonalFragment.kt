@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.ContactFragment
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel
+import com.sendpost.dreamsoft.Fragments.ContactFragment
+import com.sendpost.dreamsoft.viewmodel.UserViewModel
 import com.sendpost.dreamsoft.R
 import kotlinx.android.synthetic.main.fragment_sticker.*
 

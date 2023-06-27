@@ -1,6 +1,5 @@
 package com.sendpost.dreamsoft.adapter;
 
-
 import android.content.Context;
 
 import androidx.fragment.app.Fragment;
@@ -11,6 +10,7 @@ import com.sendpost.dreamsoft.NavFragment.PinFragment;
 import com.sendpost.dreamsoft.NavFragment.PointFragment;
 
 public class MyPagerWalleteAdapter extends FragmentPagerAdapter {
+
     Context context;
     int totalTabs;
     public MyPagerWalleteAdapter(Context c, FragmentManager fm, int totalTabs) {
@@ -18,6 +18,7 @@ public class MyPagerWalleteAdapter extends FragmentPagerAdapter {
         context = c;
         this.totalTabs = totalTabs;
     }
+
     @Override
     public Fragment getItem(int position) {
         switch (position) {

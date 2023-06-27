@@ -6,9 +6,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:clickable="false"
+    android:clickable="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ImageEditor.filters.Fragments.ReferFragment">
+    tools:context=".Fragments.ReferFragment"
+    android:focusable="true">
 
     <RelativeLayout
         android:background="@color/primary"
@@ -368,62 +369,65 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_margin="@dimen/_10sdp"
-        android:background="@drawable/btn"
-        android:backgroundTint="@color/editor_controller_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <RelativeLayout-->
+<!--        android:layout_margin="@dimen/_10sdp"-->
+<!--        android:background="@drawable/btn"-->
+<!--        android:backgroundTint="@color/editor_controller_bg"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
 
-        <TextView
-            android:id="@+id/text"
-            android:layout_margin="@dimen/_10sdp"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/invited_users"
-            android:textColor="@color/textColor"
-            android:textSize="16dp"/>
+<!--        <TextView-->
+<!--            android:id="@+id/text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:layout_marginTop="@dimen/_10sdp"-->
+<!--            android:layout_marginEnd="@dimen/_10sdp"-->
+<!--            android:layout_marginBottom="@dimen/_10sdp"-->
+<!--            android:text="@string/invited_users"-->
+<!--            android:textColor="@color/textColor"-->
+<!--            android:textSize="16dp"-->
+<!--            android:textStyle="bold" />-->
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_below="@id/text"
-            android:id="@+id/userList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/item_user_list"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="vertical"/>
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_below="@id/text"-->
+<!--            android:id="@+id/userList"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            tools:listitem="@layout/item_user_list"-->
+<!--            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            android:orientation="vertical"/>-->
 
-        <LinearLayout
-            android:visibility="gone"
-            android:id="@+id/no_data_layout"
-            android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
-            <com.airbnb.lottie.LottieAnimationView
-                android:layout_width="@dimen/_100sdp"
-                android:layout_height="@dimen/_100sdp"
-                app:lottie_rawRes="@raw/no_data"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"/>
-            <TextView
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textStyle="bold"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/no_user_found"
-                android:textSize="16dp"
-                android:textColor="@color/textColor"/>
+<!--        <LinearLayout-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/no_data_layout"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:orientation="vertical">-->
+<!--            <com.airbnb.lottie.LottieAnimationView-->
+<!--                android:layout_width="@dimen/_100sdp"-->
+<!--                android:layout_height="@dimen/_100sdp"-->
+<!--                app:lottie_rawRes="@raw/no_data"-->
+<!--                app:lottie_autoPlay="true"-->
+<!--                app:lottie_loop="true"/>-->
+<!--            <TextView-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/no_user_found"-->
+<!--                android:textSize="16dp"-->
+<!--                android:textColor="@color/textColor"/>-->
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/there_is_no_data_so"
-                android:textSize="13dp"
-                android:textColor="@color/hintColor"/>
-        </LinearLayout>
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/there_is_no_data_so"-->
+<!--                android:textSize="13dp"-->
+<!--                android:textColor="@color/hintColor"/>-->
+<!--        </LinearLayout>-->
 
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 </LinearLayout>

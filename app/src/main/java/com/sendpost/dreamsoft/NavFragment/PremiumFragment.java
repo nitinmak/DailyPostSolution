@@ -54,8 +54,8 @@ import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.RazorpayActivity;
 import com.sendpost.dreamsoft.responses.HomeResponse;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 import com.yarolegovich.discretescrollview.InfiniteScrollAdapter;
 import com.yarolegovich.discretescrollview.transform.ScaleTransformer;
 

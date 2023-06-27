@@ -13,8 +13,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import java.util.List;
 
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SearchFragment;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 import com.sendpost.dreamsoft.adapter.UpcomingImagesAdapter;
 import com.sendpost.dreamsoft.databinding.DailyFragmentBinding;
 import com.sendpost.dreamsoft.model.CategoryModel;

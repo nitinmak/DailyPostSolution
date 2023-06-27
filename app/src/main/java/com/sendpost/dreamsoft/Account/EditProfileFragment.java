@@ -44,7 +44,7 @@ import com.sendpost.dreamsoft.dialog.CustomeDialogFragment;
 import com.sendpost.dreamsoft.dialog.DialogType;
 import com.sendpost.dreamsoft.dialog.PickFromFragment;
 import com.sendpost.dreamsoft.responses.UserResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
@@ -61,9 +61,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
-
 public class EditProfileFragment extends Fragment {
-
 
     public EditProfileFragment() {}
 

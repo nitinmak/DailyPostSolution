@@ -1,73 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:orientation="vertical">
+
     <View
         android:layout_width="100dp"
         android:layout_height="10dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="15dp"
-        android:padding="@dimen/_10sdp"
         android:background="@drawable/full_rounded_bg"
-        android:backgroundTint="@color/textColor" />
+        android:backgroundTint="@color/textColor"
+        android:padding="@dimen/_10sdp" />
+
     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_margin="@dimen/_10sdp"
         android:background="@drawable/btn"
-        android:backgroundTint="@color/editor_controller_bg"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:backgroundTint="@color/editor_controller_bg">
 
         <TextView
             android:id="@+id/text"
-            android:layout_margin="@dimen/_10sdp"
-            android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
             android:text="@string/invited_users"
-            android:textColor="@color/textColor"
-            android:textSize="16dp"/>
+            android:textColor="@color/texteditColor"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:layout_below="@id/text"
             android:id="@+id/userList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_user_list"
+            android:layout_below="@id/text"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            android:orientation="vertical"/>
+            tools:listitem="@layout/item_user_list" />
 
         <LinearLayout
-            android:visibility="gone"
             android:id="@+id/no_data_layout"
-            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:orientation="vertical">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
             <com.airbnb.lottie.LottieAnimationView
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_100sdp"
-                app:lottie_rawRes="@raw/no_data"
                 app:lottie_autoPlay="true"
-                app:lottie_loop="true"/>
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/no_data" />
+
             <TextView
-                android:layout_marginTop="@dimen/_5sdp"
-                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:text="@string/no_user_found"
+                android:textColor="@color/texteditColor"
                 android:textSize="16dp"
-                android:textColor="@color/textColor"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/there_is_no_data_so"
-                android:textSize="13dp"
-                android:textColor="@color/hintColor"/>
+                android:textColor="@color/hintColor"
+                android:textSize="13dp" />
         </LinearLayout>
 
     </RelativeLayout>

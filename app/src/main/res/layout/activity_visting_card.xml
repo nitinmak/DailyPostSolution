@@ -35,22 +35,22 @@
 
 
         <LinearLayout
+            android:id="@+id/save_main_btn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
             android:gravity="center"
             android:onClick="save"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center"
             android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/save_btn"
                 android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:background="@drawable/full_rounded_bg"
                 android:padding="@dimen/_8sdp"
-                android:layout_gravity="center"
                 android:src="@drawable/ic_right"
                 app:tint="@color/white" />
 
@@ -74,6 +74,7 @@
         android:layout_below="@id/toolbar"
         android:gravity="center_vertical"
         android:orientation="horizontal"
+        android:visibility="invisible"
         android:paddingHorizontal="@dimen/_10sdp"
         android:paddingVertical="@dimen/_10sdp">
 
@@ -86,6 +87,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/editvisit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_8sdp"
@@ -107,6 +109,8 @@
         android:layout_above="@+id/bottom_lay"
         android:layout_below="@+id/edit_lay"
         android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         app:dsv_orientation="horizontal"
         tools:listitem="@layout/business_card1" />
 
@@ -122,6 +126,7 @@
             android:layout_height="@dimen/_85sdp">
 
             <LinearLayout
+                android:id="@+id/premium_lay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -260,27 +265,29 @@
 
             </LinearLayout>
 
-            <!--            <RelativeLayout-->
-            <!--                android:id="@+id/premium_tag"-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:layout_gravity="right"-->
-            <!--                android:background="#B5FFB700">-->
-            <!--            -->
-            <!--                <TextView-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:layout_centerInParent="true"-->
-            <!--                    android:drawableLeft="@drawable/ic_king"-->
-            <!--                    android:drawablePadding="5dp"-->
-            <!--                    android:gravity="center"-->
-            <!--                    android:paddingHorizontal="8dp"-->
-            <!--                    android:paddingVertical="2dp"-->
-            <!--                    android:text="@string/premium"-->
-            <!--                    android:textColor="@color/black"-->
-            <!--                    android:textStyle="bold|italic" />-->
+            <RelativeLayout
+                android:id="@+id/premium_tag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:background="#B5FFB700"
+                android:clickable="false">
 
-            <!--            </RelativeLayout>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:drawableLeft="@drawable/ic_king"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="@string/premium"
+                    android:textColor="@color/black"
+                    android:textStyle="bold|italic" />
+
+            </RelativeLayout>
+
 
         </RelativeLayout>
 

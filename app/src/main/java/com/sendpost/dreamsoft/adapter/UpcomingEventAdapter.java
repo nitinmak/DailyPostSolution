@@ -38,7 +38,7 @@ public class UpcomingEventAdapter extends RecyclerView.Adapter<UpcomingEventAdap
         ItemUpcomingFestivalHomeBinding binding = ItemUpcomingFestivalHomeBinding.inflate(LayoutInflater.from(context), parent, false);
         return new ViewHolder(binding);
     }
-
+    
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int pos) {
         int position = pos;

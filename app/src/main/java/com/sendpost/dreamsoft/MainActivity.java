@@ -24,13 +24,13 @@ import com.sendpost.dreamsoft.Classes.App;
 import com.sendpost.dreamsoft.Classes.Functions;
 import com.sendpost.dreamsoft.Classes.Variables;
 import com.sendpost.dreamsoft.dialog.CustomeDialogFragment;
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SplashFragment;
+import com.sendpost.dreamsoft.Fragments.SplashFragment;
 import com.sendpost.dreamsoft.model.LanguageModel;
 import com.sendpost.dreamsoft.View.NonSwipeableViewPager;
 import com.sendpost.dreamsoft.dialog.DialogType;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.LanguageViewModel;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.SettingsViewModel;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.LanguageViewModel;
+import com.sendpost.dreamsoft.viewmodel.SettingsViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 
 import java.util.List;
 

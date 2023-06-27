@@ -15,16 +15,17 @@ import com.sendpost.dreamsoft.NavFragment.ImageFragment;
 import com.sendpost.dreamsoft.NavFragment.CreateFragment;
 import com.sendpost.dreamsoft.NavFragment.HomeFragment;
 import com.sendpost.dreamsoft.NavFragment.VideoFragment;
+import com.sendpost.dreamsoft.NavFragment.VideoFragment1;
 
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Context context;
-    ImageView home_btn,image_btns,images_daily_routing,search_btn,dialybusinessnew,create_btn,profile_btn;
+    ImageView home_btn,image_btns,images_daily_routing,video1,dialybusinessnew,create_btn,video2,profile_btn;
     //  premium_btn,
 
     public static Fragment active;
     public static FragmentManager fragmentManager;
-    boolean homeClicked = true, imageClicked = false,dailyClicked = false,dailynew = false,videoClicked = false,createClicked = false,premiumClicked = false,profileClicked = false;
+    boolean homeClicked = true, imageClicked = false,dailyClicked = false,dailynew = false,videoClicked = false,videoClicked1 = false,createClicked = false,premiumClicked = false,profileClicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     Fragment imageFragment = new ImageFragment();
     Fragment dailynewfragment = new DailyNewFragment();
     Fragment createFragment = new CreateFragment();
-    Fragment searchFragment = new VideoFragment();
+    Fragment videoFragment = new VideoFragment();
+    //Fragment videoFragment1 = new VideoFragment1();
+
+
 //  Fragment premiumFragment = new PremiumFragment();
 //  Fragment profileFragment = new ProfileFragment();
 
@@ -56,7 +60,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         home_btn = findViewById(R.id.home_btn);
         image_btns = findViewById(R.id.images_btn);
         images_daily_routing = findViewById(R.id.images_daily_routing);
-        search_btn = findViewById(R.id.search_btn);
+        video1 = findViewById(R.id.video1);
+       // video2 = findViewById(R.id.video2);
         dialybusinessnew = findViewById(R.id.dialybusinessnew);
         create_btn = findViewById(R.id.create_btn);
 //      premium_btn = findViewById(R.id.premium_btn);
@@ -66,7 +71,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         image_btns.setOnClickListener(this);
         images_daily_routing.setOnClickListener(this);
         dialybusinessnew.setOnClickListener(this);
-        search_btn.setOnClickListener(this);
+        video1.setOnClickListener(this);
+        //video2.setOnClickListener(this);
         create_btn.setOnClickListener(this);
 //      premium_btn.setOnClickListener(this);
 //      profile_btn.setOnClickListener(this);
@@ -100,7 +106,9 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
-                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                //video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
 
@@ -110,12 +118,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
-                search_btn.getDrawable().setTint(getColor(R.color.black));
+                video1.getDrawable().setTint(getColor(R.color.black));
+                //video2.getDrawable().setTint(getColor(R.color.black));
 
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
                 dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
-                search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                video1.getBackground().setTint(getResources().getColor(R.color.transparent));
+                //video2.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -138,7 +148,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
-                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                //video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
 
@@ -147,14 +158,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
-                search_btn.getDrawable().setTint(getColor(R.color.black));
+                video1.getDrawable().setTint(getColor(R.color.black));
+                //video2.getDrawable().setTint(getColor(R.color.black));
 
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
                 dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTintList(null);
-                search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                video1.getBackground().setTint(getResources().getColor(R.color.transparent));
+                //video2.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -177,7 +190,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
-                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+               // video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
 
@@ -186,7 +200,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 images_daily_routing.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
-                search_btn.getDrawable().setTint(getColor(R.color.black));
+                video1.getDrawable().setTint(getColor(R.color.black));
+//                video2.getDrawable().setTint(getColor(R.color.black));
 
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -194,7 +209,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTintList(null);
 
-                search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                video1.getBackground().setTint(getResources().getColor(R.color.transparent));
+        //        video2.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -217,7 +233,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
-                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+ //               video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
 
@@ -226,14 +243,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
                 dialybusinessnew.getDrawable().setTint(getColor(R.color.white));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
-                search_btn.getDrawable().setTint(getColor(R.color.black));
+                video1.getDrawable().setTint(getColor(R.color.black));
+ //               video2.getDrawable().setTint(getColor(R.color.black));
 
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
                 dialybusinessnew.getBackground().setTintList(null);
-                search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                video1.getBackground().setTint(getResources().getColor(R.color.transparent));
+ //               video2.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -250,14 +269,15 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 showFragmentOnFrame(dailynewfragment);
 
                 break;
-            case R.id.search_btn:
+            case R.id.video1:
                 isHome = false;
                 home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
                 images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon ));
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
-                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+  //              video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //              premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //              profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
 
@@ -266,27 +286,29 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
                 dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
-                search_btn.getDrawable().setTint(getColor(R.color.white));
+                video1.getDrawable().setTint(getColor(R.color.white));
+   //             video2.getDrawable().setTint(getColor(R.color.black));
                 create_btn.getDrawable().setTint(getColor(R.color.black));
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
                 dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
-                search_btn.getBackground().setTintList(null);
+                video1.getBackground().setTintList(null);
                 create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+ //               video2.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 //              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
 
-                if (active != searchFragment) {
+                if (active != videoFragment) {
                     if (!videoClicked) {
-                        fragmentManager.beginTransaction().add(R.id.main_framelayout, searchFragment).show(searchFragment).hide(active).commit();
+                        fragmentManager.beginTransaction().add(R.id.main_framelayout, videoFragment).show(videoFragment).hide(active).commit();
                         videoClicked = true;
                     } else {
-                        fragmentManager.beginTransaction().show(searchFragment).hide(active).commit();
+                        fragmentManager.beginTransaction().show(videoFragment).hide(active).commit();
                     }
                 }
-                showFragmentOnFrame(searchFragment);
+                showFragmentOnFrame(videoFragment);
 
                 break;
             case R.id.create_btn:
@@ -296,7 +318,8 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
                 dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
                 create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
-                search_btn.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+                video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+              //  video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
 //                premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
 //                profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
 
@@ -304,14 +327,16 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 images_daily_routing.getDrawable().setTint(getColor(R.color.black));
                 dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
                 image_btns.getDrawable().setTint(getColor(R.color.black));
-                search_btn.getDrawable().setTint(getColor(R.color.black));
+                video1.getDrawable().setTint(getColor(R.color.black));
+               // video2.getDrawable().setTint(getColor(R.color.black));
                 create_btn.getDrawable().setTint(getColor(R.color.white));
 
                 home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
                 image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
                 dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
                 images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
-                search_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+                video1.getBackground().setTint(getResources().getColor(R.color.transparent));
+              //  video2.getBackground().setTint(getResources().getColor(R.color.transparent));
                 create_btn.getBackground().setTintList(null);
                 create_btn.getDrawable().setTint(getColor(R.color.white));
 //              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
@@ -327,6 +352,48 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 showFragmentOnFrame(createFragment);
                 break;
+
+  //          case R.id.video2:
+              //  isHome = false;
+              //  home_btn.setImageDrawable(getDrawable(R.drawable.home_activity));
+              //  images_daily_routing.setImageDrawable(getDrawable(R.drawable.daily_page_icon ));
+             //  image_btns.setImageDrawable(getDrawable(R.drawable._business_page_icon));
+              //  dialybusinessnew.setImageDrawable(getDrawable(R.drawable.daily_new_business));
+              //  create_btn.setImageDrawable(getDrawable(R.drawable.frame_page_icon));
+              //  video1.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+             //   video2.setImageDrawable(getDrawable(R.drawable.video_page_icon));
+//           //   premium_btn.setImageDrawable(getDrawable(R.drawable.nav_premium));
+//           //  profile_btn.setImageDrawable(getDrawable(R.drawable.nav_profile));
+
+
+               // home_btn.getDrawable().setTint(getColor(R.color.black));
+              //  images_daily_routing.getDrawable().setTint(getColor(R.color.black));
+              //  dialybusinessnew.getDrawable().setTint(getColor(R.color.black));
+               // image_btns.getDrawable().setTint(getColor(R.color.black));
+              //  video1.getDrawable().setTint(getColor(R.color.black));
+              //  video2.getDrawable().setTint(getColor(R.color.white));
+               // create_btn.getDrawable().setTint(getColor(R.color.black));
+
+               // home_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+              //  image_btns.getBackground().setTint(getResources().getColor(R.color.transparent));
+              //  images_daily_routing.getBackground().setTint(getResources().getColor(R.color.transparent));
+              //  dialybusinessnew.getBackground().setTint(getResources().getColor(R.color.transparent));
+               // video2.getBackground().setTintList(null);
+               // create_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+              //  video1.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              premium_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+//              profile_btn.getBackground().setTint(getResources().getColor(R.color.transparent));
+
+              //  if (active != videoFragment1) {
+                //    if (!videoClicked1) {
+                //        fragmentManager.beginTransaction().add(R.id.main_framelayout, videoFragment1).show(videoFragment1).hide(active).commit();
+                //        videoClicked1 = true;
+                 //   } else {
+                  //      fragmentManager.beginTransaction().show(videoFragment1).hide(active).commit();
+                //    }
+              //  }
+              //  showFragmentOnFrame(videoFragment1);
+              //  break;
 //            case R.id.premium_btn:
 //                isHome = false;
 //                home_btn.setImageDrawable(getDrawable(R.drawable.nav_home));

@@ -16,7 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.sendpost.dreamsoft.ImageEditor.filters.Fragments.SearchFragment;
+import com.sendpost.dreamsoft.BusinessCard.BusinessCardActivity;
+import com.sendpost.dreamsoft.Fragments.SearchFragment;
 import com.sendpost.dreamsoft.adapter.SectionAdapter;
 import com.sendpost.dreamsoft.BusinessCard.BusinessCardActivity_Digital;
 import com.sendpost.dreamsoft.ImageEditor.EditImageActivity;
@@ -24,7 +25,7 @@ import com.sendpost.dreamsoft.databinding.FragmentCreateBinding;
 import com.sendpost.dreamsoft.model.SectionModel;
 import com.sendpost.dreamsoft.PosterPreviewActivity;
 import com.sendpost.dreamsoft.responses.HomeResponse;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.HomeViewModel;
+import com.sendpost.dreamsoft.viewmodel.HomeViewModel;
 
 import java.util.List;
 
@@ -82,7 +83,7 @@ public class CreateFragment extends Fragment {
         binding.bussinessMaker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(context, BusinessCardActivity_Digital.class));
+                startActivity(new Intent(context, BusinessCardActivity.class));
             }
         });
 

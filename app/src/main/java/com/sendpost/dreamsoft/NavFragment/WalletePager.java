@@ -11,9 +11,10 @@ import androidx.lifecycle.ViewModelProvider;
 import com.google.android.material.tabs.TabLayout;
 
 import com.sendpost.dreamsoft.Classes.Functions;
+import com.sendpost.dreamsoft.R;
 import com.sendpost.dreamsoft.adapter.MyPagerWalleteAdapter;
 import com.sendpost.dreamsoft.databinding.WalleteviewpagerBinding;
-import com.sendpost.dreamsoft.ImageEditor.viewmodel.UserViewModel;
+import com.sendpost.dreamsoft.viewmodel.UserViewModel;
 
 public class WalletePager extends AppCompatActivity {
     WalleteviewpagerBinding binding;
@@ -23,12 +24,13 @@ public class WalletePager extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = WalleteviewpagerBinding.inflate(getLayoutInflater());
+
         setContentView(binding.getRoot());
 
         viewModel = new ViewModelProvider(this).get(UserViewModel.class);
 
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("POINT"));
-        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("PIN"));
+//        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("POINT"));
+//        binding.tabLayout.addTab(binding.tabLayout.newTab().setText("PIN"));
 
         getpoint(Functions.getUID(getApplicationContext()));
 
@@ -37,7 +39,7 @@ public class WalletePager extends AppCompatActivity {
     private void getpoint(String uid) {
 
             viewModel.getpinpointhistory(Functions.getUID(this)).observe(this, userResponse -> {
-        
+
                 if (userResponse != null){
                     if (userResponse.code == SUCCESS){
                         binding.tabLayout.removeAllTabs();

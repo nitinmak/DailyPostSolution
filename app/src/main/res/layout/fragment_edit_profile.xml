@@ -55,8 +55,7 @@
                 >
             <RelativeLayout
                 android:layout_width="100dp"
-                android:layout_height="100dp"
-                 >
+                android:layout_height="100dp">
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/user_pic"
                     android:layout_width="match_parent"
@@ -114,13 +113,70 @@
                     android:layout_toEndOf="@+id/referral"
                     android:backgroundTint="@color/transparent"
                     android:hint="@string/referral"
-                    android:inputType="textNoSuggestions|text"
+                    android:inputType="textNoSuggestions|number"
                     android:paddingHorizontal="8dp"
                     android:textColor="@color/texteditColor"
                     android:textColorHint="@color/hintColor"
                     android:textSize="15dp" />
 
             </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/sponserlay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/sponsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_15sdp"
+                    android:text=""
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_5sdp"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/br"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/textColor"-->
+<!--                    android:text="-"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_5sdp"/>-->
+
+                <TextView
+                    android:id="@+id/sponspernum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text=""
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+<!--                <TextView-->
+<!--                    android:id="@+id/br2"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:textColor="@color/textColor"-->
+<!--                    android:text="-"-->
+<!--                    android:textSize="@dimen/_15sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_5sdp"/>-->
+
+                <TextView
+                    android:id="@+id/locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/textColor"
+                    android:text=""
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"/>
+
+
+
+            </LinearLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -287,6 +343,15 @@
                     android:textSize="15dp" />
 
             </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:textColor="@color/red"
+                android:text="@string/notice"
+                android:textStyle="normal"/>
+
         </LinearLayout>
 
     </ScrollView>
